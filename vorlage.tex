@@ -1,0 +1,52 @@
+\documentclass[11pt,paper=a4,final]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}           %allows us to specify the 'seitenrand'
+\usepackage{graphicx}           %package used to include graphics
+\usepackage{hyperref}           %used to make klickable links
+\usepackage{listings}
+\usepackage{tabularx}
+\usepackage{pdflscape}
+\usepackage[figuresright]{rotating}
+\usepackage{nameref}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+% \setlength{\parskip}{0pt}
+% \setlength{\baselineskip}{0pt}
+\parindent 0pt 
+\parskip 11pt
+\parsep 0pt 
+\itemsep 0pt 
+\topsep 0pt 
+
+\geometry{a4paper, top=20mm, right=20mm, bottom=20mm, left=20mm}
+
+%defining header and footer
+\fancyhf{}      %delete default values
+\setlength{\headwidth}{\textwidth}      %header and footer width equal the text width
+%\fancyhead[LE,LO]{\includegraphics[scale=0.6]{header.png}}
+\fancyhead[LE,LO]{Niklaus Hofer}
+\fancyhead[RE,RO]{}
+\fancyfoot[CE,CO]{Speicherdatum: \today{}}
+\fancyfoot[RE,RO]{\thepage}
+
+%New page for every section
+\let\stdsection\section
+\renewcommand\section{\newpage\stdsection}
+
+\title{}
+\author{Niklaus Hofer}
+\date{\today{}}
+
+\begin{document}
+\end{document}
