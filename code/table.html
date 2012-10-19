@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>Table</title>
+    <style>
+      *
+      {
+        margin:0px;
+	padding:0px;
+	border:0px;
+      }
+      table
+      {
+      }
+      td
+      {
+        border:1px #000000 solid;
+	padding:2px;
+	border-top:0px;
+	border-left:0px;
+	width:18px;
+	text-align:center;
+      }
+      tr
+      {
+	height:18px;
+      }
+    </style>
+    <script>
+      window.onload=function()
+      {
+        console.log("window ready")
+	var squarestr = "";
+	for( var i=0; i<26; i++)
+	{
+	  squarestr=squarestr+"<tr>";
+	  for( var u=0; u<26; u++)
+	  {
+	    var character = 65+((u+i)%26);
+	    squarestr=squarestr+"<td>"+String.fromCharCode(character)+"</td>";
+	  }
+	  squarestr=squarestr+"</tr>";
+	}
+	document.getElementById("vsquare").innerHTML = squarestr;
+      }
+    </script>
+  </head>
+  <body onReady="genSquare">
+    <table id="vsquare" cellspacing=0 cellpadding=0>
+    </table>
+  </body>
+</html>
