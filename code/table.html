@@ -74,40 +74,6 @@
 	return numbered;
       }
 
-      function decryptText(pwArray, text)
-      {
-        l=0;
-	var decText = "";
-
-	for(n=0; n<text.length; n++)
-	{
-	  var asciiValue = text.charCodeAt(n);
-	  if(asciiValue > 96 && asciiValue < 123)
-	  {
-	    console.log("loewr case. What's that doing in there??");
-	    var calcValue = asciiValue-97;
-	    var foo = ((26+calcValue-pwArray[l%(pwArray.length)])%26)
-	    decText += String.fromCharCode(foo+65);
-	    l++;
-	    continue;
-	  }
-
-	  if(asciiValue > 64 && asciiValue < 91)
-	  {
-	    console.log("upper case")
-	    var calcValue = asciiValue-65;
-	    var foo = ((26+calcValue-pwArray[l%(pwArray.length)])%26)
-	    decText += String.fromCharCode(foo+65);
-	    l++;
-	    continue;
-	  }
-
-	  decText += String.fromCharCode(asciiValue);
-	  console.log("not a character");
-	}
-	return decText;
-      }
-
       /**
        * Encrypt a text.
        * @pwArray - Array of numbers that is the key.
@@ -160,6 +126,40 @@
 	return encText;
       }
 
+      function decryptText(pwArray, text)
+      {
+        l=0;
+	var decText = "";
+
+	for(n=0; n<text.length; n++)
+	{
+	  var asciiValue = text.charCodeAt(n);
+	  if(asciiValue > 96 && asciiValue < 123)
+	  {
+	    console.log("loewr case. What's that doing in there??");
+	    var calcValue = asciiValue-97;
+	    var foo = ((26+calcValue-pwArray[l%(pwArray.length)])%26)
+	    decText += String.fromCharCode(foo+65);
+	    l++;
+	    continue;
+	  }
+
+	  if(asciiValue > 64 && asciiValue < 91)
+	  {
+	    console.log("upper case")
+	    var calcValue = asciiValue-65;
+	    var foo = ((26+calcValue-pwArray[l%(pwArray.length)])%26)
+	    decText += String.fromCharCode(foo+65);
+	    l++;
+	    continue;
+	  }
+
+	  decText += String.fromCharCode(asciiValue);
+	  console.log("not a character");
+	}
+	return decText;
+      }
+
     </script>
   </head>
   <body onReady="genSquare">
@@ -195,7 +195,6 @@
       {
         document.write(decText[a]);
       }
-
 
     </script>
   </body>
