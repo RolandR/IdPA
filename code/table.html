@@ -42,10 +42,168 @@
 	}
 	document.getElementById("vsquare").innerHTML = squarestr;
       }
+
+      /**
+       * Create an array of numbers from the password string
+       * Returns an array of numbers
+       * All chars will assumed to be uppercaase
+       * Everything but characters will be ignored!
+       */
+      function preparePassword(password)
+      {
+	var numbered = new Array();
+	// We need to count manually, as we ignore things other than text characters
+	l = 0;
+        for (m=0; m<password.length; m++)
+	{
+	  var asciiValue = password.charCodeAt(m);
+
+	  if(asciiValue > 96 && asciiValue < 123)
+	  {
+	    numbered[l] = (asciiValue-97);
+	    l++;
+	    continue;
+	  }
+	  if(asciiValue > 64 && asciiValue < 91)
+	  {
+	    numbered[l] = (asciiValue-65);
+	    l++;
+	    continue;
+	  }
+	}
+	return numbered;
+      }
+
+      function decryptText(pwArray, text)
+      {
+        l=0;
+	var decText = "";
+
+	for(n=0; n<text.length; n++)
+	{
+	  var asciiValue = text.charCodeAt(n);
+	  if(asciiValue > 96 && asciiValue < 123)
+	  {
+	    console.log("loewr case. What's that doing in there??");
+	    var calcValue = asciiValue-97;
+	    var foo = ((calcValue-pwArray[l%(pwArray.length)])%26);
+	    decText += String.fromCharCode(foo+65);
+	    l++;
+	    continue;
+	  }
+
+	  if(asciiValue > 64 && asciiValue < 91)
+	  {
+	    console.log("upper case")
+	    var calcValue = asciiValue-65;
+	    if(calcValue-pwArray[l%(pwArray.length)] < 0)
+	    {
+	      var foo = (26+calcValue-pwArray[l%(pwArray.length)])
+	    }
+	    else
+	    {
+	      var foo = (calcValue-pwArray[l%(pwArray.length)])
+	    }
+	    decText += String.fromCharCode(foo+65);
+	    l++;
+	    continue;
+	  }
+
+	  decText += String.fromCharCode(asciiValue);
+	  console.log("not a character");
+	}
+	return decText;
+      }
+
+      /**
+       * Encrypt a text.
+       * @pwArray - Array of numbers that is the key.
+       *            You can retrieve such an array from
+       *	    the preparePassword function
+       *
+       * @text - Text to be encrypted
+       * 
+       * returns a string with the encrypted text
+       */
+      function encryptText(pwArray, text)
+      {
+        console.log("encryptText started");
+	// We can't use the loop variable to read out a number from
+	// the pwArray. That's because it gets counted up on non characters
+	// (such as spaces) too. But we want these types of chars to be 
+	// completely unaffected! So we have our own variable that gets only
+	// incremented when there's an actual character to be encoded
+	l = 0;
+        var encText = "";
+
+	for (n=0; n<text.length; n++)
+	{
+	  var asciiValue = text.charCodeAt(n); 
+	  if(asciiValue > 96 && asciiValue < 123)
+	  {
+	    console.log("lower case");
+	    var calcValue = asciiValue-97;
+	    var foo = ((calcValue+pwArray[l%(pwArray.length)])%26)
+	    // Add 65 to make it an uppercase character
+	    encText += String.fromCharCode(foo+65);
+	    l++;
+	    continue;
+	  }
+	  if(asciiValue > 64 && asciiValue < 91)
+	  {
+	    console.log("upper case")
+	    var calcValue = asciiValue-65;
+	    var foo = ((calcValue+pwArray[l%(pwArray.length)])%26)
+	    encText += String.fromCharCode(foo+65);
+	    l++;
+	    continue;
+	  }
+
+	  encText += String.fromCharCode(asciiValue);
+	  console.log("not a character");
+	}
+
+	console.log("encryptText is about to end");
+	return encText;
+      }
+
     </script>
   </head>
   <body onReady="genSquare">
     <table id="vsquare" cellspacing=0 cellpadding=0>
     </table>
+    <script>
+      // define a password
+      password = "Hello World";
+      // Then transform it into an array of numbers
+      // everything will be uppercased. Everything that's not a character
+      // will be ignored!
+      var pwArray = preparePassword(password);
+
+      // Now encrypt the text. Everything will be uppercased.
+      // Everything that is not a character will be put back in the same
+      // place unchanged
+      var encText = encryptText(pwArray, "Mein Hut der hat 3 Ecken, 3 Ecken hat mein Hut. Und haett er nicht 3 Ecken, so waer es nicht mein Hut.");
+
+      document.write("<br />");
+
+      // Write out the encrypted text
+      for(var a=0; a < encText.length; a++)
+      {
+        document.write(encText[a]);
+      }
+
+      var decText = decryptText(pwArray, encText);
+
+      document.write("<br />");
+
+      // Write out the encrypted text
+      for(var a=0; a < decText.length; a++)
+      {
+        document.write(decText[a]);
+      }
+
+
+    </script>
   </body>
 </html>
