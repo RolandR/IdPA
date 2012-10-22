@@ -86,7 +86,7 @@
 	  {
 	    console.log("loewr case. What's that doing in there??");
 	    var calcValue = asciiValue-97;
-	    var foo = ((calcValue-pwArray[l%(pwArray.length)])%26);
+	    var foo = ((26+calcValue-pwArray[l%(pwArray.length)])%26)
 	    decText += String.fromCharCode(foo+65);
 	    l++;
 	    continue;
@@ -96,14 +96,7 @@
 	  {
 	    console.log("upper case")
 	    var calcValue = asciiValue-65;
-	    if(calcValue-pwArray[l%(pwArray.length)] < 0)
-	    {
-	      var foo = (26+calcValue-pwArray[l%(pwArray.length)])
-	    }
-	    else
-	    {
-	      var foo = (calcValue-pwArray[l%(pwArray.length)])
-	    }
+	    var foo = ((26+calcValue-pwArray[l%(pwArray.length)])%26)
 	    decText += String.fromCharCode(foo+65);
 	    l++;
 	    continue;
