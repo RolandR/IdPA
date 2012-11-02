@@ -9,6 +9,13 @@
 \usepackage[figuresright]{rotating}
 \usepackage{nameref}
 \usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{ngerman} % Make the document German
+% Make the document German
+\usepackage{ngerman}
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+\usepackage{mdwlist}
 \usepackage{multirow}
 
 \hypersetup{
@@ -19,74 +26,108 @@
     urlcolor=black
 }
 
-\usepackage{fancyhdr}
+
+\title{Arbeitsjournal}
+\author{Niklaus Hofer, Roland Rytz}
+\date{\today{}}
+
+% Make title and author accessible in the header/footer
+\makeatletter
+  \let\Title\@title
+  \let\Author\@author
+\makeatother
+
 \pagestyle{fancy}
-% \setlength{\parskip}{0pt}
-% \setlength{\baselineskip}{0pt}
-\parindent 0pt 
-\parskip 11pt
-\parsep 0pt 
-\itemsep 0pt 
-\topsep 0pt 
 
-\geometry{a4paper, top=20mm, right=15mm, bottom=25mm, left=25mm}
+\geometry{a4paper, top=20mm, right=20mm, bottom=30mm, left=20mm}
 
-%defining header and footer
 \fancyhf{}      %delete default values
 \setlength{\headwidth}{\textwidth}      %header and footer width equal the text width
-%\fancyhead[LE,LO]{\includegraphics[scale=0.6]{header.png}}
-\fancyhead[LE,LO]{Niklaus Hofer und Roland Rytz}
-\fancyhead[RE,RO]{Idpa}
+\lhead{\Author}
+\rhead{\Title}
 \fancyfoot[CE,CO]{Speicherdatum: \today{}}
 \fancyfoot[RE,RO]{\thepage}
 
-%New page for every section
-\let\stdsection\section
-\renewcommand\section{\newpage\stdsection}
-
-\title{Arbeitsjournal}
-\author{Roland Rytz, Niklaus Hofer}
-\date{\today{}}
-
 \begin{document}
-
 \maketitle
-\vfill
-\begin{flushleft}
-Gewerblich Industrielle Berufsschule Bern
-\end{flushleft}
 \newpage
 \begin{landscape}
-\section{Arbeitsjournal}
-Datum im Format Jahr.Monat.Tag
-\begin{longtable}{|p{1.8cm}|p{1.5cm}|p{7.5cm}|p{9.0cm}|l|l|}
-\hline
-\multirow{2}{*}{\bf Datum} & \multirow{2}{*}{\bf Wer} &\multirow{2}{*}{\bf T\"atigkeit} & \multirow{2}{*}{\bf Reflexion} & \multicolumn{2}{c|}{\bf Zeit} \\ \cline{5-6}
- & & & & \bf Geplant & \bf Effektiv \\ \hline
-%Use the headings below if you don't have multirow installed
-%\bf Datum & \bf Wer & \bf T\"atigkeit & \bf Reflexion & \bf Geplant & \bf Effektiv \\ \hline
-\hline
-\endhead
-2012.09.09 & Niklaus und Roland &
-Initialisierung des Repositories. &
-Die Zusammenarbeit funktioniert bis jetzt gut. &
-20min & 20min \\ \hline \nopagebreak
-\multicolumn{2}{|l|}{\bf Pendenzen} &\multicolumn{2}{p{16.5cm}|}{Planen des weiteren Vorgehens.}  & \multicolumn{2}{l|}{} \\ \hline
-\end{longtable}
+  \section{Arbeitsjournal}
+  Datum im Format Jahr.Monat.Tag
+  \begin{longtable}{|p{1.8cm}|p{1.5cm}|p{5.0cm}|p{11.0cm}|l|l|}
+    \hline
+    \multirow{2}{*}{\bf Datum} & \multirow{2}{*}{\bf Wer} &\multirow{2}{*}{\bf T\"atigkeit} & \multirow{2}{*}{\bf Reflexion} & \multicolumn{2}{c|}{\bf Zeit} \\ \cline{5-6}
+     & & & & \bf Geplant & \bf Effektiv \\ \hline
+    %Use the headings below if you don't have multirow installed
+    %\bf Datum & \bf Wer & \bf T\"atigkeit & \bf Reflexion & \bf Geplant & \bf Effektiv \\ \hline
+    \hline
+    \endhead
+    % Beginn section ---------------------------------------------------------
+    2012.09.09 & Niklaus und Roland &
+    Initialisierung des Repositories. &
+    Die Zusammenarbeit funktioniert bis jetzt gut. &
+    20min & 20min \\ \hline \nopagebreak
+    \multicolumn{2}{|l|}{\bf Pendenzen} &\multicolumn{2}{p{16.0cm}|}{Planen des weiteren Vorgehens.}  & \multicolumn{2}{l|}{} \\ \hline
+    % End section ------------------------------------------------------------
+    % Beginn section ---------------------------------------------------------
+    \hline
+    2012.10.19 & Niklaus und Roland &
+    Schreiben des ersten Programmcodes. Erstellen des Vigenere square mit HTML und Javascript. &
+    Der Wiedereinstieg in die Progammierung ist nicht ganz einfahc gefallen. Wir hatten deshalb deutlich l\"anger als urspr\"unglich geplant und sind auch nicht so weit fortgeschritten wie geplant. &
+    30min & 80min \\ \hline \nopagebreak
+    \multicolumn{2}{|l|}{\bf Pendenzen} &\multicolumn{2}{p{16.0cm}|}{Wir wollen die grundlegenden Funktionen implementieren, damit wir beim ersten Gespr\"ach mit Herr L\"uthi bereits etwas zeigen k\"onnen. Insbesondere die 'sichtbaren' Funktionen sollten dann da sein. Das GUI muss dann aber nat\"urlich noch nicht fertig sein.}  & \multicolumn{2}{l|}{} \\ \hline
+    % End section ------------------------------------------------------------
+    % Beginn section ---------------------------------------------------------
+    \hline
+    2012.10.19 & Niklaus &
+    Implementieren des Verschl\"usselungsalgorithmus in Javascript. Testen der Verschl\"usselung, Vergleich mit einer anderen (online verf\"ugbaren) Vigenere Implementationen.&
+    Am Nachmittag konnte ich nach Langem wieder einmal programmieren. Das hat mich nicht mehr losgelassen. Ich habe also die Verschl\"usselung implementiert. Das ist mir \"uberraschend schnell gelungen, insbesondere wenn man bedenkt, dass ich zuvor kaum jemals mit Javascript gearbeitet habe. Die Verschl\"usselung implementiert lediglich den Algorithmus und stellt nichts grafisch dar. Sie kann aber genutzt werden um den mathematischen Aspekt des Projektes hervorzuheben. Ein Geschwindigkeitsvergleich zwischen der Methode mit dem manuellen Auslesen der Charaktere aus dem Square und der mathematischen Funktion, sollte die Vorz\"uge der wesentlich schnelleren, mathematischen Funktion deutlich hervorheben.&
+    60min & 120min \\ \hline \nopagebreak
+    \multicolumn{2}{|l|}{\bf Pendenzen} &\multicolumn{2}{p{16.0cm}|}{}  & \multicolumn{2}{l|}{} \\ \hline
+    % End section ------------------------------------------------------------
+    % Beginn section ---------------------------------------------------------
+    2012.10.22 & Niklaus &
+    Implementation des Verschl\"usselungsalgorithmus.&
+    In der Pause im Mathematikunterricht habe ich die Entschl\"usselung implementiert. Das war eine schlechte Idee, ich konnte mich danach nicht mehr auf den Unterricht konzentrieren. Im weiteren Verlauf des Nachmittags ist mir eingefallen, wie ich den Code besonders sch\"on machen kann. Da die Entschl\"usselung \"ahnlich der Verschl\"usselung ist, konnte ich viel Code \"ubernehmen und ben\"otigte weniger Zeit.&
+    15min & 30min \\ \hline \nopagebreak
+    \multicolumn{2}{|l|}{\bf Pendenzen} &\multicolumn{2}{p{16.0cm}|}{}  & \multicolumn{2}{l|}{} \\ \hline
+    % End section ------------------------------------------------------------
+    % Beginn section ---------------------------------------------------------
+    \hline
+    2012.10.22 & Roland &
+    Portieren des vorhandenen Codes nach JQuery. Der Code zur Generierung des Squares wird in ein Objekt \"ubernommen, dem sp\"ater verschiedene Funktionen hinzugef\"ugt werden k\"onnen.&
+    Die Javascript Programmierung wird durch die Verwendung von JQuery erleichtert. Die objektorientierte Programmierung ist zeitgem\"ass und bringe ebenfalls viele Vorteile mit sich.&
+    30min & 30min \\ \hline \nopagebreak
+    \multicolumn{2}{|l|}{\bf Pendenzen} &\multicolumn{2}{p{16.0cm}|}{Funktionen zum Highlighten der richtigen Spalten und Zeilen m\"ussen noch geschriben werden, damit die Verschl\"usselung grafisch dargestellt werden kann. Ausserdem m\"ussen die entsprechenden Werte ausgelesen werden. Danach sollten wir bereit f\"ur eine erste Besprechung mit Herr L\"uthi sein.}  & \multicolumn{2}{l|}{} \\ \hline
+    % End section ------------------------------------------------------------
+    % Beginn section ---------------------------------------------------------
+    \hline
+    2012.10.22 & Roland &
+    Implementieren des Highlightings im Square.&
+    Im Square k\"onnen einzelne Spalten und Linien gezielt markiert wreden. Ausserdem k\"onnen Buchstaben aus dem Schnittpunkt ausgelesen werden.&
+    30min & 30min \\ \hline \nopagebreak
+    \multicolumn{2}{|l|}{\bf Pendenzen} &\multicolumn{2}{p{16.0cm}|}{}  & \multicolumn{2}{l|}{} \\ \hline
+    % End section ------------------------------------------------------------
+    % Beginn section ---------------------------------------------------------
+    \hline
+    2012.10.22 & Roland &
+    Portieren des vorhandenen Codes nach JQuery. Der Code zur Generierung des Squares wird in ein Objekt \"ubernommen, dem sp\"ater verschiedene Funktionen hinzugef\"ugt werden k\"onnen.&
+    Die Javascript Programmierung wird durch die Verwendung von JQuery erleichtert. Die objektorientierte Programmierung ist zeitgem\"ass und bringe ebenfalls viele Vorteile mit sich.&
+    30min & 60min \\ \hline \nopagebreak
+    \multicolumn{2}{|l|}{\bf Pendenzen} &\multicolumn{2}{p{16.0cm}|}{Funktionen zum Highlighten der richtigen Spalten und Zeilen m\"ussen noch geschriben werden, damit die Verschl\"usselung grafisch dargestellt werden kann. Ausserdem m\"ussen die entsprechenden Werte ausgelesen werden. Danach sollten wir bereit f\"ur eine erste Besprechung mit Herr L\"uthi sein.}  & \multicolumn{2}{l|}{} \\ \hline
+    % End section ------------------------------------------------------------
+    % Beginn section ---------------------------------------------------------
+    \hline
+    2012.10.31 & Roland &
+    Versch\"onern der Highlight Funktion.&
+    &
+    40min & 40min \\ \hline \nopagebreak
+    \multicolumn{2}{|l|}{\bf Pendenzen} &\multicolumn{2}{p{16.0cm}|}{}  & \multicolumn{2}{l|}{} \\ \hline
+    % End section ------------------------------------------------------------
+  \end{longtable}
 \end{landscape}
 \newpage
-%\bibliographystyle{plain}
-%\bibliography{documentation}{}
-\newpage
-\section{Erkl\"arung}
-Wir best\"atigen, die vorliegende Arbeit selbst\"andig verfasst zu haben. S\"amtliche Textstellen, die nicht von uns stammen, sind als Zitate gekennzeichnet und mit dem genauen Hinweis auf ihre Herkunft versehen. Die verwendeten Quellen (gilt auch f\"ur Abbildungen, Grafiken u.\"a.) sind im Literaturverzeichnis aufgef\"uhrt.
-
-\vspace{4cm}
-Bern, \today{}
-\vspace{4cm}
-
-Niklaus Hofer\hfill Roland Rytz\\
-\vspace{2cm}
-\hrulefill \hfill \hrulefill
-\newpage
+foo bar
+\bibliography{}{}
+\bibliographystyle{plain}
 \end{document}
