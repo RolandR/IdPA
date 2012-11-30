@@ -1,0 +1,79 @@
+\documentclass[11pt,paper=a4,final]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}           %allows us to specify the 'seitenrand'
+\usepackage{graphicx}           %package used to include graphics
+\usepackage{hyperref}           %used to make klickable links
+\usepackage{listings}
+\usepackage{tabularx}
+\usepackage{pdflscape}
+\usepackage[figuresright]{rotating}
+\usepackage{nameref}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{ngerman} % Make the document German
+% Make the document German
+\usepackage{ngerman}
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+\usepackage{mdwlist}
+\usepackage{multirow}
+
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+
+\title{Raport}
+\author{Niklaus Hofer}
+\date{\today{}}
+
+% Make title and author accessible in the header/footer
+%\makeatletter
+%  \let\Title\@title
+%  \let\Author\@author
+%\makeatother
+%
+\pagestyle{fancy}
+%
+\geometry{a4paper, top=20mm, right=20mm, bottom=20mm, left=20mm}
+%
+%\fancyhf{}      %delete default values
+%\setlength{\headwidth}{\textwidth}      %header and footer width equal the text width
+%\lhead{\Author}
+%\rhead{\Title}
+%\fancyfoot[CE,CO]{Speicherdatum: \today{}}
+%\fancyfoot[RE,RO]{\thepage}
+
+\begin{document}
+\begin{landscape}
+  \begin{longtable}{|p{1.8cm}|p{1.5cm}|p{5.0cm}|p{11.0cm}|l|l|}
+    \hline
+    \multirow{2}{*}{\bf Datum} & \multirow{2}{*}{\bf Wer} &\multirow{2}{*}{\bf T\"atigkeit} & \multirow{2}{*}{\bf Reflexion} & \multicolumn{2}{c|}{\bf Zeit} \\ \cline{5-6}
+     & & & & \bf Geplant & \bf Effektiv \\ \hline
+    %Use the headings below if you don't have multirow installed
+    %\bf Datum & \bf Wer & \bf T\"atigkeit & \bf Reflexion & \bf Geplant & \bf Effektiv \\ \hline
+    \hline
+    \endhead
+    % Beginn section ---------------------------------------------------------
+    2012.11.23 & Niklaus Hofer &
+    Besprechung mit Herr Tschopp \"uber den Projektstand und das geplante weitere Vorgehen. &
+    Bis jetzt siehts nicht schlecht aus. Wir sind gut im Zeitplan. Allerdings sollten wir mit dem Erstellen des Wikipedia-Artikels beginnen. Wir haben abgemacht, dass ein Entwurf der Struktur des Artikels anfangs Dezember vorliegen sollte. Um diese Struktur zu erstellen, werden wir andere Wikipedia-Artikel zu \"ahnlichen Themen auf ihren Aufbau untersuche. Die Resultate werden wir festhalten und uns dann beim Erstellen des eigenen Artikels daran orientieren.&
+    40min & 20min \\ \hline \nopagebreak
+    \multicolumn{2}{|l|}{\bf Pendenzen} &\multicolumn{2}{p{16.0cm}|}{
+      \begin{itemize}
+        \item Beginn der Arbeiten am Wikipedia-Artikel
+	\begin{itemize}
+	  \item Erstellen des Rasters zum Untersuchen der Wikipedia-Artikel
+	  \item Wikipediaartikel zu \"ahnlichen Themen untersuchen
+	  \item Vorlage f\"ur den eigenen Artikel erstellen
+	 \end{itemize}
+	 \item neuen Termin mit Herr L\"uthi vereinbaren
+      \end{itemize}
+    }  & \multicolumn{2}{l|}{} \\ \hline
+  \end{longtable}
+\end{landscape}
+\end{document}

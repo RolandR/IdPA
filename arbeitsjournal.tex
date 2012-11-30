@@ -277,6 +277,64 @@ Zur Praxisarbeit z\"ahlt eine Webapplikation, die die Funktionsweise von Vigener
 Der Theorieteil umfasst den Wikipediaartikel zu dem Thema, eine Erl\"auterung der Funktionsweise der Verschl\"usselung und eine Beschreibung der Schw\"achen des Algorithmus. Diese Schw\"achen werden mithilfe geeigneter Krypto-Analyse-Software getestet. Die dabei gewonnenen Erkenntnisse werden im Praxisteil erl\"autert.
 \newpage
 foo bar
+\section{Wikipedia-Artikel}
+\subsection{Analyse \"ahnlicher Artikel}
+Um einen geeigneten Aufbau f\"ur unseren Artikel zu bestimmen, haben wir
+bestehende Wikipedia Eintr\"age zu \"ahnlichen Themen analysiert. Die
+untersuchten Artikel sind:
+\begin{itemize}
+  \item Caesar Verschl\"usselung
+  \item Digital Signature Algorithm (DSA)
+  \item RSA-Kryptosystem 
+  \item Elliptic Curve Cryptography (ECC)
+  \item Advanced Encryption Standard (AES) (auch rijndael)
+  \item One-Time-Pad
+\end{itemize}
+Hier sind die Ergbenisse dazu:
+
+\subsubsection{Aufbau}
+\begin{itemize}
+  \item viele der Artikel enthalten eine vereinfachende Grafik um den Ablauf der
+  Verschl\"usselung grob zu umreissen
+  \item Die untersuchten Artikel verf\"ugen \"uber einen Abschnitt, der den
+  historischen Hintergrund des Algorithmus erl\"autert
+  \item Allen gemeinsam ist auch, dass sie die Funktionsweise erkl\"aren
+  \item Die Sicherheit und Analyse dieser wird als Kryptoanalyse bezeichnet und
+  wird in der Regel in einem oder gar mehreren Kapitel behandelt
+  \item Bei modernen und aktuellen Algorithmen werden meistens verschiedene
+  Implementationen einzeln behandelt
+\end{itemize}
+\subsubsection{Stil}
+\begin{itemize}
+  \item Um die Funktionsweise sachlich korrekt zu beschreiben werden
+  mathematische Hintergr\"unde beleuchtet und durch Formeln dargestellt
+  \item Bei den simpleren Algorithmen kann ein einfaches Beispiel die
+  Funktionsweise gut umschreiben
+\end{itemize}
+
+\begin{quote}
+Der öffentliche Schlüssel (public key) ist ein Zahlenpaar \((e,N)\) und
+der private Schlüssel (private key) ein Zahlenpaar \((d,N)\), wobei \(N\) bei
+beiden Schlüsseln gleich ist. Man nennt \(N\) den RSA-Modul, \(e\) den
+Verschlüsselungsexponenten und d den Entschlüsselungsexponenten.
+\footnote{Verweis} %TODO
+\end{quote}
+
+An diesem Textbeispiel des RSA-Artikels ist gut ersichtlich, dass der Stil
+sachlich und pr\"azise ist. Der Text ist vielleicht f\"ur den Laien nicht
+unbedingt verst\"andlich - Der Artikel ist an Personen gerichtet, die bereits
+\"uber Kenntnisse der Kryptographie verf\"ugen. Die Vigen\`ere-Chiffre ist
+jedoch eher f\"ur Anf\"anger geeignet und wird auch oft als Beispiel dazu
+gebraucht. Daher sollte unser Artikel verst\"andlicher und auch f\"ur Anf\"anger
+gut verst\"andlich sein. Als Beispiel soll hier ein Ausschnitt aus dem Artikel
+\"uber die C\"asar-Verschl\"usselung dienen, die auch oft als Einstieg in die
+Kryptographie dient:
+
+\begin{quote}
+Neben der Nutzung eines veränderten Alphabets, in dem etwa Ziffern und
+Sonderzeichen enthalten sind, gibt es zudem die Variante der umgekehrten oder
+revertierten Caesar-Verschlüsselung.
+\end{quote}
 \bibliography{}{}
 \bibliographystyle{plain}
 \end{document}
