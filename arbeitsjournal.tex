@@ -17,7 +17,6 @@
 \usepackage{lipsum}
 \usepackage{mdwlist}
 \usepackage{multirow}
-\usepackage{natbib}
 
 \hypersetup{
     colorlinks,
@@ -61,12 +60,27 @@
 \listoftables
 \section{Managementsummary}
 \subsection{Aufgabenstellung}
+Unser Programm soll den Vigenere-Algorithmus visuell erkl\"aren. Ein
+Wikipedia-Artikel soll die n\"otigen Hintergrundinformationen zu dem Thema
+bereit halten. In Englischer Sprache gibt es bereits seit L\"angerem einen
+Artikel zu dem Tema, nicht so in der deutschen Wikipedia.
 \subsection{Varianten}
+Gerade in der Webentwicklung gibt es sehr viele unterschiedliche Tools und
+Ans\"atze. Es ist wichtig, dass man sich von Beginn weg f\"ur den am besten
+geeigneten Prozess und gute Werkzeuge entscheidet. In diesem Abschnitt werden
+die M\"oglichkeiten aufgezeigt und der Entscheid begr\"undet.
 \subsection{Konzept}
+Hier finden die Planung der Produkte statt. Der Aufbau der Applikation wird
+geplant und aufgezeigt. Die Struktur des Wikipedia-Artikels wird geplant. Hier
+werden sich auch erste Ablauf-Diagramme und Vorlagen finden.
 \subsection{Realisierung}
-\subsection{Testbericht}
+Im Verlauf der Arbeiten an den Produkten treten Unterschiede zu der Planung auf
+die sich zumeist aus unvorhergesehenen Komplikationen oder Vereinfachungen
+ergeben. Alle Unterschiede zur Planung werden hier erl\"autert und begr\"undet.
 \subsection{Mittelbedarf}
+Hier werden die n\"otigen Ressourcen aufgelistet.
 \subsection{Fazit}
+%TODO
 \part{Ablauf und Umfeld}
 \section{Projektmethode Hermes}
 \begin{figure}[htb!]
@@ -85,7 +99,7 @@ nur beschrieben.
 
 In den Abschnitten unten, werden wird die jeweilige Phase kurz erläutern und
 aufzeigen welche Teile dieses Dokumentes zu welcher Phase gehören.
-\newpage
+%\newpage
 \subsection{Initialisierung}
 \begin{itemize}
   \item Festlegung eines klar definierten organisatorischen und technischen
@@ -141,14 +155,34 @@ Diese Phase beinhaltet folgende Punkte dieser Dokumentation:
   \item 
 \end{itemize}
 \subsection{Einf\"uhrung}
+%TODO
 \subsection{Abschluss}
+%TODO
 \section{Aufgabenstellung}
 \subsection{Ausgangslage}
+Der Vigenere-Algorithmus ist bereits mehrere Hundert Jahre alt. Er ist
+einerseits intuitiv und auch f\"ur Laien leicht verst\"andlich. Trotzdem lassen
+sich daran einige wichtige Punkte von kryptografischen Systemen aufzeigen. Trotz
+der schnell verst\"andlichen St\"arken des Algorithmus l\"asst er sich heute mit
+sehr wenig Aufwand knacken. 
+
+Die meisten Webseiten die Vigenere grafisch erkl\"aren tun die mit Hilfe eines
+Java-Applets. Im Zeitalter von HTML5 ist der Einsatz von Java-Applets auf
+Webseiten aber fragw\"urdig und stark umstritten. Wir m\"ochten diese veralteten
+Versionen der grafischen Darstellung des klassischen Algorithmus durch eine
+zeitgerechte Web-Applikation in HTML/CSS/JS ersetzen.
+
+Auf der Englisch-sprachigen Wikipedia findet sich ein separater Artikel zu
+Vigenere's Algorithmus. In der Deutschen Wikipedia hingegen ist lediglich ein
+Artikel zu finden, der das Gebiet in einem breiteren Spektrum abdeckt und zu
+Vigenere nur wenige Informationen bietet. Dies m\"ochten wir mit einem Eintrag
+speziell zu diesem Tema \"andern.
 \subsection{Auftragsformulierung}
 % TODO
 % Einfuegen des Auftrages
 \subsubsection{Detaillierte Aufgabenstellung}
-\subsection{Tests}
+% TODO
+% Einfuegen des Auftrages
 \subsection{Mittel und Methoden}
 \begin{table}[h!]
  \centering
@@ -193,8 +227,13 @@ verschiedenen Browsern ist keine Neuheit.
 Niklaus Hofer hat bereits einfache Vigenere Implementationen in C++, Python und
 Java geschrieben und sich kurz theoretisch mit dem Thema auseinandergesetzt.
 
+Die beiden Autoren sind theoretisch mit dem Erstellen von Wikipedia-Artikeln
+vertraut, haben aber noch nie zuvor eigene Artikel verfasst.
 \section{Vorarbeiten}
+Es gibt zu dieser Arbeit keine Vorarbeiten.
 \section{Termine}
+Die wichtigsten Termine sind die Treffen mit den Lehrpersonen.
+%TODO
 \section{Arbeitsjournal}
 \begin{landscape}
   \section{Arbeitsjournal}
@@ -255,28 +294,119 @@ Java geschrieben und sich kurz theoretisch mit dem Thema auseinandergesetzt.
     % End section ------------------------------------------------------------
     % Beginn section ---------------------------------------------------------
     \hline
-    2012.10.22 & Roland &
-    Portieren des vorhandenen Codes nach JQuery. Der Code zur Generierung des Squares wird in ein Objekt \"ubernommen, dem sp\"ater verschiedene Funktionen hinzugef\"ugt werden k\"onnen.&
-    Die Javascript Programmierung wird durch die Verwendung von JQuery erleichtert. Die objektorientierte Programmierung ist zeitgem\"ass und bringe ebenfalls viele Vorteile mit sich.&
-    30min & 60min \\ \hline \nopagebreak
-    \multicolumn{2}{|l|}{\bf Pendenzen} &\multicolumn{2}{p{16.0cm}|}{Funktionen zum Highlighten der richtigen Spalten und Zeilen m\"ussen noch geschriben werden, damit die Verschl\"usselung grafisch dargestellt werden kann. Ausserdem m\"ussen die entsprechenden Werte ausgelesen werden. Danach sollten wir bereit f\"ur eine erste Besprechung mit Herr L\"uthi sein.}  & \multicolumn{2}{l|}{} \\ \hline
-    % End section ------------------------------------------------------------
-    % Beginn section ---------------------------------------------------------
-    \hline
     2012.10.31 & Roland &
     Versch\"onern der Highlight Funktion.&
     &
     40min & 40min \\ \hline \nopagebreak
     \multicolumn{2}{|l|}{\bf Pendenzen} &\multicolumn{2}{p{16.0cm}|}{}  & \multicolumn{2}{l|}{} \\ \hline
     % End section ------------------------------------------------------------
+    % Beginn section ---------------------------------------------------------
+    \hline
+    2012.11.23 & Niklaus &
+    Portieren des vorhandenen Protokolls (der Notizen) in eine richtige HERMES
+    Struktur&
+    Dies wird die Dokumentation deutlich \"ubersichtlicher machen.&
+    45min & 45min \\ \hline \nopagebreak
+    \multicolumn{2}{|l|}{\bf Pendenzen} &\multicolumn{2}{p{16.0cm}|}{HERMES ist
+    ein komplexer Standard. Das wird noch einiges an Zeit in Anspruch nehmen.}  & \multicolumn{2}{l|}{} \\ \hline
+    % End section ------------------------------------------------------------
+    % Beginn section ---------------------------------------------------------
+    \hline
+    2012.11.23 & Niklaus Hofer &
+    Besprechung mit Herr Tschopp \"uber den Projektstand und das geplante
+    weitere Vorgehen. & Bis jetzt siehts nicht schlecht aus. Wir sind gut im
+    Zeitplan. Allerdings sollten wir mit dem Erstellen des Wikipedia-Artikels
+    beginnen. Wir haben abgemacht, dass ein Entwurf der Struktur des Artikels
+    anfangs Dezember vorliegen sollte. Um diese Struktur zu erstellen, werden
+    wir andere Wikipedia-Artikel zu \"ahnlichen Themen auf ihren Aufbau
+    untersuche. Die Resultate werden wir festhalten und uns dann beim Erstellen
+    des eigenen Artikels daran orientieren.&
+    40min & 20min \\ \hline \nopagebreak
+    \multicolumn{2}{|l|}{\bf Pendenzen} &\multicolumn{2}{p{16.0cm}|}{
+      \begin{itemize}
+        \item Beginn der Arbeiten am Wikipedia-Artikel
+	\begin{itemize}
+	  \item Erstellen des Rasters zum Untersuchen der Wikipedia-Artikel
+	  \item Wikipediaartikel zu \"ahnlichen Themen untersuchen
+	  \item Vorlage f\"ur den eigenen Artikel erstellen
+	 \end{itemize}
+	 \item neuen Termin mit Herr L\"uthi vereinbaren
+      \end{itemize}
+    }  & \multicolumn{2}{l|}{} \\ \hline
+    % End section ------------------------------------------------------------
+    % Beginn section ---------------------------------------------------------
+    \hline
+    2012.11.30 & Niklaus und Roland &
+    Analyse von Wikipedia-Artikeln zu \"ahnlichen Themen. Erstellen einer
+    Struktur f\"ur unseren eigenen Artikel in Abh\"angigkeit unserer
+    Erkentnisse. Anlegen einer bibtex-Datenbank f\"ur die Referenzen.&
+    Das Analysieren der Artikel nimmt deutlich mehr Zeit in Anspruch als
+    geplant. Ausserdem m\"ussen wir aufpassen, dass wir uns an Artikeln
+    \"ahnlichen Schwirigkeitsgrads orientieren. Solche zu Themen wie RSA oder
+    AES (rejindael) sind vom Thema und folglich auch vom Aufbau her deutlich
+    komplexer als solche zu einfacheren Algorithmen.
+    &
+    45min & 90min \\ \hline \nopagebreak
+    \multicolumn{2}{|l|}{\bf Pendenzen} &\multicolumn{2}{p{16.0cm}|}{Als
+    n\"achstes wollen wir die Analyse der Artikel fertigstellen, damit wir in
+    den Ferien an dem Artikel arbeiten k\"onnen.
+    }  & \multicolumn{2}{l|}{} \\ \hline
+    % End section ------------------------------------------------------------
+    % Beginn section ---------------------------------------------------------
+    \hline
+    2012.12.13 & Niklaus und Roland &
+    Fertigstellen der Auswertung der untersuchten Wikipedia-Artikel. Erstellen
+    des Skelettes. Informationen zum Schreiben von Wikipeia-Artikeln sammenl.&
+    Die Vorlage f\"ur den Artikel sollte soweit bereit sein. Das Ganze hat aber
+    deutlich mehr Zeit gekostet als erwartet! Wikipedia selbst bietet einige
+    Artikel an die das Verfassen von Wikipedia-Eintr\"agen erl\"autern und
+    einige Regeln und Richtlinien enthalten. Darunter scheint aber nichts zu
+    sein, was nicht zimlich offensichtlich ist.
+    &
+    30min & 60min \\ \hline \nopagebreak
+    \multicolumn{2}{|l|}{\bf Pendenzen} &\multicolumn{2}{p{16.0cm}|}{Jetzt ist
+    das Meiste bereit f\"ur das Verfassen des Wikipdia-Eintrages. F\"ur die
+    mathematischen Erl\"auterungen m\"ussen wir einen Termin mit Herr L\"uthi
+    vereinbaren. Der Wikipedia-Artikel kann somit in die Phase Realisierung
+    \"ubergehen.}  & \multicolumn{2}{l|}{} \\ \hline
+    % End section ------------------------------------------------------------
   \end{longtable}
 \end{landscape}
 \section{Schlussbericht}
+%TODO
 \subsection{Vergleich Soll/Ist}
+%TODO
 \subsection{Pers\"onliches Fazit}
 \subsubsection{Niklaus Hofer}
+%TODO
 \subsubsection{Roland Rytz}
+%TODO
 \part{Projektdokumentation}
+\section{Voranalyse}
+\subsection{Situationsanalyse}
+\subsubsection{Analyse Ist-Zustand}
+Keines der Ziele ist erf\"ullt. Der Wikipedia-Artikel zum Thema \glqq
+Polyalphabetische Substitution\grqq kommt unseren Vorstellungen am n\"achsten
+und enth\"alt auch schon einige grundlegende Informationen. Die Ausf\"uhrungen
+spezifisch zu Vignere sind aber deutlich weniger detailliert als das im
+Englischen Artikel zu dem Thema der Fall ist.
+
+Der Umstand dass visualisierungen des Algorithmus zumeist nur als Java-Applet
+vorliegen behagt uns nicht. Wir sehen uns als Vertreter eines \glqq freien\grqq
+Internets, das unabh\"angig von (propriet\"aren) Browser-Plugins allen zur
+Verf\"ugung steht. Solche Browser-Plugins stellen ausserdem h\"aufig ein
+erhebliches Sicherheitsrisiko dar.
+\subsubsection{Analyse Soll-Zustand}
+Wie in der englischsprachigen Wikipedia soll die Deutsche einen dedizierten
+Artikel zu Vigeneres Algorithmus erhalten.
+
+Eine HTML5 Web-Applikation f\"ur Vigenere Algorithmus entledigt Nutzer von einer
+weiteren Ab\"angigkeit zum Java-Plugin.
+\subsection{Varianten}
+Im Bereich der Webentwicklung mussten wir uns f\"ur ein spezifisches Vorgehen
+entscheiden. Hier gibt es viele M\"oglichkeiten. Dieser Abschnitt wird die
+Varianten beschreiben und sie, mit Fokus auf unsere Anwendung, vergleichen.
+\subsection{Variantenentscheid}
 \section{Abstract}
 \section{Einleitung}
 Kryptografie ist ein wichtiges Teilgebiet nicht nur der Informatik, sondern auch
@@ -373,7 +503,7 @@ Hilfe bei der Formulierung unseres eigenen Textes dienen.
   der private Schlüssel (private key) ein Zahlenpaar \((d,N)\), wobei \(N\) bei
   beiden Schlüsseln gleich ist. Man nennt \(N\) den RSA-Modul, \(e\) den
   Verschlüsselungsexponenten und d den Entschlüsselungsexponenten.
-  \footnote{\citet{wiki:Caesar-Verschluesselung}}
+  \footnote{\cite{wiki:Caesar-Verschluesselung}}
 \end{quote}
 
 An diesem Textbeispiel des RSA-Artikels ist gut ersichtlich, dass der Stil
@@ -390,7 +520,7 @@ Kryptographie dient:
   Neben der Nutzung eines veränderten Alphabets, in dem etwa Ziffern und
   Sonderzeichen enthalten sind, gibt es zudem die Variante der umgekehrten oder
   revertierten Caesar-Verschlüsselung.
-  \footnote{\citet{wiki:RSA-Kryptosystem}}
+  \footnote{\cite{wiki:RSA-Kryptosystem}}
 \end{quote}
 
 \subsubsection{Entwurf}
