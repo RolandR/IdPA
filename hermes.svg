@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<svg version="1.2" baseProfile="tiny" viewBox="0 0 19157 2857" preserveAspectRatio="xMidYMid" fill-rule="evenodd" clip-path="url(#presentation_clip_path)" stroke-width="28.222" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0" xmlns:smil="urn:oasis:names:tc:opendocument:xmlns:smil-compatible:1.0" xmlns:anim="urn:oasis:names:tc:opendocument:xmlns:animation:1.0" xml:space="preserve">
+ <defs>
+  <clipPath id="presentation_clip_path" clipPathUnits="userSpaceOnUse">
+   <rect x="0" y="0" width="19157" height="2857"/>
+  </clipPath>
+ </defs>
+ <defs>
+  <font id="EmbeddedFont_1" horiz-adv-x="2048">
+   <font-face font-family="Calibri embedded" units-per-em="2048" font-weight="normal" font-style="normal" ascent="1879" descent="476"/>
+   <missing-glyph horiz-adv-x="2048" d="M 0,0 L 2047,0 2047,2047 0,2047 0,0 Z"/>
+   <glyph unicode="ü" horiz-adv-x="927" d="M 174,442 L 174,1120 358,1120 358,449 C 358,343 379,264 420,211 461,158 523,131 606,131 705,131 784,163 842,226 899,289 928,376 928,485 L 928,1120 1112,1120 1112,0 928,0 928,172 C 883,104 832,54 773,21 714,-12 645,-29 567,-29 438,-29 341,11 274,91 207,171 174,288 174,442 Z M 729,1552 L 932,1552 932,1350 729,1350 729,1552 Z M 338,1552 L 541,1552 541,1350 338,1350 338,1552 Z"/>
+   <glyph unicode="z" horiz-adv-x="901" d="M 113,1120 L 987,1120 987,952 295,147 987,147 987,0 88,0 88,168 780,973 113,973 113,1120 Z"/>
+   <glyph unicode="y" horiz-adv-x="1086" d="M 659,-104 C 607,-237 556,-324 507,-365 458,-406 392,-426 309,-426 L 162,-426 162,-272 270,-272 C 321,-272 360,-260 388,-236 416,-212 447,-155 481,-66 L 514,18 61,1120 256,1120 606,244 956,1120 1151,1120 659,-104 Z"/>
+   <glyph unicode="u" horiz-adv-x="927" d="M 174,442 L 174,1120 358,1120 358,449 C 358,343 379,264 420,211 461,158 523,131 606,131 705,131 784,163 842,226 899,289 928,376 928,485 L 928,1120 1112,1120 1112,0 928,0 928,172 C 883,104 832,54 773,21 714,-12 645,-29 567,-29 438,-29 341,11 274,91 207,171 174,288 174,442 Z "/>
+   <glyph unicode="t" horiz-adv-x="689" d="M 375,1438 L 375,1120 754,1120 754,977 375,977 375,369 C 375,278 388,219 413,193 438,167 488,154 565,154 L 754,154 754,0 565,0 C 423,0 325,27 271,80 217,133 190,229 190,369 L 190,977 55,977 55,1120 190,1120 190,1438 375,1438 Z"/>
+   <glyph unicode="s" horiz-adv-x="848" d="M 907,1087 L 907,913 C 855,940 801,960 745,973 689,986 631,993 571,993 480,993 411,979 366,951 320,923 297,881 297,825 297,782 313,749 346,725 379,700 444,677 543,655 L 606,641 C 737,613 830,574 885,523 940,472 967,400 967,309 967,205 926,123 844,62 761,1 648,-29 504,-29 444,-29 382,-23 317,-12 252,0 183,18 111,41 L 111,231 C 179,196 246,169 312,152 378,134 443,125 508,125 595,125 661,140 708,170 755,199 778,241 778,295 778,345 761,383 728,410 694,437 620,462 506,487 L 442,502 C 328,526 246,563 195,613 144,662 119,730 119,817 119,922 156,1004 231,1061 306,1118 412,1147 549,1147 617,1147 681,1142 741,1132 801,1122 856,1107 907,1087 Z"/>
+   <glyph unicode="r" horiz-adv-x="663" d="M 842,948 C 821,960 799,969 775,975 750,980 723,983 694,983 590,983 510,949 455,882 399,814 371,717 371,590 L 371,0 186,0 186,1120 371,1120 371,946 C 410,1014 460,1065 522,1098 584,1131 659,1147 748,1147 761,1147 775,1146 790,1145 805,1143 822,1140 841,1137 L 842,948 Z"/>
+   <glyph unicode="p" horiz-adv-x="1007" d="M 371,168 L 371,-426 186,-426 186,1120 371,1120 371,950 C 410,1017 459,1066 518,1099 577,1131 647,1147 729,1147 865,1147 976,1093 1061,985 1146,877 1188,735 1188,559 1188,383 1146,241 1061,133 976,25 865,-29 729,-29 647,-29 577,-13 518,20 459,52 410,101 371,168 Z M 997,559 C 997,694 969,801 914,878 858,955 781,993 684,993 587,993 510,955 455,878 399,801 371,694 371,559 371,424 399,318 455,241 510,164 587,125 684,125 781,125 858,164 914,241 969,318 997,424 997,559 Z"/>
+   <glyph unicode="o" horiz-adv-x="1033" d="M 627,991 C 528,991 450,953 393,876 336,799 307,693 307,559 307,425 336,320 393,243 450,166 528,127 627,127 725,127 803,166 860,243 917,320 946,426 946,559 946,692 917,797 860,875 803,952 725,991 627,991 Z M 627,1147 C 787,1147 913,1095 1004,991 1095,887 1141,743 1141,559 1141,376 1095,232 1004,128 913,23 787,-29 627,-29 466,-29 341,23 250,128 159,232 113,376 113,559 113,743 159,887 250,991 341,1095 466,1147 627,1147 Z"/>
+   <glyph unicode="n" horiz-adv-x="927" d="M 1124,676 L 1124,0 940,0 940,670 C 940,776 919,855 878,908 837,961 775,987 692,987 593,987 514,955 457,892 400,829 371,742 371,633 L 371,0 186,0 186,1120 371,1120 371,946 C 415,1013 467,1064 527,1097 586,1130 655,1147 733,1147 862,1147 959,1107 1025,1028 1091,948 1124,831 1124,676 Z"/>
+   <glyph unicode="l" horiz-adv-x="186" d="M 193,1556 L 377,1556 377,0 193,0 193,1556 Z"/>
+   <glyph unicode="i" horiz-adv-x="186" d="M 193,1120 L 377,1120 377,0 193,0 193,1120 Z M 193,1556 L 377,1556 377,1323 193,1323 193,1556 Z"/>
+   <glyph unicode="h" horiz-adv-x="927" d="M 1124,676 L 1124,0 940,0 940,670 C 940,776 919,855 878,908 837,961 775,987 692,987 593,987 514,955 457,892 400,829 371,742 371,633 L 371,0 186,0 186,1556 371,1556 371,946 C 415,1013 467,1064 527,1097 586,1130 655,1147 733,1147 862,1147 959,1107 1025,1028 1091,948 1124,831 1124,676 Z"/>
+   <glyph unicode="g" horiz-adv-x="1006" d="M 930,573 C 930,706 903,810 848,883 793,956 715,993 616,993 517,993 441,956 386,883 331,810 303,706 303,573 303,440 331,337 386,264 441,191 517,154 616,154 715,154 793,191 848,264 903,337 930,440 930,573 Z M 1114,139 C 1114,-52 1072,-193 987,-287 902,-379 773,-426 598,-426 533,-426 472,-421 415,-412 358,-402 302,-387 248,-367 L 248,-188 C 302,-217 355,-239 408,-253 461,-267 514,-274 569,-274 690,-274 780,-242 840,-180 900,-116 930,-21 930,106 L 930,197 C 892,131 843,82 784,49 725,16 654,0 571,0 434,0 323,52 239,157 155,262 113,400 113,573 113,746 155,885 239,990 323,1095 434,1147 571,1147 654,1147 725,1131 784,1098 843,1065 892,1016 930,950 L 930,1120 1114,1120 1114,139 Z"/>
+   <glyph unicode="f" horiz-adv-x="716" d="M 760,1556 L 760,1403 584,1403 C 518,1403 472,1390 447,1363 421,1336 408,1288 408,1219 L 408,1120 711,1120 711,977 408,977 408,0 223,0 223,977 47,977 47,1120 223,1120 223,1198 C 223,1323 252,1414 310,1471 368,1528 460,1556 586,1556 L 760,1556 Z"/>
+   <glyph unicode="e" horiz-adv-x="1033" d="M 1151,606 L 1151,516 305,516 C 313,389 351,293 420,227 488,160 583,127 705,127 776,127 844,136 911,153 977,170 1043,196 1108,231 L 1108,57 C 1042,29 974,8 905,-7 836,-22 765,-29 694,-29 515,-29 374,23 270,127 165,231 113,372 113,549 113,732 163,878 262,986 361,1093 494,1147 662,1147 813,1147 932,1099 1020,1002 1107,905 1151,773 1151,606 Z M 967,659 C 966,760 938,841 883,901 828,961 755,991 664,991 561,991 479,962 418,904 356,846 320,764 311,659 L 967,659 Z"/>
+   <glyph unicode="c" horiz-adv-x="874" d="M 999,1077 L 999,905 C 947,934 895,955 843,970 790,984 737,991 684,991 565,991 472,953 406,878 340,802 307,696 307,559 307,422 340,316 406,241 472,165 565,127 684,127 737,127 790,134 843,149 895,163 947,184 999,213 L 999,43 C 948,19 895,1 840,-11 785,-23 726,-29 664,-29 495,-29 361,24 262,130 163,236 113,379 113,559 113,742 163,885 264,990 364,1095 501,1147 676,1147 733,1147 788,1141 842,1130 896,1118 948,1100 999,1077 Z"/>
+   <glyph unicode="b" horiz-adv-x="1007" d="M 997,559 C 997,694 969,801 914,878 858,955 781,993 684,993 587,993 510,955 455,878 399,801 371,694 371,559 371,424 399,318 455,241 510,164 587,125 684,125 781,125 858,164 914,241 969,318 997,424 997,559 Z M 371,950 C 410,1017 459,1066 518,1099 577,1131 647,1147 729,1147 865,1147 976,1093 1061,985 1146,877 1188,735 1188,559 1188,383 1146,241 1061,133 976,25 865,-29 729,-29 647,-29 577,-13 518,20 459,52 410,101 371,168 L 371,0 186,0 186,1556 371,1556 371,950 Z"/>
+   <glyph unicode="a" horiz-adv-x="953" d="M 702,563 C 553,563 450,546 393,512 336,478 307,420 307,338 307,273 329,221 372,183 415,144 473,125 547,125 649,125 731,161 793,234 854,306 885,402 885,522 L 885,563 702,563 Z M 1069,639 L 1069,0 885,0 885,170 C 843,102 791,52 728,20 665,-13 589,-29 498,-29 383,-29 292,3 225,68 157,132 123,218 123,326 123,452 165,547 250,611 334,675 460,707 627,707 L 885,707 885,725 C 885,810 857,875 802,922 746,968 668,991 567,991 503,991 441,983 380,968 319,953 261,930 205,899 L 205,1069 C 272,1095 338,1115 401,1128 464,1141 526,1147 586,1147 748,1147 869,1105 949,1021 1029,937 1069,810 1069,639 Z"/>
+   <glyph unicode="V" horiz-adv-x="1351" d="M 586,0 L 16,1493 227,1493 700,236 1174,1493 1384,1493 815,0 586,0 Z"/>
+   <glyph unicode="R" horiz-adv-x="1139" d="M 909,700 C 952,685 995,654 1036,606 1077,558 1118,492 1159,408 L 1364,0 1147,0 956,383 C 907,483 859,549 813,582 766,615 703,631 623,631 L 403,631 403,0 201,0 201,1493 657,1493 C 828,1493 955,1457 1039,1386 1123,1315 1165,1207 1165,1063 1165,969 1143,891 1100,829 1056,767 992,724 909,700 Z M 403,1327 L 403,797 657,797 C 754,797 828,820 878,865 927,910 952,976 952,1063 952,1150 927,1216 878,1261 828,1305 754,1327 657,1327 L 403,1327 Z"/>
+   <glyph unicode="K" horiz-adv-x="1192" d="M 201,1493 L 403,1493 403,862 1073,1493 1333,1493 592,797 1386,0 1120,0 403,719 403,0 201,0 201,1493 Z"/>
+   <glyph unicode="I" horiz-adv-x="213" d="M 201,1493 L 403,1493 403,0 201,0 201,1493 Z"/>
+   <glyph unicode="E" horiz-adv-x="954" d="M 201,1493 L 1145,1493 1145,1323 403,1323 403,881 1114,881 1114,711 403,711 403,170 1163,170 1163,0 201,0 201,1493 Z"/>
+   <glyph unicode="A" horiz-adv-x="1351" d="M 700,1294 L 426,551 975,551 700,1294 Z M 586,1493 L 815,1493 1384,0 1174,0 1038,383 365,383 229,0 16,0 586,1493 Z"/>
+   <glyph unicode=" " horiz-adv-x="635"/>
+  </font>
+ </defs>
+ <g id="id2" class="Master_Slide" clip-path="url(#presentation_clip_path)">
+  <g id="bg-id2" visibility="visible" class="Background">
+   <rect fill="none" stroke="none" x="0" y="0" width="19157" height="2857"/>
+  </g>
+  <g id="bo-id2" visibility="visible" class="BackgroundObjects"/>
+ </g>
+ <g id="id1" class="Slide" visibility="visible" clip-path="url(#presentation_clip_path)">
+  <g class="com.sun.star.drawing.PolyPolygonShape">
+   <g>
+    <defs>
+     <mask id="mask1">
+      <g>
+       <defs>
+        <linearGradient id="gradient1" x1="1836" y1="556" x2="1836" y2="2857" gradientUnits="userSpaceOnUse">
+         <stop offset="0.5" style="stop-color:rgb(128,128,128)"/>
+         <stop offset="0.5" style="stop-color:rgb(128,128,128)"/>
+         <stop offset="1" style="stop-color:rgb(128,128,128)"/>
+         <stop offset="1" style="stop-color:rgb(128,128,128)"/>
+        </linearGradient>
+       </defs>
+       <path style="fill:url(#gradient1)" d="M 297,557 L 3376,557 3376,2856 297,2856 297,557 Z"/>
+      </g>
+     </mask>
+    </defs>
+    <g style="mask:url(#mask1)">
+     <path fill="rgb(205,205,205)" stroke="none" d="M 174,2028 L 2649,2028 2649,2603 3253,1453 2649,304 2649,878 174,878 174,2028 Z"/>
+     <rect fill="none" stroke="none" x="174" y="304" width="3080" height="2300"/>
+    </g>
+    <path fill="rgb(205,205,205)" stroke="none" d="M 123,1977 L 2598,1977 2598,2552 3202,1402 2598,253 2598,827 123,827 123,1977 Z"/>
+    <rect fill="none" stroke="none" x="123" y="253" width="3080" height="2300"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.TextShape">
+   <g>
+    <rect fill="none" stroke="none" x="149" y="253" width="2905" height="2301"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.PolyLineShape">
+   <g>
+    <path fill="none" stroke="rgb(64,64,64)" d="M 149,1977 L 2597,1977 2597,2552 3202,1402 2597,253 2597,827 149,827 149,827"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.TextShape">
+   <g>
+    <rect fill="none" stroke="none" x="149" y="253" width="3054" height="2301"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.PolyLineShape">
+   <g>
+    <path fill="none" stroke="rgb(166,195,221)" d="M 130,1969 L 147,1969 147,837 130,837 130,1969"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.TextShape">
+   <g>
+    <rect fill="none" stroke="none" x="127" y="253" width="3176" height="2301"/>
+    <g font-family="Calibri embedded" font-size="423px" font-style="normal" font-weight="400">
+     <g fill="rgb(0,0,0)" stroke="none">
+      <text x="282" y="1549">I</text>
+      <text x="409" y="1549">n</text>
+      <text x="676" y="1549">i</text>
+      <text x="794" y="1549">t</text>
+      <text x="959" y="1549">i</text>
+      <text x="1078" y="1549">a</text>
+      <text x="1336" y="1549">l</text>
+      <text x="1455" y="1549">i</text>
+      <text x="1573" y="1549">s</text>
+      <text x="1793" y="1549">i</text>
+      <text x="1912" y="1549">e</text>
+      <text x="2174" y="1549">r</text>
+      <text x="2348" y="1549">u</text>
+      <text x="2615" y="1549">n</text>
+      <text x="2881" y="1549">g</text>
+      <text x="3148" y="1549"> </text></g>
+    </g>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.PolyPolygonShape">
+   <g>
+    <defs>
+     <mask id="mask2">
+      <g>
+       <defs>
+        <linearGradient id="gradient2" x1="8478" y1="556" x2="8478" y2="2857" gradientUnits="userSpaceOnUse">
+         <stop offset="0.5" style="stop-color:rgb(128,128,128)"/>
+         <stop offset="0.5" style="stop-color:rgb(128,128,128)"/>
+         <stop offset="1" style="stop-color:rgb(128,128,128)"/>
+         <stop offset="1" style="stop-color:rgb(128,128,128)"/>
+        </linearGradient>
+       </defs>
+       <path style="fill:url(#gradient2)" d="M 7027,557 L 9930,557 9930,2856 7027,2856 7027,557 Z"/>
+      </g>
+     </mask>
+    </defs>
+    <g style="mask:url(#mask2)">
+     <path fill="rgb(205,205,205)" stroke="none" d="M 3539,2028 L 5867,2028 5867,2603 6442,1453 5867,304 5867,878 3539,878 3539,2028 Z"/>
+     <rect fill="none" stroke="none" x="3539" y="304" width="2904" height="2300"/>
+    </g>
+    <path fill="rgb(205,205,205)" stroke="none" d="M 3488,1977 L 5816,1977 5816,2552 6391,1402 5816,253 5816,827 3488,827 3488,1977 Z"/>
+    <rect fill="none" stroke="none" x="3488" y="253" width="2904" height="2300"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.TextShape">
+   <g>
+    <rect fill="none" stroke="none" x="3488" y="253" width="2905" height="2301"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.PolyLineShape">
+   <g>
+    <path fill="none" stroke="rgb(64,64,64)" d="M 3488,1977 L 5816,1977 5816,2552 6391,1402 5816,253 5816,827 3488,827 3488,1977"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.TextShape">
+   <g>
+    <rect fill="none" stroke="none" x="3488" y="253" width="2905" height="2301"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.TextShape">
+   <g>
+    <rect fill="none" stroke="none" x="3488" y="253" width="2905" height="2301"/>
+    <g font-family="Calibri embedded" font-size="423px" font-style="normal" font-weight="400">
+     <g fill="rgb(0,0,0)" stroke="none">
+      <text x="3713" y="1549">V</text>
+      <text x="3967" y="1549">o</text>
+      <text x="4225" y="1549">r</text>
+      <text x="4399" y="1549">a</text>
+      <text x="4657" y="1549">n</text>
+      <text x="4924" y="1549">a</text>
+      <text x="5182" y="1549">l</text>
+      <text x="5301" y="1549">y</text>
+      <text x="5550" y="1549">s</text>
+      <text x="5770" y="1549">e</text>
+      <text x="6033" y="1549"> </text></g>
+    </g>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.PolyPolygonShape">
+   <g>
+    <defs>
+     <mask id="mask3">
+      <g>
+       <defs>
+        <linearGradient id="gradient3" x1="14758" y1="556" x2="14758" y2="2857" gradientUnits="userSpaceOnUse">
+         <stop offset="0.5" style="stop-color:rgb(128,128,128)"/>
+         <stop offset="0.5" style="stop-color:rgb(128,128,128)"/>
+         <stop offset="1" style="stop-color:rgb(128,128,128)"/>
+         <stop offset="1" style="stop-color:rgb(128,128,128)"/>
+        </linearGradient>
+       </defs>
+       <path style="fill:url(#gradient3)" d="M 13307,557 L 16210,557 16210,2856 13307,2856 13307,557 Z"/>
+      </g>
+     </mask>
+    </defs>
+    <g style="mask:url(#mask3)">
+     <path fill="rgb(205,205,205)" stroke="none" d="M 6679,2028 L 9007,2028 9007,2603 9582,1453 9007,304 9007,878 6679,878 6679,2028 Z"/>
+     <rect fill="none" stroke="none" x="6679" y="304" width="2905" height="2300"/>
+    </g>
+    <path fill="rgb(205,205,205)" stroke="none" d="M 6628,1977 L 8956,1977 8956,2552 9531,1402 8956,253 8956,827 6628,827 6628,1977 Z"/>
+    <rect fill="none" stroke="none" x="6628" y="253" width="2905" height="2300"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.TextShape">
+   <g>
+    <rect fill="none" stroke="none" x="6628" y="253" width="2905" height="2301"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.PolyLineShape">
+   <g>
+    <path fill="none" stroke="rgb(64,64,64)" d="M 6628,1977 L 8956,1977 8956,2552 9531,1402 8956,253 8956,827 6628,827 6628,1977"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.TextShape">
+   <g>
+    <rect fill="none" stroke="none" x="6628" y="253" width="2905" height="2301"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.TextShape">
+   <g>
+    <rect fill="none" stroke="none" x="6628" y="253" width="2905" height="2301"/>
+    <g font-family="Calibri embedded" font-size="423px" font-style="normal" font-weight="400">
+     <g fill="rgb(0,0,0)" stroke="none">
+      <text x="7164" y="1549">K</text>
+      <text x="7422" y="1549">o</text>
+      <text x="7680" y="1549">n</text>
+      <text x="7947" y="1549">z</text>
+      <text x="8167" y="1549">e</text>
+      <text x="8430" y="1549">p</text>
+      <text x="8696" y="1549">t</text>
+      <text x="8862" y="1549"> </text></g>
+    </g>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.PolyPolygonShape">
+   <g>
+    <defs>
+     <mask id="mask4">
+      <g>
+       <defs>
+        <linearGradient id="gradient4" x1="21036" y1="556" x2="21036" y2="2857" gradientUnits="userSpaceOnUse">
+         <stop offset="0.5" style="stop-color:rgb(128,128,128)"/>
+         <stop offset="0.5" style="stop-color:rgb(128,128,128)"/>
+         <stop offset="1" style="stop-color:rgb(128,128,128)"/>
+         <stop offset="1" style="stop-color:rgb(128,128,128)"/>
+        </linearGradient>
+       </defs>
+       <path style="fill:url(#gradient4)" d="M 19585,557 L 22488,557 22488,2856 19585,2856 19585,557 Z"/>
+      </g>
+     </mask>
+    </defs>
+    <g style="mask:url(#mask4)">
+     <path fill="rgb(205,205,205)" stroke="none" d="M 9818,2028 L 12146,2028 12146,2603 12721,1453 12146,304 12146,878 9818,878 9818,2028 Z"/>
+     <rect fill="none" stroke="none" x="9818" y="304" width="2905" height="2300"/>
+    </g>
+    <path fill="rgb(205,205,205)" stroke="none" d="M 9767,1977 L 12095,1977 12095,2552 12670,1402 12095,253 12095,827 9767,827 9767,1977 Z"/>
+    <rect fill="none" stroke="none" x="9767" y="253" width="2905" height="2300"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.TextShape">
+   <g>
+    <rect fill="none" stroke="none" x="9767" y="253" width="2905" height="2301"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.PolyLineShape">
+   <g>
+    <path fill="none" stroke="rgb(64,64,64)" d="M 9767,1977 L 12095,1977 12095,2552 12670,1402 12095,253 12095,827 9767,827 9767,1977"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.TextShape">
+   <g>
+    <rect fill="none" stroke="none" x="9767" y="253" width="2905" height="2301"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.TextShape">
+   <g>
+    <rect fill="none" stroke="none" x="9767" y="253" width="2905" height="2301"/>
+    <g font-family="Calibri embedded" font-size="423px" font-style="normal" font-weight="400">
+     <g fill="rgb(0,0,0)" stroke="none">
+      <text x="9915" y="1549">R</text>
+      <text x="10190" y="1549">e</text>
+      <text x="10453" y="1549">a</text>
+      <text x="10711" y="1549">l</text>
+      <text x="10829" y="1549">i</text>
+      <text x="10948" y="1549">s</text>
+      <text x="11168" y="1549">i</text>
+      <text x="11287" y="1549">e</text>
+      <text x="11549" y="1549">r</text>
+      <text x="11723" y="1549">u</text>
+      <text x="11989" y="1549">n</text>
+      <text x="12256" y="1549">g</text>
+      <text x="12523" y="1549"> </text></g>
+    </g>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.PolyPolygonShape">
+   <g>
+    <defs>
+     <mask id="mask5">
+      <g>
+       <defs>
+        <linearGradient id="gradient5" x1="33600" y1="556" x2="33600" y2="2857" gradientUnits="userSpaceOnUse">
+         <stop offset="0.5" style="stop-color:rgb(128,128,128)"/>
+         <stop offset="0.5" style="stop-color:rgb(128,128,128)"/>
+         <stop offset="1" style="stop-color:rgb(128,128,128)"/>
+         <stop offset="1" style="stop-color:rgb(128,128,128)"/>
+        </linearGradient>
+       </defs>
+       <path style="fill:url(#gradient5)" d="M 32149,557 L 35052,557 35052,2856 32149,2856 32149,557 Z"/>
+      </g>
+     </mask>
+    </defs>
+    <g style="mask:url(#mask5)">
+     <path fill="rgb(205,205,205)" stroke="none" d="M 16100,2028 L 18428,2028 18428,2603 19003,1453 18428,304 18428,878 16100,878 16100,2028 Z"/>
+     <rect fill="none" stroke="none" x="16100" y="304" width="2904" height="2300"/>
+    </g>
+    <path fill="rgb(205,205,205)" stroke="none" d="M 16049,1977 L 18377,1977 18377,2552 18952,1402 18377,253 18377,827 16049,827 16049,1977 Z"/>
+    <rect fill="none" stroke="none" x="16049" y="253" width="2904" height="2300"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.TextShape">
+   <g>
+    <rect fill="none" stroke="none" x="16049" y="253" width="2905" height="2301"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.PolyLineShape">
+   <g>
+    <path fill="none" stroke="rgb(64,64,64)" d="M 16049,1977 L 18377,1977 18377,2552 18952,1402 18377,253 18377,827 16049,827 16049,1977"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.TextShape">
+   <g>
+    <rect fill="none" stroke="none" x="16049" y="253" width="2905" height="2301"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.TextShape">
+   <g>
+    <rect fill="none" stroke="none" x="16149" y="253" width="2905" height="2301"/>
+    <g font-family="Calibri embedded" font-size="423px" font-style="normal" font-weight="400">
+     <g fill="rgb(0,0,0)" stroke="none">
+      <text x="16484" y="1549">A</text>
+      <text x="16772" y="1549">b</text>
+      <text x="17039" y="1549">s</text>
+      <text x="17259" y="1549">c</text>
+      <text x="17492" y="1549">h</text>
+      <text x="17758" y="1549">l</text>
+      <text x="17877" y="1549">u</text>
+      <text x="18143" y="1549">s</text>
+      <text x="18364" y="1549">s</text>
+      <text x="18584" y="1549"> </text></g>
+    </g>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.PolyPolygonShape">
+   <g>
+    <defs>
+     <mask id="mask6">
+      <g>
+       <defs>
+        <linearGradient id="gradient6" x1="27296" y1="556" x2="27296" y2="2858" gradientUnits="userSpaceOnUse">
+         <stop offset="0.5" style="stop-color:rgb(128,128,128)"/>
+         <stop offset="0.5" style="stop-color:rgb(128,128,128)"/>
+         <stop offset="1" style="stop-color:rgb(128,128,128)"/>
+         <stop offset="1" style="stop-color:rgb(128,128,128)"/>
+        </linearGradient>
+       </defs>
+       <path style="fill:url(#gradient6)" d="M 25845,557 L 28748,557 28748,2857 25845,2857 25845,557 Z"/>
+      </g>
+     </mask>
+    </defs>
+    <g style="mask:url(#mask6)">
+     <path fill="rgb(205,205,205)" stroke="none" d="M 12948,2029 L 15276,2029 15276,2604 15851,1454 15276,304 15276,879 12948,879 12948,2029 Z"/>
+     <rect fill="none" stroke="none" x="12948" y="304" width="2904" height="2301"/>
+    </g>
+    <path fill="rgb(205,205,205)" stroke="none" d="M 12897,1978 L 15225,1978 15225,2553 15800,1403 15225,253 15225,828 12897,828 12897,1978 Z"/>
+    <rect fill="none" stroke="none" x="12897" y="253" width="2904" height="2301"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.TextShape">
+   <g>
+    <rect fill="none" stroke="none" x="12897" y="253" width="2905" height="2301"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.PolyLineShape">
+   <g>
+    <path fill="none" stroke="rgb(64,64,64)" d="M 12897,1978 L 15225,1978 15225,2553 15800,1403 15225,253 15225,828 12897,828 12897,1978"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.TextShape">
+   <g>
+    <rect fill="none" stroke="none" x="12897" y="253" width="2905" height="2301"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.TextShape">
+   <g>
+    <rect fill="none" stroke="none" x="12897" y="253" width="2905" height="2301"/>
+    <g font-family="Calibri embedded" font-size="423px" font-style="normal" font-weight="400">
+     <g fill="rgb(0,0,0)" stroke="none">
+      <text x="13128" y="1549">E</text>
+      <text x="13395" y="1549">i</text>
+      <text x="13513" y="1549">n</text>
+      <text x="13780" y="1549">f</text>
+      <text x="13928" y="1549">ü</text>
+      <text x="14195" y="1549">h</text>
+      <text x="14462" y="1549">r</text>
+      <text x="14635" y="1549">u</text>
+      <text x="14902" y="1549">n</text>
+      <text x="15168" y="1549">g</text>
+      <text x="15435" y="1549"> </text></g>
+    </g>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ClosedBezierShape">
+   <g>
+    <defs>
+     <mask id="mask7">
+      <g>
+       <defs>
+        <linearGradient id="gradient7" x1="6695" y1="2662" x2="6695" y2="2858" gradientUnits="userSpaceOnUse">
+         <stop offset="0.5" style="stop-color:rgb(128,128,128)"/>
+         <stop offset="0.5" style="stop-color:rgb(128,128,128)"/>
+         <stop offset="1" style="stop-color:rgb(128,128,128)"/>
+         <stop offset="1" style="stop-color:rgb(128,128,128)"/>
+        </linearGradient>
+       </defs>
+       <path style="fill:url(#gradient7)" d="M 6599,2663 L 6792,2663 6792,2857 6599,2857 6599,2663 Z"/>
+      </g>
+     </mask>
+    </defs>
+    <g style="mask:url(#mask7)">
+     <path fill="rgb(205,205,205)" stroke="none" d="M 3325,1454 L 3325,1454 C 3325,1436 3329,1421 3338,1406 3347,1390 3358,1379 3373,1370 3389,1362 3404,1357 3421,1357 3439,1357 3454,1362 3470,1370 3485,1379 3496,1390 3505,1406 3514,1421 3518,1436 3518,1454 L 3518,1454 3518,1454 C 3518,1472 3514,1487 3505,1502 3496,1518 3485,1529 3470,1538 3454,1546 3439,1551 3422,1551 3404,1551 3389,1546 3373,1538 3358,1529 3347,1518 3338,1502 3329,1487 3325,1472 3325,1454 Z"/>
+     <rect fill="none" stroke="none" x="3325" y="1357" width="194" height="195"/>
+    </g>
+    <path fill="rgb(0,0,0)" stroke="none" d="M 3274,1403 L 3274,1403 C 3274,1385 3278,1370 3287,1355 3296,1339 3307,1328 3322,1319 3338,1311 3353,1306 3370,1306 3388,1306 3403,1311 3419,1319 3434,1328 3445,1339 3454,1355 3463,1370 3467,1385 3467,1403 L 3467,1403 3467,1403 C 3467,1421 3463,1436 3454,1451 3445,1467 3434,1478 3419,1487 3403,1495 3388,1500 3371,1500 3353,1500 3338,1495 3322,1487 3307,1478 3296,1467 3287,1451 3278,1436 3274,1421 3274,1403 Z"/>
+    <rect fill="none" stroke="none" x="3274" y="1306" width="194" height="195"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.OpenBezierShape">
+   <g>
+    <path fill="none" stroke="rgb(64,64,64)" d="M 3274,1403 L 3274,1403 C 3274,1385 3278,1370 3287,1355 3296,1339 3307,1328 3322,1319 3338,1311 3353,1306 3370,1306 3388,1306 3403,1311 3419,1319 3434,1328 3445,1339 3454,1355 3463,1370 3467,1385 3467,1403 L 3467,1403 3467,1403 C 3467,1421 3463,1436 3454,1451 3445,1467 3434,1478 3419,1487 3403,1495 3388,1500 3371,1500 3353,1500 3338,1495 3322,1487 3307,1478 3296,1467 3287,1451 3278,1436 3274,1421 3274,1403"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ClosedBezierShape">
+   <g>
+    <defs>
+     <mask id="mask8">
+      <g>
+       <defs>
+        <linearGradient id="gradient8" x1="31809" y1="2662" x2="31809" y2="2858" gradientUnits="userSpaceOnUse">
+         <stop offset="0.5" style="stop-color:rgb(128,128,128)"/>
+         <stop offset="0.5" style="stop-color:rgb(128,128,128)"/>
+         <stop offset="1" style="stop-color:rgb(128,128,128)"/>
+         <stop offset="1" style="stop-color:rgb(128,128,128)"/>
+        </linearGradient>
+       </defs>
+       <path style="fill:url(#gradient8)" d="M 31713,2663 L 31906,2663 31906,2857 31713,2857 31713,2663 Z"/>
+      </g>
+     </mask>
+    </defs>
+    <g style="mask:url(#mask8)">
+     <path fill="rgb(205,205,205)" stroke="none" d="M 15882,1454 L 15882,1454 C 15882,1436 15886,1421 15895,1406 15904,1390 15915,1379 15930,1370 15946,1362 15961,1357 15978,1357 15996,1357 16011,1362 16027,1370 16042,1379 16053,1390 16062,1406 16071,1421 16075,1436 16075,1454 L 16075,1454 16075,1454 C 16075,1472 16071,1487 16062,1502 16053,1518 16042,1529 16027,1538 16011,1546 15996,1551 15979,1551 15961,1551 15946,1546 15930,1538 15915,1529 15904,1518 15895,1502 15886,1487 15882,1472 15882,1454 Z"/>
+     <rect fill="none" stroke="none" x="15882" y="1357" width="194" height="195"/>
+    </g>
+    <path fill="rgb(0,0,0)" stroke="none" d="M 15831,1403 L 15831,1403 C 15831,1385 15835,1370 15844,1355 15853,1339 15864,1328 15879,1319 15895,1311 15910,1306 15927,1306 15945,1306 15960,1311 15976,1319 15991,1328 16002,1339 16011,1355 16020,1370 16024,1385 16024,1403 L 16024,1403 16024,1403 C 16024,1421 16020,1436 16011,1451 16002,1467 15991,1478 15976,1487 15960,1495 15945,1500 15928,1500 15910,1500 15895,1495 15879,1487 15864,1478 15853,1467 15844,1451 15835,1436 15831,1421 15831,1403 Z"/>
+    <rect fill="none" stroke="none" x="15831" y="1306" width="194" height="195"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.OpenBezierShape">
+   <g>
+    <path fill="none" stroke="rgb(64,64,64)" d="M 15831,1403 L 15831,1403 C 15831,1385 15835,1370 15844,1355 15853,1339 15864,1328 15879,1319 15895,1311 15910,1306 15927,1306 15945,1306 15960,1311 15976,1319 15991,1328 16002,1339 16011,1355 16020,1370 16024,1385 16024,1403 L 16024,1403 16024,1403 C 16024,1421 16020,1436 16011,1451 16002,1467 15991,1478 15976,1487 15960,1495 15945,1500 15928,1500 15910,1500 15895,1495 15879,1487 15864,1478 15853,1467 15844,1451 15835,1436 15831,1421 15831,1403"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ClosedBezierShape">
+   <g>
+    <defs>
+     <mask id="mask9">
+      <g>
+       <defs>
+        <linearGradient id="gradient9" x1="25531" y1="2662" x2="25531" y2="2858" gradientUnits="userSpaceOnUse">
+         <stop offset="0.5" style="stop-color:rgb(128,128,128)"/>
+         <stop offset="0.5" style="stop-color:rgb(128,128,128)"/>
+         <stop offset="1" style="stop-color:rgb(128,128,128)"/>
+         <stop offset="1" style="stop-color:rgb(128,128,128)"/>
+        </linearGradient>
+       </defs>
+       <path style="fill:url(#gradient9)" d="M 25435,2663 L 25628,2663 25628,2857 25435,2857 25435,2663 Z"/>
+      </g>
+     </mask>
+    </defs>
+    <g style="mask:url(#mask9)">
+     <path fill="rgb(205,205,205)" stroke="none" d="M 12743,1454 L 12743,1454 C 12743,1436 12747,1421 12756,1406 12765,1390 12776,1379 12791,1370 12807,1362 12822,1357 12839,1357 12857,1357 12872,1362 12888,1370 12903,1379 12914,1390 12923,1406 12932,1421 12936,1436 12936,1454 L 12936,1454 12936,1454 C 12936,1472 12932,1487 12923,1502 12914,1518 12903,1529 12888,1538 12872,1546 12857,1551 12840,1551 12822,1551 12807,1546 12791,1538 12776,1529 12765,1518 12756,1502 12747,1487 12743,1472 12743,1454 Z"/>
+     <rect fill="none" stroke="none" x="12743" y="1357" width="194" height="195"/>
+    </g>
+    <path fill="rgb(0,0,0)" stroke="none" d="M 12692,1403 L 12692,1403 C 12692,1385 12696,1370 12705,1355 12714,1339 12725,1328 12740,1319 12756,1311 12771,1306 12788,1306 12806,1306 12821,1311 12837,1319 12852,1328 12863,1339 12872,1355 12881,1370 12885,1385 12885,1403 L 12885,1403 12885,1403 C 12885,1421 12881,1436 12872,1451 12863,1467 12852,1478 12837,1487 12821,1495 12806,1500 12789,1500 12771,1500 12756,1495 12740,1487 12725,1478 12714,1467 12705,1451 12696,1436 12692,1421 12692,1403 Z"/>
+    <rect fill="none" stroke="none" x="12692" y="1306" width="194" height="195"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.OpenBezierShape">
+   <g>
+    <path fill="none" stroke="rgb(64,64,64)" d="M 12692,1403 L 12692,1403 C 12692,1385 12696,1370 12705,1355 12714,1339 12725,1328 12740,1319 12756,1311 12771,1306 12788,1306 12806,1306 12821,1311 12837,1319 12852,1328 12863,1339 12872,1355 12881,1370 12885,1385 12885,1403 L 12885,1403 12885,1403 C 12885,1421 12881,1436 12872,1451 12863,1467 12852,1478 12837,1487 12821,1495 12806,1500 12789,1500 12771,1500 12756,1495 12740,1487 12725,1478 12714,1467 12705,1451 12696,1436 12692,1421 12692,1403"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ClosedBezierShape">
+   <g>
+    <defs>
+     <mask id="mask10">
+      <g>
+       <defs>
+        <linearGradient id="gradient10" x1="19251" y1="2662" x2="19251" y2="2858" gradientUnits="userSpaceOnUse">
+         <stop offset="0.5" style="stop-color:rgb(128,128,128)"/>
+         <stop offset="0.5" style="stop-color:rgb(128,128,128)"/>
+         <stop offset="1" style="stop-color:rgb(128,128,128)"/>
+         <stop offset="1" style="stop-color:rgb(128,128,128)"/>
+        </linearGradient>
+       </defs>
+       <path style="fill:url(#gradient10)" d="M 19155,2663 L 19348,2663 19348,2857 19155,2857 19155,2663 Z"/>
+      </g>
+     </mask>
+    </defs>
+    <g style="mask:url(#mask10)">
+     <path fill="rgb(205,205,205)" stroke="none" d="M 9603,1454 L 9603,1454 C 9603,1436 9607,1421 9616,1406 9625,1390 9636,1379 9651,1370 9667,1362 9682,1357 9699,1357 9717,1357 9732,1362 9748,1370 9763,1379 9774,1390 9783,1406 9792,1421 9796,1436 9796,1454 L 9796,1454 9796,1454 C 9796,1472 9792,1487 9783,1502 9774,1518 9763,1529 9748,1538 9732,1546 9717,1551 9700,1551 9682,1551 9667,1546 9651,1538 9636,1529 9625,1518 9616,1502 9607,1487 9603,1472 9603,1454 Z"/>
+     <rect fill="none" stroke="none" x="9603" y="1357" width="195" height="195"/>
+    </g>
+    <path fill="rgb(0,0,0)" stroke="none" d="M 9552,1403 L 9552,1403 C 9552,1385 9556,1370 9565,1355 9574,1339 9585,1328 9600,1319 9616,1311 9631,1306 9648,1306 9666,1306 9681,1311 9697,1319 9712,1328 9723,1339 9732,1355 9741,1370 9745,1385 9745,1403 L 9745,1403 9745,1403 C 9745,1421 9741,1436 9732,1451 9723,1467 9712,1478 9697,1487 9681,1495 9666,1500 9649,1500 9631,1500 9616,1495 9600,1487 9585,1478 9574,1467 9565,1451 9556,1436 9552,1421 9552,1403 Z"/>
+    <rect fill="none" stroke="none" x="9552" y="1306" width="195" height="195"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.OpenBezierShape">
+   <g>
+    <path fill="none" stroke="rgb(64,64,64)" d="M 9552,1403 L 9552,1403 C 9552,1385 9556,1370 9565,1355 9574,1339 9585,1328 9600,1319 9616,1311 9631,1306 9648,1306 9666,1306 9681,1311 9697,1319 9712,1328 9723,1339 9732,1355 9741,1370 9745,1385 9745,1403 L 9745,1403 9745,1403 C 9745,1421 9741,1436 9732,1451 9723,1467 9712,1478 9697,1487 9681,1495 9666,1500 9649,1500 9631,1500 9616,1495 9600,1487 9585,1478 9574,1467 9565,1451 9556,1436 9552,1421 9552,1403"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.ClosedBezierShape">
+   <g>
+    <defs>
+     <mask id="mask11">
+      <g>
+       <defs>
+        <linearGradient id="gradient11" x1="12973" y1="2662" x2="12973" y2="2858" gradientUnits="userSpaceOnUse">
+         <stop offset="0.5" style="stop-color:rgb(128,128,128)"/>
+         <stop offset="0.5" style="stop-color:rgb(128,128,128)"/>
+         <stop offset="1" style="stop-color:rgb(128,128,128)"/>
+         <stop offset="1" style="stop-color:rgb(128,128,128)"/>
+        </linearGradient>
+       </defs>
+       <path style="fill:url(#gradient11)" d="M 12877,2663 L 13070,2663 13070,2857 12877,2857 12877,2663 Z"/>
+      </g>
+     </mask>
+    </defs>
+    <g style="mask:url(#mask11)">
+     <path fill="rgb(205,205,205)" stroke="none" d="M 6464,1454 L 6464,1454 C 6464,1436 6468,1421 6477,1406 6486,1390 6497,1379 6512,1370 6528,1362 6543,1357 6560,1357 6578,1357 6593,1362 6609,1370 6624,1379 6635,1390 6644,1406 6653,1421 6657,1436 6657,1454 L 6657,1454 6657,1454 C 6657,1472 6653,1487 6644,1502 6635,1518 6624,1529 6609,1538 6593,1546 6578,1551 6561,1551 6543,1551 6528,1546 6512,1538 6497,1529 6486,1518 6477,1502 6468,1487 6464,1472 6464,1454 Z"/>
+     <rect fill="none" stroke="none" x="6464" y="1357" width="194" height="195"/>
+    </g>
+    <path fill="rgb(0,0,0)" stroke="none" d="M 6413,1403 L 6413,1403 C 6413,1385 6417,1370 6426,1355 6435,1339 6446,1328 6461,1319 6477,1311 6492,1306 6509,1306 6527,1306 6542,1311 6558,1319 6573,1328 6584,1339 6593,1355 6602,1370 6606,1385 6606,1403 L 6606,1403 6606,1403 C 6606,1421 6602,1436 6593,1451 6584,1467 6573,1478 6558,1487 6542,1495 6527,1500 6510,1500 6492,1500 6477,1495 6461,1487 6446,1478 6435,1467 6426,1451 6417,1436 6413,1421 6413,1403 Z"/>
+    <rect fill="none" stroke="none" x="6413" y="1306" width="194" height="195"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.OpenBezierShape">
+   <g>
+    <path fill="none" stroke="rgb(64,64,64)" d="M 6413,1403 L 6413,1403 C 6413,1385 6417,1370 6426,1355 6435,1339 6446,1328 6461,1319 6477,1311 6492,1306 6509,1306 6527,1306 6542,1311 6558,1319 6573,1328 6584,1339 6593,1355 6602,1370 6606,1385 6606,1403 L 6606,1403 6606,1403 C 6606,1421 6602,1436 6593,1451 6584,1467 6573,1478 6558,1487 6542,1495 6527,1500 6510,1500 6492,1500 6477,1495 6461,1487 6446,1478 6435,1467 6426,1451 6417,1436 6413,1421 6413,1403"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.PolyLineShape">
+   <g>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 53,2752 L 12700,2752 12700,53 53,53 53,2752"/>
+   </g>
+  </g>
+  <g class="com.sun.star.drawing.PolyLineShape">
+   <g>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 12827,2551 L 12827,2752 13145,2752"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 13304,2752 L 13622,2752"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 13781,2752 L 14099,2752"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 14258,2752 L 14576,2752"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 14735,2752 L 15053,2752"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 15212,2752 L 15530,2752"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 15689,2752 L 16007,2752"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 16166,2752 L 16484,2752"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 16643,2752 L 16961,2752"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 17120,2752 L 17438,2752"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 17597,2752 L 17915,2752"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 18074,2752 L 18392,2752"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 18551,2752 L 18869,2752"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 19028,2752 L 19053,2752 19053,2459"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 19053,2300 L 19053,1982"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 19053,1823 L 19053,1505"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 19053,1346 L 19053,1028"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 19053,869 L 19053,551"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 19053,392 L 19053,74"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 18915,53 L 18597,53"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 18438,53 L 18120,53"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 17961,53 L 17643,53"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 17484,53 L 17166,53"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 17007,53 L 16689,53"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 16530,53 L 16212,53"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 16053,53 L 15735,53"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 15576,53 L 15258,53"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 15099,53 L 14781,53"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 14622,53 L 14304,53"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 14145,53 L 13827,53"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 13668,53 L 13350,53"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 13191,53 L 12873,53"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 12827,166 L 12827,484"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 12827,643 L 12827,961"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 12827,1120 L 12827,1438"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 12827,1597 L 12827,1915"/>
+    <path fill="none" stroke="rgb(255,0,0)" d="M 12827,2074 L 12827,2392"/>
+   </g>
+  </g>
+ </g>
+</svg>
