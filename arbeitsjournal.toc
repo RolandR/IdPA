@@ -6,8 +6,8 @@
 \contentsline {subsection}{\numberline {2.1}Aufgabenstellung}{3}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Varianten}{3}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Konzept}{3}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Realisierung}{4}{subsection.2.4}
-\contentsline {subsection}{\numberline {2.5}Mittelbedarf}{4}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.4}Realisierung}{3}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Mittelbedarf}{3}{subsection.2.5}
 \contentsline {subsection}{\numberline {2.6}Fazit}{4}{subsection.2.6}
 \contentsline {part}{\numberline {I}Ablauf und Umfeld}{4}{part.1}
 \contentsline {section}{\numberline {3}Projektmethode Hermes}{4}{section.3}
@@ -19,34 +19,30 @@
 \contentsline {subsection}{\numberline {3.6}Abschluss}{5}{subsection.3.6}
 \contentsline {section}{\numberline {4}Aufgabenstellung}{5}{section.4}
 \contentsline {subsection}{\numberline {4.1}Ausgangslage}{5}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Auftragsformulierung}{6}{subsection.4.2}
-\contentsline {subsubsection}{\numberline {4.2.1}Detaillierte Aufgabenstellung}{6}{subsubsection.4.2.1}
-\contentsline {subsection}{\numberline {4.3}Mittel und Methoden}{6}{subsection.4.3}
-\contentsline {subsection}{\numberline {4.4}Projektorganisation}{6}{subsection.4.4}
-\contentsline {subsection}{\numberline {4.5}Projektrollen}{6}{subsection.4.5}
-\contentsline {section}{\numberline {5}Vorkenntnisse}{6}{section.5}
+\contentsline {subsection}{\numberline {4.2}Auftragsformulierung}{5}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Detaillierte Aufgabenstellung}{5}{subsubsection.4.2.1}
+\contentsline {subsection}{\numberline {4.3}Mittel und Methoden}{5}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Projektorganisation}{5}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Projektrollen}{5}{subsection.4.5}
+\contentsline {section}{\numberline {5}Vorkenntnisse}{5}{section.5}
 \contentsline {section}{\numberline {6}Vorarbeiten}{6}{section.6}
-\contentsline {section}{\numberline {7}Termine}{7}{section.7}
+\contentsline {section}{\numberline {7}Termine}{6}{section.7}
 \contentsline {section}{\numberline {8}Arbeitsjournal}{7}{section.8}
-\contentsline {section}{\numberline {9}Arbeitsjournal}{8}{section.9}
-\contentsline {section}{\numberline {10}Schlussbericht}{12}{section.10}
-\contentsline {subsection}{\numberline {10.1}Vergleich Soll/Ist}{12}{subsection.10.1}
-\contentsline {subsection}{\numberline {10.2}Pers\"onliches Fazit}{12}{subsection.10.2}
-\contentsline {subsubsection}{\numberline {10.2.1}Niklaus Hofer}{12}{subsubsection.10.2.1}
-\contentsline {subsubsection}{\numberline {10.2.2}Roland Rytz}{12}{subsubsection.10.2.2}
-\contentsline {part}{\numberline {II}Projektdokumentation}{12}{part.2}
-\contentsline {section}{\numberline {11}Voranalyse}{12}{section.11}
-\contentsline {subsection}{\numberline {11.1}Situationsanalyse}{12}{subsection.11.1}
-\contentsline {subsubsection}{\numberline {11.1.1}Analyse Ist-Zustand}{12}{subsubsection.11.1.1}
-\contentsline {subsubsection}{\numberline {11.1.2}Analyse Soll-Zustand}{12}{subsubsection.11.1.2}
-\contentsline {subsection}{\numberline {11.2}Varianten}{12}{subsection.11.2}
-\contentsline {subsection}{\numberline {11.3}Variantenentscheid}{12}{subsection.11.3}
-\contentsline {section}{\numberline {12}Abstract}{12}{section.12}
-\contentsline {section}{\numberline {13}Einleitung}{12}{section.13}
-\contentsline {section}{\numberline {14}Praxisarbeit}{13}{section.14}
-\contentsline {section}{\numberline {15}Theorieteil}{13}{section.15}
-\contentsline {section}{\numberline {16}Wikipedia-Artikel}{14}{section.16}
-\contentsline {subsection}{\numberline {16.1}Analyse \"ahnlicher Artikel}{14}{subsection.16.1}
-\contentsline {subsubsection}{\numberline {16.1.1}Aufbau}{14}{subsubsection.16.1.1}
-\contentsline {subsubsection}{\numberline {16.1.2}Stil}{14}{subsubsection.16.1.2}
-\contentsline {subsubsection}{\numberline {16.1.3}Entwurf}{15}{subsubsection.16.1.3}
+\contentsline {section}{\numberline {9}Schlussbericht}{11}{section.9}
+\contentsline {subsection}{\numberline {9.1}Vergleich Soll/Ist}{11}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}Pers\"onliches Fazit}{11}{subsection.9.2}
+\contentsline {subsubsection}{\numberline {9.2.1}Niklaus Hofer}{11}{subsubsection.9.2.1}
+\contentsline {subsubsection}{\numberline {9.2.2}Roland Rytz}{11}{subsubsection.9.2.2}
+\contentsline {part}{\numberline {II}Projektdokumentation}{11}{part.2}
+\contentsline {section}{\numberline {10}Voranalyse}{11}{section.10}
+\contentsline {subsection}{\numberline {10.1}Situationsanalyse}{11}{subsection.10.1}
+\contentsline {subsubsection}{\numberline {10.1.1}Analyse Ist-Zustand}{11}{subsubsection.10.1.1}
+\contentsline {subsubsection}{\numberline {10.1.2}Analyse Soll-Zustand}{11}{subsubsection.10.1.2}
+\contentsline {subsection}{\numberline {10.2}Varianten}{11}{subsection.10.2}
+\contentsline {subsection}{\numberline {10.3}Variantenentscheid}{11}{subsection.10.3}
+\contentsline {section}{\numberline {11}Konzept}{11}{section.11}
+\contentsline {subsection}{\numberline {11.1}Wikipedia-Eintrag}{11}{subsection.11.1}
+\contentsline {subsubsection}{\numberline {11.1.1}Analyse \"ahnlicher Artikel}{11}{subsubsection.11.1.1}
+\contentsline {paragraph}{Aufbau}{12}{section*.4}
+\contentsline {paragraph}{Stil}{12}{section*.5}
+\contentsline {subsubsection}{\numberline {11.1.2}Entwurf}{12}{subsubsection.11.1.2}
