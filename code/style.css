@@ -1,0 +1,172 @@
+      *
+      {
+        margin:0px;
+		padding:0px;
+		border:0px;
+      }
+      body{
+      	font-family: courier, monospace;
+      	font-size: 0.8em;
+      	color: #CCCCCC;
+      	background-color: #000000;
+      }
+      table
+      {	
+      	display: none;
+      	
+      	margin: 10px;
+      	font-size: 1.3em;
+      	border-top: 1px #555555 solid;
+      	border-left: 1px #555555 solid;
+      }
+      td
+      {
+      	/*background-color: #000000;*/
+        border:1px #555555 solid;
+		padding:2px;
+		border-top:0px;
+		border-left:0px;
+		width:15px;
+		height:15px;
+		text-align:center;
+		overflow: hidden;
+		
+		transition: opacity 1s ease-in-out;
+	   -moz-transition: opacity 1s ease-in-out;
+	   -webkit-transition: opacity 1s ease-in-out;
+      }
+      
+      div{
+      	background-color: #000000;
+      	margin: 0px;
+      }
+      
+      div:hover{
+      	animation-name: lightUp;
+      	animation-duration: 1s;
+      	animation-iteration-count: 1;
+      	
+      	-webkit-animation-name: lightUp;
+      	-webkit-animation-duration: 1s;
+      	-webkit-animation-iteration-count: 1;
+      }
+      
+      @keyframes lightUp {
+		0% {
+			background-color: #000000;
+		}
+
+		40% {
+			background-color: #00FF00;
+		}
+		
+		60% {
+			background-color: #FFFF00;
+		}
+		
+		100% {
+			background-color: #000000;
+		}
+	}
+      .horizontalHighlight{
+      	
+      	color: #000000;
+      	
+      	background: #258dc8; /* Old browsers */
+		background: -moz-linear-gradient(top, #258dc8 0%, #87b0c6 47%, #87b0c6 50%, #258dc8 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#258dc8), color-stop(47%,#87b0c6), color-stop(50%,#87b0c6), color-stop(100%,#258dc8)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, #258dc8 0%,#87b0c6 47%,#87b0c6 50%,#258dc8 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, #258dc8 0%,#87b0c6 47%,#87b0c6 50%,#258dc8 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top, #258dc8 0%,#87b0c6 47%,#87b0c6 50%,#258dc8 100%); /* IE10+ */
+		background: linear-gradient(to bottom, #258dc8 0%,#87b0c6 47%,#87b0c6 50%,#258dc8 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#258dc8', endColorstr='#258dc8',GradientType=0 ); /* IE6-9 */
+      }
+      .verticalHighlight{
+      	
+      	color: #000000;
+      	
+      	background: #28d391; /* Old browsers */
+		background: -moz-linear-gradient(left, #28d391 0%, #87c49c 44%, #87c49c 50%, #28d391 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, right top, color-stop(0%,#28d391), color-stop(44%,#87c49c), color-stop(50%,#87c49c), color-stop(100%,#28d391)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(left, #28d391 0%,#87c49c 44%,#87c49c 50%,#28d391 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(left, #28d391 0%,#87c49c 44%,#87c49c 50%,#28d391 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(left, #28d391 0%,#87c49c 44%,#87c49c 50%,#28d391 100%); /* IE10+ */
+		background: linear-gradient(to right, #28d391 0%,#87c49c 44%,#87c49c 50%,#28d391 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#28d391', endColorstr='#28d391',GradientType=1 ); /* IE6-9 */
+      }
+      .cellHighlight{
+      	
+      	color: #000000;
+      	
+      	background: #ecffaf; /* Old browsers */
+		background: -moz-radial-gradient(center, ellipse cover, #ecffaf 17%, #94ff30 100%); /* FF3.6+ */
+		background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(17%,#ecffaf), color-stop(100%,#94ff30)); /* Chrome,Safari4+ */
+		background: -webkit-radial-gradient(center, ellipse cover, #ecffaf 17%,#94ff30 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-radial-gradient(center, ellipse cover, #ecffaf 17%,#94ff30 100%); /* Opera 12+ */
+		background: -ms-radial-gradient(center, ellipse cover, #ecffaf 17%,#94ff30 100%); /* IE10+ */
+		background: radial-gradient(ellipse at center, #ecffaf 17%,#94ff30 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ecffaf', endColorstr='#94ff30',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+      }
+      
+      #inputBox{
+      	position: absolute;
+      	border: 1px #555555 solid;
+      	background-color: #111111;
+      	width: 400px;
+      	height: 270px;
+      	margin-top: 10px;
+      	margin-left: -210px;
+      	left: 50%;
+      	padding: 10px;
+      	overflow: hidden;
+      }
+      
+      input, textArea, select{
+      	display: block;
+      	
+      	font-family: courier, monospace;
+      	font-size: 1.5em;
+      	
+      	border: 1px #555555 solid;
+      	width: 100%;
+      	height: 30px;
+      	color: #00CC33;
+      	padding-left: 5px;
+      	padding-right: 5px;
+      	margin-bottom: 10px;
+      	
+      	background: #000000; /* Old browsers */
+		background: -moz-linear-gradient(top, #000000 0%, #2d2d2d 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000000), color-stop(100%,#2d2d2d)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, #000000 0%,#2d2d2d 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, #000000 0%,#2d2d2d 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top, #000000 0%,#2d2d2d 100%); /* IE10+ */
+		background: linear-gradient(to bottom, #000000 0%,#2d2d2d 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#2d2d2d',GradientType=0 ); /* IE6-9 */
+      }
+      
+      option{
+      	background-color: #222222;
+      }
+      
+      input:hover, textArea:hover, select:hover{
+      	border-color: #999999;
+      }
+      
+      #textInput{
+      	width: 400px;
+      	height: 150px;
+      }
+      
+      #encryptButton, #decryptButton{
+      	display: inline-block;
+      	background: -webkit-linear-gradient(top, #2d2d2d 0%, #000000 100%); /* TODO: Moar browsers */
+      	border-radius: 5px;
+      	width: 190px;
+      	margin-right: 10px;
+      }
+      
+      #encryptButton:hover, #decryptButton:hover{
+      	background: -webkit-linear-gradient(top, #444444 0%, #222222 100%); /* TODO: Moar browsers */
+      	cursor: pointer;
+      }
