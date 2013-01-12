@@ -1,48 +1,122 @@
 <html>
   <head>
-    <title>Table</title>
-    <style>
-      *
-      {
-        margin:0px;
-	padding:0px;
-	border:0px;
-      }
-      table
-      {
-      }
-      td
-      {
-        border:1px #000000 solid;
-	padding:2px;
-	border-top:0px;
-	border-left:0px;
-	width:18px;
-	text-align:center;
-      }
-      tr
-      {
-	height:18px;
-      }
-    </style>
+    <title>Magic VigeneACCENTGRAPHEre Square</title>
+    <script src="jquery-1.8.2.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script>
       window.onload=function()
       {
-        console.log("window ready")
-	var squarestr = "";
-	for( var i=0; i<26; i++)
-	{
-	  squarestr=squarestr+"<tr>";
-	  for( var u=0; u<26; u++)
-	  {
-	    var character = 65+((u+i)%26);
-	    squarestr=squarestr+"<td>"+String.fromCharCode(character)+"</td>";
-	  }
-	  squarestr=squarestr+"</tr>";
-	}
-	document.getElementById("vsquare").innerHTML = squarestr;
+        var letterSquare = new LetterSquare("vsquare");
       }
-
+      
+      function logThis(message){ //allows you to toggle
+      	var logIsEnabled = false; //if console.log should be enabled
+      	if(logIsEnabled){
+      		console.log(message);
+      	}
+      }
+      
+      /*
+      LetterSquare generates and handles the Vigenère table 
+      and offers function to access letters at certain positions
+      as well as highlighting them.
+      */
+      
+      var LetterSquare = function(
+      	tableId	//Id of the <table> tag which will be used to generate the sqare
+      ){
+      	var tableId = tableId;
+      	initiate(tableId);
+      	
+      	
+      	highlightAtChars('U','O');
+      	console.log(getCharAtChars('U','O'));
+      	
+      	//Generates the Vigenère square using the basic alphabet
+      	function initiate(tableId){
+		var squarestr = "";
+		for( var i=0; i<26; i++)
+		{
+		  squarestr += "<tr y=\""+i+"\">";
+		  for( var u=0; u<26; u++)
+		  {
+		    var character = 65+((u+i)%26);
+		    squarestr += "<td x=\""+u+"\">"+String.fromCharCode(character)+"</td>";
+		  }
+		  squarestr += "</tr>";
+		}
+		$('#'+tableId).html(squarestr);
+      	}
+      	
+      	//Highlights the xPos column and yPos row. Requires capital chars.
+      	//Does not return the value at the position. Set a value to false
+      	//to only highlight the other.
+      	function highlightAtChars(xPos, yPos){
+      		if(yPos != false){
+      			yPos = yPos.toString().charCodeAt(0)-65;
+      		}
+      		if(xPos != false){
+      			xPos = xPos.toString().charCodeAt(0)-65;
+      		}
+      		highlight(xPos, yPos);
+      	}
+      	
+      	//Returns the character at xPos, yPos. Requires integers.
+      	//Does not highlight the position.
+      	function getCharAtPos(xPos, yPos){
+      		return $("#"+tableId+" tr[y=\""+yPos+"\"] td[x=\""+xPos+"\"]").html();
+      	}
+      	
+      	//Returns the character at letters xPos, yPos. Requires capital chars.
+      	//Does not highlight the position.
+      	function getCharAtChars(xPos, yPos){
+      		if(yPos != false){
+      			yPos = yPos.toString().charCodeAt(0)-65;
+      		}
+      		if(xPos != false){
+      			xPos = xPos.toString().charCodeAt(0)-65;
+      		}
+      		return getCharAtPos(xPos, yPos);
+      	}
+      	
+      	//Highlights a position at xPos or yPos or both. Requires integers.
+      	//Set one value to false to omit it and only highlight the other.
+      	//It is also a gebastu, but that's what you get when doing CSS stuff.
+      	function highlight(xPos, yPos){
+      		var tableContents = $("#"+tableId+" *");
+      		tableContents.removeClass("horizontalHighlight");
+      		tableContents.removeClass("verticalHighlight");
+      		tableContents.removeClass("cellHighlight");
+      		if(yPos != -1){
+      			$("#"+tableId+" tr[y=\""+yPos+"\"]").addClass("horizontalHighlight");
+      		}
+      		if(xPos != -1){
+      			$("#"+tableId+" td[x=\""+xPos+"\"]").addClass("verticalHighlight");
+      		}
+      		if(yPos != -1 && yPos != -1){
+      			$("#"+tableId+" tr[y=\""+yPos+"\"] td[x=\""+xPos+"\"]").addClass("cellHighlight");
+      		}
+      	}
+      }
+	
+	function startEncryption(){
+		var encryptionMethod = "mathematical";
+		var strToEncrypt = $('#textInput').val();
+		var passwordStr = $('#keyInput').val();
+		
+		//var strToEncrypt = document.getElementById('textInput').innerHTML;
+		//var passwordStr = document.getElementById('keyInput').value;
+		
+		console.log(strToEncrypt);
+		console.log(passwordStr);
+		
+		if(encryptionMethod == "mathematical"){
+			var preparedPassword = preparePassword(passwordStr);
+			var encryptedText = encryptText(preparedPassword, strToEncrypt);
+			$('#textInput').val(encryptedText);
+		}
+	}
+	
       /**
        * Create an array of numbers from the password string
        * Returns an array of numbers
@@ -86,7 +160,7 @@
        */
       function encryptText(pwArray, text)
       {
-        console.log("encryptText started");
+        logThis("encryptText started");
 	// We can't use the loop variable to read out a number from
 	// the pwArray. That's because it gets counted up on non characters
 	// (such as spaces) too. But we want these types of chars to be 
@@ -100,7 +174,7 @@
 	  var asciiValue = text.charCodeAt(n); 
 	  if(asciiValue > 96 && asciiValue < 123)
 	  {
-	    console.log("lower case");
+	    logThis("lower case");
 	    var calcValue = asciiValue-97;
 	    var foo = ((calcValue+pwArray[l%(pwArray.length)])%26)
 	    // Add 65 to make it an uppercase character
@@ -110,7 +184,7 @@
 	  }
 	  if(asciiValue > 64 && asciiValue < 91)
 	  {
-	    console.log("upper case")
+	    logThis("upper case")
 	    var calcValue = asciiValue-65;
 	    var foo = ((calcValue+pwArray[l%(pwArray.length)])%26)
 	    encText += String.fromCharCode(foo+65);
@@ -119,10 +193,10 @@
 	  }
 
 	  encText += String.fromCharCode(asciiValue);
-	  console.log("not a character");
+	  logThis("not a character");
 	}
 
-	console.log("encryptText is about to end");
+	logThis("encryptText is about to end");
 	return encText;
       }
 
@@ -136,7 +210,7 @@
 	  var asciiValue = text.charCodeAt(n);
 	  if(asciiValue > 96 && asciiValue < 123)
 	  {
-	    console.log("loewr case. What's that doing in there??");
+	    logThis("loewr case. What's that doing in there??");
 	    var calcValue = asciiValue-97;
 	    var foo = ((26+calcValue-pwArray[l%(pwArray.length)])%26)
 	    decText += String.fromCharCode(foo+65);
@@ -146,7 +220,7 @@
 
 	  if(asciiValue > 64 && asciiValue < 91)
 	  {
-	    console.log("upper case")
+	    logThis("upper case")
 	    var calcValue = asciiValue-65;
 	    var foo = ((26+calcValue-pwArray[l%(pwArray.length)])%26)
 	    decText += String.fromCharCode(foo+65);
@@ -155,7 +229,7 @@
 	  }
 
 	  decText += String.fromCharCode(asciiValue);
-	  console.log("not a character");
+	  logThis("not a character");
 	}
 	return decText;
       }
@@ -163,11 +237,21 @@
     </script>
   </head>
   <body onReady="genSquare">
-    <table id="vsquare" cellspacing=0 cellpadding=0>
+  	<div id="inputBox">
+	  	<input id="keyInput" value="Key" />
+	  	<textArea id="textInput"/>Text</textArea>
+	  	<select id="method">
+	  		<option name="mathematical" title="Use ASCII values to en-/decrypt">Solve mathematically</option>
+	  		<option name="graphicalSlow" title="Use an HTML table to en-/decrypt">Solve using table</option>
+	  		<option name="graphicalFast" title="Shows en-/decryption process step by step">Solve graphically</option>
+	  	</select>
+	  	<input type="Button" id="encryptButton" value="Encrypt" onclick="startEncryption();"/><input type="Button" id="decryptButton" value="Decrypt" onclick="startDecryption" />
+	  </div>
+    <table id="vsquare" cellspacing="0" cellpadding="0">
     </table>
     <script>
       // define a password
-      password = "Hello World";
+      password = "Hello Worold";
       // Then transform it into an array of numbers
       // everything will be uppercased. Everything that's not a character
       // will be ignored!
@@ -197,5 +281,8 @@
       }
 
     </script>
+    <div>
+		supdivdivdiv
+    </div>
   </body>
 </html>
