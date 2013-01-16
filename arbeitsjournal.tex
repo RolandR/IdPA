@@ -57,8 +57,8 @@
 \subsection{Referenzierte Dokumente}
 \subsection{Verwendete Abk\"urzungen}
 \tableofcontents
-\listoffigures
-\listoftables
+%\listoffigures
+%\listoftables
 \section{Managementsummary}
 \subsection{Aufgabenstellung}
 Unser Programm soll den Vigenere-Algorithmus visuell erkl\"aren. Ein
@@ -179,36 +179,60 @@ Artikel zu finden, der das Gebiet in einem breiteren Spektrum abdeckt und zu
 Vigenere nur wenige Informationen bietet. Dies m\"ochten wir mit einem Eintrag
 speziell zu diesem Tema \"andern.
 \subsection{Auftragsformulierung}
-% TODO
-% Einfuegen des Auftrages
-\subsubsection{Detaillierte Aufgabenstellung}
-% TODO
-% Einfuegen des Auftrages
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{|p{4cm}|p{12cm}|}\hline
+    \bf Oberthema & (NULL) \\ \hline
+    \bf Arbeitstitle & Visualiesierung Vigenère Chiffre und
+    Krypto-AnalyseVisualiesierung Vigen\'ere Chiffre und Krypto-Analyse \\
+    \hline
+    \bf Zielsetzungen & Implementation und Visualisierung der Funktionsweise
+    eines Vigenère Algorithmus. Verfassen eines dedizierten Wikipedia-Artikels
+    zu dem Thema auf Deutsch. \\ \hline
+    \bf Leitfragen & \begin{itemize*} \item Wie koennen einfache, kryptografische
+    Ablaeufe visualisiert und erklaert werden? \item Wie funktioniert der
+    Vigen\'ere Algorithmus? \item Wieso gilt der einst als unknackbar
+    bezeichnete Algorithmus heute als unsicher? \end{itemize*} \\ \hline
+    m\"ogliches \bf Produkt & \begin{itemize*} \item Visualisierung des Vigen\'ere
+    Algorithmus mit Javascript/HTML/CSS \item Deutscher Wikipedia Artikel zu dem
+    Thema des Vigen\'ere Algorithmus \end{itemize*} \\ \hline
+    \bf Adressaten & \begin{itemize*} \item Technik- und Kryptografie
+    Interessierte \item Leser der Wikipedia \end{itemize*} \\ \hline
+    Stichwörter zum geplanten Vorgehen & Vigen\'ere, Wikipedia, Kryptografie,
+    Verschluesselung, Wissensvermittlung, Visualisierung \\ \hline
+    \bf Beteiligte Schulf\"acher & \begin{itemize*} \item Mathematik \item
+    Deutsch \end{itemize*} \\ \hline
+    \bf Zweitkorrigierende Lehrkraft & Herr G. L\"uthi \\ \hline
+  \end{tabular}
+  \caption{Auftragsformulierung}
+  \label{tab:auftrag}
+\end{table}
+\newpage
 \subsection{Mittel und Methoden}
 \begin{table}[h!]
  \centering
-  \begin{tabular}{|l|p{10cm}|}
+  \begin{tabular}{|p{4cm}|p{12cm}|}
   \hline
-  Projektmethode & Hermes Light, Eine auf den Projektumfang zugeschnittene Variante von Hermes \\ \hline
-  Systeme & Computer zum Schreiben des Codes. Internetanschluss \\ \hline
-  Testing environment & System das in der Lage ist, virtuelle Mascheinen auszuf\"uhren zum Testen mit verschiedenen Browsern unter verschiedenen Systemen \\ \hline
-  Entwicklungssoftware & Editor, Browser, Javascript, JQuery \\ \hline
-  Dokumentation & Texteditor, pdflatex, MikTex \\ \hline
-  Entwicklungssprache & Javascript \\ \hline
-  Versionsverwaltung & git, github \\ \hline
+  Projektmethode & Hermes Light, Eine auf den Projektumfang zugeschnittene
+  Variante von Hermes \\ \hline Systeme & Computer zum Schreiben des Codes.
+  Internetanschluss \\ \hline Testing environment & System das in der Lage ist,
+  virtuelle Mascheinen auszuf\"uhren zum Testen mit verschiedenen Browsern unter
+  verschiedenen Systemen \\ \hline Entwicklungssoftware & Editor, Browser,
+  Javascript, JQuery \\ \hline Dokumentation & Texteditor, pdflatex, MikTex \\
+  \hline Entwicklungssprache & Javascript \\ \hline Versionsverwaltung & git,
+  github \\ \hline
   \end{tabular}
   \caption{Auflistung der Mittel und Methoden}
 \end{table}
 \subsection{Projektorganisation}
-% TODO
-% Grafik erstellen
-\subsection{Projektrollen}
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=0.8\textwidth]{rollen.pdf}
+  \includegraphics[width=0.6\textwidth]{rollen.pdf}
   \caption{Projektrollen, Visualisierung}
   \label{fig:projektrollen}
 \end{figure}
+\newpage
+\subsection{Projektrollen}
 \begin{table}[h!]
   \centering
   \begin{tabular}{|l|l|l|}
@@ -240,8 +264,19 @@ vertraut, haben aber noch nie zuvor eigene Artikel verfasst.
 \section{Vorarbeiten}
 Es gibt zu dieser Arbeit keine Vorarbeiten.
 \section{Termine}
-Die wichtigsten Termine sind die Treffen mit den Lehrpersonen.
-%TODO
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{|l|l|}\hline
+    Projektstart & Somewhen in August/September 2012 \\ \hline
+    Abgabepermin & Freitag, 25. Januar 2012 \\ \hline
+    Kontrolle Arbeitsjournal & 29. November 2012 \\ \hline
+    Kontrolle Arbeitsjouranl & 21. Dezember 2012 \\ \hline
+    1. Termin mit Herr L\"uthi & 13. November 2012 \\ \hline
+    2. Termin mit Herr L\"uthi & 8. Januar 2013 \\ \hline
+  \end{tabular}
+  \caption{Termine}
+  \label{tab:termine}
+\end{table}
 \begin{landscape}
   \section{Arbeitsjournal}
   Datum im Format Jahr.Monat.Tag
@@ -634,8 +669,117 @@ Selbst wenn also eine der Maschinen abst\"urzen sollte, ist eine vollst\"andige
 Kopie aller Arbeiten auf all den anderen Rechnern noch vorhanden.
 
 \section{Konzept}
-\subsection{Wikipedia-Eintrag}
-\subsubsection{Analyse \"ahnlicher Artikel}
+\subsection{Use-cases}
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{|l|p{12cm}|}\hline
+    \bf Use-case & \bf Verschl\"usseln von ASCII-Text \\ \hline
+    \bf Beschreibung & Der Nutzer m\"ochte einen 8-bit-ASCII Text
+    verschl\"usseln. \\ \hline
+    \bf Benutzer & Normaler Internetnutzer, evtl. Crypto-Interessiert \\ \hline
+    \bf Vorbedingungen & \begin{itemize*} \item Text muss 7-bit-ASCII formatiert
+    sein. 8-bit-ASCII und Unicode werden nicht unterst\"utzt \item
+    Javascript-f\"ahiger Browser \item Internetverbindung \end{itemize*} \\
+    \hline
+    \bf Ablauf & \begin{itemize*} \item Text/Nachricht in entsprechendes Feld eingeben
+    oder einf\"ugen \item Passwort in entsprechendes Feld eingeben \item
+    Verschl\"usseln-Knopf dr\"ucken \item Der verschl\"usselte Text erscheint
+    jetzt im Ausgabefeld \end{itemize*} \\ \hline
+    \bf Resultat & Der Verschl\"usselte Text wird dem Nutzer im entsprechenden
+    Feld angezeigt. \\ \hline
+  \end{tabular}
+  \caption{Use-case 1: Verschl\"usseln eines Textes}
+  \label{tab:usecase1}
+\end{table}
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{|l|p{12cm}|}\hline
+    \bf Use-case & \bf Entschl\"usseln von verschl\"usseltem Text \\ \hline
+    \bf Beschreibung & Der Nutzer m\"ochte einen zuvor verschl\"usselten Text
+    wieder entschl\"usseln \\ \hline
+    \bf Benutzer & Normaler Internetnutzer, evtl. Crypto-Interessiert \\ \hline
+    \bf Vorbedingungen & \begin{itemize*} \item Text muss 7-bit-ASCII formatiert
+    sein. 8-bit-ASCII und Unicode werden nicht unterst\"utzt \item
+    Javascript-f\"ahiger Browser \item Internetverbindung \end{itemize*} \\
+    \hline
+    \bf Ablauf & \begin{itemize*} \item Verschl\"usselten Text/ Verschl\"usselte
+    Nachricht in entsprechendes Feld eingeben
+    oder einf\"ugen \item Passwort in entsprechendes Feld eingeben \item
+    Entschl\"usseln-Knopf dr\"ucken \item Der entschl\"usselte Text erscheint
+    jetzt im Ausgabefeld \end{itemize*} \\ \hline
+    \bf Resultat & Der entschl\"usselte Text wird dem Nutzer im entsprechenden
+    Feld angezeigt. Der angezeigte Text entspricht der Version vor der
+    Verschl\"usselung \\ \hline
+  \end{tabular}
+  \caption{Use-case 2: Entschl\"usseln eines Textes}
+  \label{tab:usecase2}
+\end{table}
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{|l|p{12cm}|}\hline
+    \bf Use-case & \bf Visualisierung des Verschl\"usselungsprozesses \\ \hline
+    \bf Beschreibung & Ein (kurzer) Text wird verschl\"usselt. Die einzelnen
+    Schritte der Verschl\"usselung werden visualisiert. \\ \hline
+    \bf Benutzer & Crypto-Interessierter Nutzer \\ \hline
+    \bf Vorbedingungen & \begin{itemize*} \item Text muss 7-bit-ASCII formatiert
+    sein. 8-bit-ASCII und Unicode werden nicht unterst\"utzt \item
+    Javascript-f\"ahiger Browser \item Internetverbindung \end{itemize*} \\
+    \hline
+    \bf Ablauf & \begin{itemize*} \item Text in entsprechendes Feld eingeben.
+    \item Passwort in entsprechendes Feld eingeben. \item Verschl\"usseln-Knopf
+    dr\"ucken \item Die Verschl\"usselung der einzelnen Zeichen wird jetzt eines
+    nach dem anderen im Vig\'enere-Square dargestellt \item verschl\"usselter
+    Text wird im Ausgabefeld ausgegeben \end{itemize*} \\ \hline
+    \bf Resultat & Der verschl\"usselte Text wird dem Nutzer im entsprechenden
+    Feld angezeigt. \\ \hline
+  \end{tabular}
+  \caption{Use-case 3: Visualisierte Verschl\"usselung}
+  \label{tab:usecase3}
+\end{table}
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{|l|p{12cm}|}\hline
+    \bf Use-case & \bf Visualisierung des Entschl\"usselungsprozesses \\ \hline
+    \bf Beschreibung & Ein (kurzer) verschl\"usselter Text wird entschl\"usselt.
+    Die einzelnen Schritte der Verschl\"usselung werden visualisiert. \\ \hline
+    \bf Benutzer & Crypto-Interessierter Nutzer \\ \hline
+    \bf Vorbedingungen & \begin{itemize*} \item (verschl\"usselter) Text muss
+    7-bit-ASCII formatiert sein. 8-bit-ASCII und Unicode werden nicht
+    unterst\"utzt \item Javascript-f\"ahiger Browser \item Internetverbindung
+    \end{itemize*} \\ \hline
+    \bf Ablauf & \begin{itemize*} \item verschl\"usselten Text in entsprechendes
+    Feld eingeben.  \item Passwort in entsprechendes Feld eingeben. \item
+    Entschl\"usselungs-Knopf dr\"ucken \item Die Entschl\"usselung der einzelnen
+    Zeichen wird jetzt eines nach dem anderen im Vig\'enere-Square dargestellt
+    \item entschl\"usselter Text wird im Ausgabefeld ausgegeben \end{itemize*}
+    \\ \hline
+    \bf Resultat & Der entschl\"usselte Text wird dem Nutzer im entsprechenden
+    Feld angezeigt. Der angezeigte Text entspricht der Version vor der
+    Verschl\"usselung \\ \hline
+  \end{tabular}
+  \caption{Use-case 4: Visualisierte Entschl\"usselung}
+  \label{tab:usecase4}
+\end{table}
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{|l|p{12cm}|}\hline
+    \bf Use-case & \bf Wikipediaartikel lesen \\ \hline
+    \bf Beschreibung & Nutzer informiert sich auf der deutschen Wikipedia \"uber
+    den Vigen\`ere Algorithmus \\ \hline
+    \bf Benutzer & Crypto-Interessierter Nutzer/Wikipedia Leser \\ \hline
+    \bf Vorbedingungen & \begin{itemize*} \item Internetverbindung
+    \end{itemize*} \\ \hline
+    \bf Ablauf & \begin{itemize*}\item Nutzer besucht den deutschen
+    Wikipediaartikel zum Vigen\`ere Algorithmus \end{itemize*} \\ \hline
+    \bf Resultat & Der Wikipediaartikel wird angezeigt und enth\"alt die
+    gew\"unschten Informationen. \\ \hline
+  \end{tabular}
+  \caption{Use-case 5: Wikipediaartikel lesen}
+  \label{tab:usecase5}
+\end{table}
+\subsection{Konzept entwickeln}
+\subsubsection{Wikipedia-Eintrag}
+\paragraph{Analyse \"ahnlicher Artikel}
 Um einen geeigneten Aufbau f\"ur unseren Artikel zu bestimmen, haben wir
 bestehende Wikipedia Eintr\"age zu \"ahnlichen Themen analysiert. Die
 untersuchten Artikel sind:
@@ -649,7 +793,7 @@ untersuchten Artikel sind:
 \end{itemize*}
 Hier sind die Ergbenisse dazu:
 
-\paragraph{Aufbau}
+\subparagraph{Aufbau}
 \begin{itemize*}
   \item viele der Artikel enthalten eine vereinfachende Grafik um den Ablauf der
   Verschl\"usselung grob zu umreissen
@@ -661,7 +805,7 @@ Hier sind die Ergbenisse dazu:
   \item Bei modernen und aktuellen Algorithmen werden meistens verschiedene
   Implementationen einzeln behandelt
 \end{itemize*}
-\paragraph{Stil}
+\subparagraph{Stil}
 \begin{itemize*}
   \item Um die Funktionsweise sachlich korrekt zu beschreiben werden
   mathematische Hintergr\"unde beleuchtet und durch Formeln dargestellt
@@ -697,7 +841,7 @@ Kryptographie dient:
   \footnote{\cite{wiki:RSA-Kryptosystem}}
 \end{quote}
 
-\subsubsection{Entwurf}
+\paragraph{Entwurf}
 \begin{enumerate*}
   \item Einleitung
   \item Geschichte
@@ -764,6 +908,7 @@ Kryptographie dient:
 \newpage
 
 \listoftables
+\listoffigures
 
 \bibliography{arbeitsjournal.bib}{}
 \bibliographystyle{plain}
