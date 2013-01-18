@@ -5,4 +5,6 @@
 *.lot
 *.bbl
 *.blg
+*.lof
+*.lot
 *~

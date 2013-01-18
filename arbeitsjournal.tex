@@ -52,6 +52,8 @@
 \begin{document}
 \maketitle
 \newpage
+\begin{abstract}
+\end{abstract}
 \section{Dokumenteninformationen}
 \subsection{\"Anderungskontrolle}
 \subsection{Referenzierte Dokumente}
@@ -779,6 +781,20 @@ Kopie aller Arbeiten auf all den anderen Rechnern noch vorhanden.
   \label{tab:usecase5}
 \end{table}
 \subsection{Konzept entwickeln}
+\subsubsection{Applikationsstruktur}
+%TODO
+\paragraph{encrypt}
+Die Encrypt Funktion verschl\"usselt den Text mit einer mathematischen Funktion,
+die zimlich genau dem mathematischen Algorithmus f\"ur Vigen\'ere entspricht.
+Dazu muss zuerst der ASCII-Wert auf einen Wert zwischen 1 und 26 reduziert
+werden, was sp\"ater r\"uckg\"angig gemacht wird. Die Funktion ist in
+Abbildung \ref{fig:encrypt} \glqq \nameref{fig:encrypt}\grqq abgebildet.
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{encrypt.pdf}
+  \caption{UML Abbildung der Encrypt-Funktion}
+  \label{fig:encrypt}
+\end{figure}
 \subsubsection{Wikipedia-Eintrag}
 \paragraph{Analyse \"ahnlicher Artikel}
 Um einen geeigneten Aufbau f\"ur unseren Artikel zu bestimmen, haben wir
@@ -909,11 +925,8 @@ Kryptographie dient:
 \newpage
 
 \listoftables
-<<<<<<< HEAD
-=======
 \listoffigures
 
->>>>>>> 4844ebaedbed06515a44968d8edde80facf04fd9
 \bibliography{arbeitsjournal.bib}{}
 \bibliographystyle{plain}
 \end{document}
