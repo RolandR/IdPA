@@ -37,7 +37,6 @@
       }
       
       div{
-      	background-color: #000000;
       	margin: 0px;
       }
       
@@ -112,10 +111,10 @@
       	position: absolute;
       	border: 1px #555555 solid;
       	background-color: #111111;
-      	width: 400px;
+      	width: 600px;
       	height: 270px;
       	margin-top: 10px;
-      	margin-left: -210px;
+      	margin-left: -310px;
       	left: 50%;
       	padding: 10px;
       	overflow: hidden;
@@ -153,17 +152,28 @@
       	border-color: #999999;
       }
       
-      #textInput{
-      	width: 400px;
-      	height: 150px;
+      #textInput, #textOutput{
+      	width: 237px;
+      	height: 180px;
+		display: inline-block;
+		padding-top: 3px;
       }
+	#buttonsContainer{
+		display: inline-block;
+	}
+
+	#buttonsInnerContainer{
+		display: block;
+		width: 110px;
+	}
       
       #encryptButton, #decryptButton{
-      	display: inline-block;
+      	display: block;
       	background: -webkit-linear-gradient(top, #2d2d2d 0%, #000000 100%); /* TODO: Moar browsers */
       	border-radius: 5px;
-      	width: 190px;
-      	margin-right: 10px;
+      	width: 110px;
+      	position: relative;
+		top: -70px;
       }
       
       #encryptButton:hover, #decryptButton:hover{
