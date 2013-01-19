@@ -107,13 +107,25 @@
 		//var strToEncrypt = document.getElementById('textInput').innerHTML;
 		//var passwordStr = document.getElementById('keyInput').value;
 		
-		console.log(strToEncrypt);
-		console.log(passwordStr);
-		
 		if(encryptionMethod == "mathematical"){
 			var preparedPassword = preparePassword(passwordStr);
 			var encryptedText = encryptText(preparedPassword, strToEncrypt);
-			$('#textInput').val(encryptedText);
+			$('#textOutput').val(encryptedText);
+		}
+	}
+
+	function startDecryption(){
+		var encryptionMethod = "mathematical";
+		var strToDecrypt = $('#textOutput').val();
+		var passwordStr = $('#keyInput').val();
+		
+		//var strToEncrypt = document.getElementById('textInput').innerHTML;
+		//var passwordStr = document.getElementById('keyInput').value;
+		
+		if(encryptionMethod == "mathematical"){
+			var preparedPassword = preparePassword(passwordStr);
+			var decryptedText = decryptText(preparedPassword, strToDecrypt);
+			$('#textInput').val(decryptedText);
 		}
 	}
 	
@@ -238,14 +250,20 @@
   </head>
   <body onReady="genSquare">
   	<div id="inputBox">
-	  	<input id="keyInput" value="Key" />
-	  	<textArea id="textInput"/>Text</textArea>
-	  	<select id="method">
+<select id="method">
 	  		<option name="mathematical" title="Use ASCII values to en-/decrypt">Solve mathematically</option>
 	  		<option name="graphicalSlow" title="Use an HTML table to en-/decrypt">Solve using table</option>
 	  		<option name="graphicalFast" title="Shows en-/decryption process step by step">Solve graphically</option>
 	  	</select>
-	  	<input type="Button" id="encryptButton" value="Encrypt" onclick="startEncryption();"/><input type="Button" id="decryptButton" value="Decrypt" onclick="startDecryption" />
+		<input id="keyInput" value="Key" />
+	  	<textArea id="textInput"/>Text</textArea>
+		<div id="buttonsContainer">
+			<div id="buttonsInnerContainer">
+				<input type="Button" id="encryptButton" value="Encrypt&gt;" onclick="startEncryption();"/>
+				<input type="Button" id="decryptButton" value="&lt;Decrypt" onclick="startDecryption();" />
+			</div>
+		</div>
+		<textArea id="textOutput"/>DIVD</textArea>
 	  </div>
     <table id="vsquare" cellspacing="0" cellpadding="0">
     </table>
@@ -260,7 +278,7 @@
       // Now encrypt the text. Everything will be uppercased.
       // Everything that is not a character will be put back in the same
       // place unchanged
-      var encText = encryptText(pwArray, "Mein Hut der hat 3 Ecken, 3 Ecken hat mein Hut. Und haett er nicht 3 Ecken, so waer es nicht mein Hut. Ich brauche aber, damit die Analyse moeglich wird, einen deutlich laengeren Text. Deshalb schreib ich hier jetzt eine Menge 'Seich' rein. Ich hoffe das genuegt allmaehlich, denn ich mag mir nicht noch mehr mist ausdenken.");
+      /*var encText = encryptText(pwArray, "Mein Hut der hat 3 Ecken, 3 Ecken hat mein Hut. Und haett er nicht 3 Ecken, so waer es nicht mein Hut. Ich brauche aber, damit die Analyse moeglich wird, einen deutlich laengeren Text. Deshalb schreib ich hier jetzt eine Menge 'Seich' rein. Ich hoffe das genuegt allmaehlich, denn ich mag mir nicht noch mehr mist ausdenken.");
 
       document.write("<br />");
 
@@ -278,11 +296,8 @@
       for(var a=0; a < decText.length; a++)
       {
         document.write(decText[a]);
-      }
+      }*/
 
     </script>
-    <div>
-		supdivdivdiv
-    </div>
   </body>
 </html>
