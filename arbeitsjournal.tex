@@ -18,6 +18,7 @@
 \usepackage{lipsum}
 \usepackage{mdwlist}
 \usepackage{multirow}
+\usepackage{moreverb}
 
 \hypersetup{
     colorlinks,
@@ -783,6 +784,10 @@ Kopie aller Arbeiten auf all den anderen Rechnern noch vorhanden.
 \subsection{Konzept entwickeln}
 \subsubsection{Applikationsstruktur}
 %TODO
+Die Applikation wird strukturiert aufgebaut. Aufgrund der relativ geringen
+Applikationskomplexit\"at ziehen die Autoren dieses Paradigma der
+objektorientierten Programmierung vor. Im Anschluss werden einige der
+wichtigsten Funktionen kurz beschrieben.
 \paragraph{encrypt}
 Die Encrypt Funktion verschl\"usselt den Text mit einer mathematischen Funktion,
 die zimlich genau dem mathematischen Algorithmus f\"ur Vigen\'ere entspricht.
@@ -795,6 +800,101 @@ Abbildung \ref{fig:encrypt} \glqq \nameref{fig:encrypt}\grqq abgebildet.
   \caption{UML Abbildung der Encrypt-Funktion}
   \label{fig:encrypt}
 \end{figure}
+\paragraph{decrypt}
+Decrypt funktioniert sehr \"ahnlich wie die encrypt Funktion. Der einzige
+signifikante Teil der sich ge\"andert hat, ist die Berechnung die so umgekehrt
+wurde, dass der Text entschl\"usselt wird.
+\begin{verbatimtab}
+  var l=0;
+  # indiziert, wie an welcher Stelle im Text wir uns befinden
+  ...
+  var calcValue = asciiValue-97
+  # in ASCII, die kleinen Buchstaben beginnen bei 97. Die mathematische
+  # Operation wird aber einfacher, wenn man Werte zwischen 0 und 25 verwendet
+  # weshalb wir hier die 97 abziehen.
+  var foo =
+  (
+    (
+      26+calcValue-
+      # die 26 die hier addiert werden, stellen sicher, dass wir durch die
+      # folgende Substraktion nicht in einen negativen bereich fallen
+      pwArray[l%(pwArray.length)]
+      # Auslesen des Passworts-Zeichens der entsprechenden Stelle. Die
+      # Modulo-Operation stellt sicher, dass, sobald das Ende des Arrays
+      # erreicht ist, wieder von vorne begonnen wird.
+    )
+    %26
+    # Der erreichte Wert muss zwischen 0 und 25 liegen. Deshalb wenden wir erneut
+    # %eine Modulo-Operation an.
+  )
+  decText += String.fromCharCode(foo+97)
+  # Zum Schluss f\"ugen wir die 97 wieder hinzu um einen brauchbaren ASCII Wert
+  # zu erhalten. fromCharCode wandelt diesen Zahlenwert dann in eine Zahl um.
+\end{verbatimtab}
+\paragraph{preparePassword}
+F\"ur die Funktionen encrypt und decrypt ist es einfacher, wenn das Passwort als
+Array von Integern vorliegt als als Buchstaben. Deshalb wird es zuerst in die
+Funktion \glqq preparePassword\grqq eingespielt, die es als Liste von
+Zahlenwerten zur\"uckgibt. So muss in den ohnehin komplexen Formeln nicht auch
+immer noch der Passwort-Wert umgerechnet werden. Ausserdem kann so
+Rechenleistung gespart werden. Da das Passwort in der Regel k\"urzer ist als der
+zu verschl\"usselte Text, wird jedes Zeichen des Passwortes mehrmals verwendet.
+Dadurch, dass es zuvor einmal umgerchnet wird, muss nicht jedes Zeichen bei
+jeder Verwendung wieder umgerechnet werden. Ausserdem stellt die Funktion
+sicher, dass nur alphabetische Funktionen im verwendeten Passwort landen. Die
+Funktion ist in Abbildung \ref{fig:preparePassword} \glqq
+\nameref{fig:preparePassword}\grqq abgebildet.
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{preparePassword.pdf}
+  \caption{UML Abbildung der preparePassword Funktion}
+  \label{fig:preparePassword}
+\end{figure}
+\paragraph{visualSquare}
+Diese Funktion erstellt zeichnet ein Vigen\`ere Square. Das sollte in etwa so
+aussehen wie in Abbildung \ref{fig:square} \glqq \nameref{fig:square} \grqq
+dargestellt.
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.6\textwidth]{square.png}
+  \caption{Vigen\`ere Square}
+  \label{fig:square}
+\end{figure}
+
+Dazu kommen noch einige weitere Funktionen die vorallem als Wrapper dienen um
+die Verwendung zu vereinfachen oder bei der visuellen Darstellung behilflich
+sind. Genaueres findet sich dann in der %TODO
+\subsubsection{Oberfl\"achenentwurf}
+\paragraph{Bedienelemente}
+Die Applikation wird drei Eingabefelder darstellen. Das erste davon ist
+lediglich einzeilig und f\"ur die Eingabe des Passwortes vorgesehen. Die beiden
+anderen sind mehrzeilig und exakt gleich gross. Das eine davon enth\"alt den
+unverschl\"usselten Text, das andere den verschl\"usselten. Zwischen den beiden
+Feldern befinden sich zwei Kn\"opfe mit denen sich der Text verschl\"usseln,
+respektive entschl\"usseln l\"asst. Grafik \ref{fig:interface} \glqq
+\nameref{fig:interface} \grqq gibt einen Eindruck davon.
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.8\textwidth]{interface.png}
+  \caption{Entwurf der Programmoberfl\"ache}
+  \label{fig:interface}
+\end{figure}
+
+\paragraph{Vigen\`ere Rechteck}
+Das einzig andere wichtige Element ist das Vigen\`ere Rechteck. Mit dessen hilfe
+wird der Algorithmus visualisiert. Dazu wird jeweils zum aktuellen Zeichen des
+Passwortes die entsprechende Zeile und zum aktuellen Zeichen des Textes die
+entsprechende Spalte markiert. Der Buchstabe im Treffpunkt der beiden
+Markierungen wird ausgelesen. Grafik \ref{fig:select} \glqq \nameref{fig:select}
+\grqq zeigt wie die Autoren sich das vorstellen.
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.8\textwidth]{select.png}
+  \caption{Konzeptioneller Entwurf der Abbildung des Vigen\`ere Rechtecks}
+  \label{fig:select}
+\end{figure}
+
+
 \subsubsection{Wikipedia-Eintrag}
 \paragraph{Analyse \"ahnlicher Artikel}
 Um einen geeigneten Aufbau f\"ur unseren Artikel zu bestimmen, haben wir
