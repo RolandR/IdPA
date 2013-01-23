@@ -11,7 +11,7 @@
 \usepackage{longtable}
 \usepackage{enumitem}
 \usepackage{ngerman} % Make the document German
-\usepackage[table]{xcolor}
+\usepackage[table,usenames,dvipsnames]{xcolor}
 % Make the document German
 \usepackage{ngerman}
 \usepackage{fancyhdr}
@@ -27,6 +27,48 @@
     linkcolor=black,
     urlcolor=black
 }
+
+% SOURCE
+% http://vis4.net/blog/posts/javascript-quelltexte-in-latex/
+\lstdefinelanguage{JavaScript} {
+  morekeywords={
+    break,const,continue,delete,do,while,export,for,in,function,
+    if,else,import,in,instanceOf,label,let,new,return,switch,this,
+    throw,try,catch,typeof,var,void,with,yield
+  },
+  sensitive=false,
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]",
+  morestring=[d]'
+}
+
+\lstset{
+  frame=tb,
+  framesep=5pt,
+  basicstyle=\footnotesize\ttfamily,
+  showstringspaces=false,
+  keywordstyle=\ttfamily\bfseries\color{CadetBlue},
+  identifierstyle=\ttfamily,
+  stringstyle=\ttfamily\color{OliveGreen},
+  commentstyle=\color{ 	
+  CornflowerBlue},
+  rulecolor=\color{Gray},
+  xleftmargin=5pt,
+  xrightmargin=5pt,
+  aboveskip=\bigskipamount,
+  belowskip=\bigskipamount
+}
+
+% SOURCE
+% http://www.golatex.de/wie-css-quellcode-formatieren-listings-t4003.html
+\lstdefinelanguage{CSS}
+  {morekeywords={color,background,margin},
+  sensitive=false,
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]",
+} 
 
 
 \title{Arbeitsjournal}
@@ -54,6 +96,8 @@
 \maketitle
 \newpage
 \begin{abstract}
+%TODO
+foo bar
 \end{abstract}
 \section{Dokumenteninformationen}
 \subsection{\"Anderungskontrolle}
@@ -159,6 +203,8 @@ Diese Phase beinhaltet folgende Punkte dieser Dokumentation:
   \item 
 \end{itemize*}
 \subsection{Einf\"uhrung}
+Hier wird beschrieben, wie die Produkte zum Einsatz bereitgestellt werden.
+Diese Phase beinhaltet folgende Punkte dieser Dokumentation:
 %TODO
 \subsection{Abschluss}
 %TODO
@@ -782,6 +828,8 @@ Kopie aller Arbeiten auf all den anderen Rechnern noch vorhanden.
   \label{tab:usecase5}
 \end{table}
 \subsection{Konzept entwickeln}
+Bemerkug: Die Grafiken finden sich im Ahnang unter \glqq \ref{sec:grafiken}
+\nameref{sec:grafiken}\grqq
 \subsubsection{Applikationsstruktur}
 %TODO
 Die Applikation wird strukturiert aufgebaut. Aufgrund der relativ geringen
@@ -794,43 +842,10 @@ die zimlich genau dem mathematischen Algorithmus f\"ur Vigen\'ere entspricht.
 Dazu muss zuerst der ASCII-Wert auf einen Wert zwischen 1 und 26 reduziert
 werden, was sp\"ater r\"uckg\"angig gemacht wird. Die Funktion ist in
 Abbildung \ref{fig:encrypt} \glqq \nameref{fig:encrypt}\grqq abgebildet.
-\begin{figure}[h!]
-  \centering
-  \includegraphics[width=\textwidth]{encrypt.pdf}
-  \caption{UML Abbildung der Encrypt-Funktion}
-  \label{fig:encrypt}
-\end{figure}
 \paragraph{decrypt}
 Decrypt funktioniert sehr \"ahnlich wie die encrypt Funktion. Der einzige
 signifikante Teil der sich ge\"andert hat, ist die Berechnung die so umgekehrt
 wurde, dass der Text entschl\"usselt wird.
-\begin{verbatimtab}
-  var l=0;
-  # indiziert, wie an welcher Stelle im Text wir uns befinden
-  ...
-  var calcValue = asciiValue-97
-  # in ASCII, die kleinen Buchstaben beginnen bei 97. Die mathematische
-  # Operation wird aber einfacher, wenn man Werte zwischen 0 und 25 verwendet
-  # weshalb wir hier die 97 abziehen.
-  var foo =
-  (
-    (
-      26+calcValue-
-      # die 26 die hier addiert werden, stellen sicher, dass wir durch die
-      # folgende Substraktion nicht in einen negativen bereich fallen
-      pwArray[l%(pwArray.length)]
-      # Auslesen des Passworts-Zeichens der entsprechenden Stelle. Die
-      # Modulo-Operation stellt sicher, dass, sobald das Ende des Arrays
-      # erreicht ist, wieder von vorne begonnen wird.
-    )
-    %26
-    # Der erreichte Wert muss zwischen 0 und 25 liegen. Deshalb wenden wir erneut
-    # %eine Modulo-Operation an.
-  )
-  decText += String.fromCharCode(foo+97)
-  # Zum Schluss f\"ugen wir die 97 wieder hinzu um einen brauchbaren ASCII Wert
-  # zu erhalten. fromCharCode wandelt diesen Zahlenwert dann in eine Zahl um.
-\end{verbatimtab}
 \paragraph{preparePassword}
 F\"ur die Funktionen encrypt und decrypt ist es einfacher, wenn das Passwort als
 Array von Integern vorliegt als als Buchstaben. Deshalb wird es zuerst in die
@@ -844,22 +859,10 @@ jeder Verwendung wieder umgerechnet werden. Ausserdem stellt die Funktion
 sicher, dass nur alphabetische Funktionen im verwendeten Passwort landen. Die
 Funktion ist in Abbildung \ref{fig:preparePassword} \glqq
 \nameref{fig:preparePassword}\grqq abgebildet.
-\begin{figure}[h!]
-  \centering
-  \includegraphics[width=\textwidth]{preparePassword.pdf}
-  \caption{UML Abbildung der preparePassword Funktion}
-  \label{fig:preparePassword}
-\end{figure}
 \paragraph{visualSquare}
 Diese Funktion erstellt zeichnet ein Vigen\`ere Square. Das sollte in etwa so
 aussehen wie in Abbildung \ref{fig:square} \glqq \nameref{fig:square} \grqq
 dargestellt.
-\begin{figure}[h!]
-  \centering
-  \includegraphics[width=0.6\textwidth]{square.png}
-  \caption{Vigen\`ere Square}
-  \label{fig:square}
-\end{figure}
 
 Dazu kommen noch einige weitere Funktionen die vorallem als Wrapper dienen um
 die Verwendung zu vereinfachen oder bei der visuellen Darstellung behilflich
@@ -873,12 +876,6 @@ unverschl\"usselten Text, das andere den verschl\"usselten. Zwischen den beiden
 Feldern befinden sich zwei Kn\"opfe mit denen sich der Text verschl\"usseln,
 respektive entschl\"usseln l\"asst. Grafik \ref{fig:interface} \glqq
 \nameref{fig:interface} \grqq gibt einen Eindruck davon.
-\begin{figure}[h!]
-  \centering
-  \includegraphics[width=0.8\textwidth]{interface.png}
-  \caption{Entwurf der Programmoberfl\"ache}
-  \label{fig:interface}
-\end{figure}
 
 \paragraph{Vigen\`ere Rechteck}
 Das einzig andere wichtige Element ist das Vigen\`ere Rechteck. Mit dessen hilfe
@@ -887,13 +884,6 @@ Passwortes die entsprechende Zeile und zum aktuellen Zeichen des Textes die
 entsprechende Spalte markiert. Der Buchstabe im Treffpunkt der beiden
 Markierungen wird ausgelesen. Grafik \ref{fig:select} \glqq \nameref{fig:select}
 \grqq zeigt wie die Autoren sich das vorstellen.
-\begin{figure}[h!]
-  \centering
-  \includegraphics[width=0.8\textwidth]{select.png}
-  \caption{Konzeptioneller Entwurf der Abbildung des Vigen\`ere Rechtecks}
-  \label{fig:select}
-\end{figure}
-
 
 \subsubsection{Wikipedia-Eintrag}
 \paragraph{Analyse \"ahnlicher Artikel}
@@ -968,6 +958,100 @@ Kryptographie dient:
   \item Variationen
   \item Kryptoanalyse
 \end{enumerate*}
+\section{Realisierung}
+\subsection{Funktionen}
+\paragraph{encryptText}
+An der Encrypt-Funktion hat sich im Vergleich zur Konzept-Phase nichts
+nennenswertes ver\"andert. Sie wurde aber umbenannt zu encryptText.
+\paragraph{decryptText}
+Auch die decrypt-Funktion wurde umbenannt zu decryptText
+Hier ist der wichtige und zugleich kompexe Teil der decrypt-Funtkion genau
+erl\"autert. Dies kann sehr \"ahnlich auch auf die encrypt-Funktion angewant
+werden.
+%\lstset{language=JavaScript}
+\begin{lstlisting}[frame=single,language=JavaScript]
+  var l=0;
+  // indiziert, wie an welcher Stelle im Text wir uns befinden
+  ...
+  var calcValue = asciiValue-97
+  // in ASCII, die kleinen Buchstaben beginnen bei 97. Die mathematische
+  // Operation wird aber einfacher, wenn man Werte zwischen 0 und 25 verwendet
+  // weshalb wir hier die 97 abziehen.
+  var foo =
+  (
+    (
+      26+calcValue-
+      // die 26 die hier addiert werden, stellen sicher, dass wir durch die
+      // folgende Substraktion nicht in einen negativen bereich fallen
+      pwArray[l%(pwArray.length)]
+      // Auslesen des Passworts-Zeichens der entsprechenden Stelle. Die
+      // Modulo-Operation stellt sicher, dass, sobald das Ende des Arrays
+      // erreicht ist, wieder von vorne begonnen wird.
+    )
+    %26
+    // Der erreichte Wert muss zwischen 0 und 25 liegen. Deshalb wenden wir erneut
+    // %eine Modulo-Operation an.
+  )
+  decText += String.fromCharCode(foo+97)
+  // Zum Schluss fuegen wir die 97 wieder hinzu um einen brauchbaren ASCII Wert
+  // zu erhalten. fromCharCode wandelt diesen Zahlenwert dann in eine Zahl um.
+\end{lstlisting}
+\paragraph{preparePassword}
+Auch hier hat sich im Vergleich zum Konzept nur wenig ge\"andert.
+\paragraph{visualSquare}
+Besteht aus zwei Loops, die Felder in eine Tabelle einf\"ugen. Der \"aussere
+Loop erstellt die Zeilen, der innere die Felder innerhalb der aktuellen Zeile.
+Zur \"Ubersichtlichkeit werden innerhalb der Loops Zahlen zwischen 0 und 25
+verwendet, weshalb zur Darstellung als Buchstabe jeweils nocht 65 hinzugef\"ugt
+werden m\"ussen. Die generierten Spalten und Felder werden ausserdem jeweils mit
+einer eindeutigen ID versehen. Anhand dieser k\"onnen die Elemente sp\"ater im
+DOM gefunden und angesprochen werden.Der so erzeugte HTML Code wird
+schlussendlich in das DOM eingef\"ugt. Die Funktion ist in Abbildung
+\ref{fig:gensquare} \glqq \nameref{fig:gensquare}\grqq dargestellt.
+\paragraph{highlightAtChars}
+\label{highlightAtChars}
+Diese Funktion hebt eine Zeile und eine Spalte des Vigen\`ere Vierecks hervor.
+Dazu werden lediglich die ersten Buchstaben der Zeile beziehungsweise Reihe
+ben\"otigt. Dadurch dass die Felder alle eine eindeutige ID besitzen, ist die
+Funktion nicht unn\"otig komplex.
+
+highlightAtChars wird verwendet um die Verschl\"usselung zu visualisieren. So
+kann etwa das aktuelle Zeichen des Passwortes als Zeile, das aktuelle Zeichen
+des Textes als Spalte verwendet werden. Der Buchstabe der von beiden getroffen
+wird, ist das Zeichen das als n\"achstes dem Passwort angef\"ugt wird.
+\paragraph{highlight}
+\"Ahnlich der highlightAtChars Funktion, aber mit anderen Parametern.
+\paragraph{getCharAtPos}
+Mithilfe dieser Funktion l\"asst sich der nach dem in
+\glqq \nameref{highlightAtChars}\grqq
+erkl\"arten Schema erkannte Buchstabe aus der Tabelle auslesen. Dies dient
+vorallem dazu einen Geschwindigkeitsvergleich zwischen der mathematischen und
+der grafischen Methode zu erm\"oglichen.
+\paragraph{getCharAtChars}
+Dasselbe wie getCharAtPost, bloss mit anderen Argumenten.
+\paragraph{startEncryption}
+Diese Funktion wird in jedem Fall aufgerufen, sobalder der \glqq Encrypt\grqq
+Knopf gedr\"uckt wird. Diese Funktion erkennt dann, welcher Modus gew\"ahlt
+wurde (mathematisch oder grafisch) und ruft die entsprechenden Funtkonen auf.
+Im Falle der mathematischen Methode sind das \glqq preparePassword\grqq, \glqq
+encryptText\grqq und zum Schluss das Ausgeben des Resultates.
+\paragraph{startDecryption}
+Entspricht der \glqq startEncryption\grqq Funktion. Wird aber aufgerufen wenn
+der \glqq decrypt\grqq Knopf gedr\"uckt wird und leitet dann die Schritte ein um
+den Text zu entschl\"usseln.
+\section{Einf\"uhrung}
+In beiden F\"allen war die Einf\"uhrung nicht besonders aufw\"andig.
+\subsection{Wikipediaartikel}
+Der Wikipediaartikel wurde w\"ahrend der Arbeiten eingef\"uhrt. Wikipedia
+verfolgt alle \"Anderungen am Text und erlaubt es zwischen der Versionen zu
+wechseln. Das hat es m\"oglich gemacht die Arbeiten gleich auf der Seite
+durchzuf\"uhren.
+\subsection{Website}
+Unser Projekt kommt g\"anzlich ohne serverseitigen Code aus. Die Einf\"uhrung
+beschr\"ankt sich deshalb lediglich auf das Kopieren der Dateien auf eine
+Webserver. Roland Rytz hat die Dateien mit Hilfe von Filezilla auf seinen
+Webserver hochgeladen.
+
 %\section{Abstract}
 %\section{Einleitung}
 %Kryptografie ist ein wichtiges Teilgebiet nicht nur der Informatik, sondern auch
@@ -1021,12 +1105,60 @@ Kryptographie dient:
 %Praxisteil erl\"autert.
 %\newpage
 %foo bar
-
 \newpage
-
 \listoftables
 \listoffigures
-
 \bibliography{arbeitsjournal.bib}{}
 \bibliographystyle{plain}
+
+\part{Anhang}
+\label{part:anhang}
+\section{Wikipediaartikel}
+\section{Code}
+\subsection{table.html}
+\lstset{language=JavaScript,frame=single,breaklines=true}
+\lstinputlisting{code/table.html}
+\subsection{style.css}
+\lstset{language=CSS,frame=single,breaklines=true}
+\lstinputlisting{code/style.css}
+\section{Grafiken}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.8\textwidth]{select.png}
+  \caption{Konzeptioneller Entwurf der Abbildung des Vigen\`ere Rechtecks}
+  \label{fig:select}
+\end{figure}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.8\textwidth]{interface.png}
+  \caption{Entwurf der Programmoberfl\"ache}
+  \label{fig:interface}
+\end{figure}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.6\textwidth]{square.png}
+  \caption{Vigen\`ere Square}
+  \label{fig:square}
+\end{figure}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{preparePassword.pdf}
+  \caption{UML Abbildung der preparePassword Funktion}
+  \label{fig:preparePassword}
+\end{figure}
+\label{sec:grafiken}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{encrypt.pdf}
+  \caption{UML Abbildung der Encrypt-Funktion}
+  \label{fig:encrypt}
+\end{figure}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{gensquare.pdf}
+  \caption{UML Abbildung der Funktion zum generieren des grafischen Vigen\`ere
+  Quadrates}
+  \label{fig:gensquare}
+\end{figure}
+
 \end{document}
