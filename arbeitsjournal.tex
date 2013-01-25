@@ -19,6 +19,7 @@
 \usepackage{mdwlist}
 \usepackage{multirow}
 \usepackage{moreverb}
+\usepackage{cclicenses}
 
 \hypersetup{
     colorlinks,
@@ -71,8 +72,8 @@
 } 
 
 
-\title{Arbeitsjournal}
-\author{Niklaus Hofer, Roland Rytz}
+\title{Individuelle Projektarbeit - Arbeitsjournal}
+\author{Niklaus Hofer \and Roland Rytz}
 \date{\today{}}
 
 % Make title and author accessible in the header/footer
@@ -91,17 +92,34 @@
 \rhead{\Title}
 \fancyfoot[CE,CO]{Speicherdatum: \today{}}
 \fancyfoot[RE,RO]{\thepage}
+\fancyfoot[LE,LO]{\cc \bysa}
+\renewcommand{\abstractname}{Abstract}
 
 \begin{document}
 \maketitle
+KLassenlehrkraft: Herr U. Tschopp\\
+Zweitkorrigierende Lehrkraft: Herr G. L\"uthi
+\begin{figure}[h!]
+  \centering
+\includegraphics[width=0.8\textwidth]{title.png}
+\end{figure}
+
 \newpage
 \begin{abstract}
-%TODO
-foo bar
+  Unsere Arbeit befasst sich eingehend mit dem Vigen\`ere Algorithmus, einem
+  bereits \"uber 500 Jahre Alten Algorithmus zum Verschl\"usseln von
+  Textnachrichten. Das Dokument enth\"allt alles was es braucht um anhand von
+  Vigen\`ere Grundlagen der Kryptografie zu lernen. Der Wikipedia-Artikel in
+  Deutscher Sprache liefert die n\"otigen Hintergrundinformationen und Links zur
+  eingehenden Vertiefung. Die in Javascript geschriebene Applikation zeigt Schritt
+  f\"ur Schritt auf, wie Vigen\`ere funktioniert und bietet die M\"oglichkeit
+  selbst Code zu Ver- und Entschl\"usseln.. Das Arbeitsjournal dokumentiert
+  die Arbeit, dient zugleich aber auch als Dokumentation der Applikation. Dadurch
+  soll die Maintainability des Codes sichergestellt werden.
 \end{abstract}
 \section{Dokumenteninformationen}
-\subsection{\"Anderungskontrolle}
-\subsection{Referenzierte Dokumente}
+%\subsection{\"Anderungskontrolle}
+%\subsection{Referenzierte Dokumente}
 \subsection{Verwendete Abk\"urzungen}
 \begin{table}[h!]
   \centering
@@ -135,8 +153,6 @@ foo bar
 \end{table}
 
 \tableofcontents
-%\listoffigures
-%\listoftables
 \section{Managementsummary}
 \subsection{Aufgabenstellung}
 Unser Programm soll den Vigenere-Algorithmus visuell erkl\"aren. Ein
@@ -159,7 +175,9 @@ ergeben. Alle Unterschiede zur Planung werden hier erl\"autert und begr\"undet.
 \subsection{Mittelbedarf}
 Hier werden die n\"otigen Ressourcen aufgelistet.
 \subsection{Fazit}
-%TODO
+Dieses Dokument zeigt auf, wie der Vigen\`ere Visualisierer und der deutsche
+Wikipedia-Eintrag zum Vigen\`ere Algorithmus verfasst wurden. Es dient ausserdem
+als Dokumentation des Programmcodes.
 \part{Ablauf und Umfeld}
 \section{Projektmethode Hermes}
 \begin{figure}[htb!]
@@ -169,16 +187,11 @@ Hier werden die n\"otigen Ressourcen aufgelistet.
   \label{fig:hermes_schema}
 \end{figure}
 Wir haben die Projektmethode Hermes Light gew\"ahlt. Hermes Light ist eine
-vereinfachte und verkürzte Variante von Hermes. In der Grafik
-\ref{fig:hermes_schema} sind die sechs Phasen der Projektmethode aufgezeigt. Die
-letzten zwei Phasen, \glqq Einführung\grqq und \glqq Abschluss\grqq werden im
-Rahmen dieser IPA nur teilweise durchgeführt. Die Einf\"uhrung besteht im
-Bereitstellen der Webseite und des Artikels. Der Abschluss allerdings wird hier
-nur beschrieben.
+vereinfachte und verkürzte Variante von Hermes.\cite{adminch:hermes} In der Grafik
+\ref{fig:hermes_schema} sind die sechs Phasen der Projektmethode aufgezeigt.
 
 In den Abschnitten unten, werden wird die jeweilige Phase kurz erläutern und
 aufzeigen welche Teile dieses Dokumentes zu welcher Phase gehören.
-%\newpage
 \subsection{Initialisierung}
 \begin{itemize*}
   \item Festlegung eines klar definierten organisatorischen und technischen
@@ -187,9 +200,10 @@ aufzeigen welche Teile dieses Dokumentes zu welcher Phase gehören.
   \item Freigabe der Phase Voranalyse
 \end{itemize*}
 Diese Phase beinhaltet folgende Punkte dieser Dokumentation:
-% TODO
 \begin{itemize*}
-  \item 
+  \item \ref{sec:vorkenntnisse} \nameref{sec:vorkenntnisse}
+  \item \ref{sec:vorarbeiten} \nameref{sec:vorarbeiten}
+  \item \ref{sec:termine} \nameref{sec:termine}
 \end{itemize*}
 \subsection{Voranalyse}
 \begin{itemize*}
@@ -200,14 +214,9 @@ Diese Phase beinhaltet folgende Punkte dieser Dokumentation:
   \item Auswahl eines Lösungsvorschlages und Freigabe der Phase Konzept.
 \end{itemize*}
 Diese Phase beinhaltet folgende Punkte dieser Dokumentation:
-% TODO
 \begin{itemize*}
-  \item 
+  \item \ref{sec:voranalyse} \nameref{sec:voranalyse}
 \end{itemize*}
-% TODO
-Eigentlich beinhaltet diese Phase noch die Punkte \glqq Termine\grqq und \glqq
-Zeitplan\grqq . Aufgrund des Ablaufs der IPA und da diese Daten gegeben sind,
-habe ich oben genannte Punkte aber in die Phase Initialisierung verschoben.
 \subsection{Konzept}
 \begin{itemize*}
   \item Vollständige Darstellung des Systems, ausgehend vom gewählten Lösungsvorschlag
@@ -215,9 +224,8 @@ habe ich oben genannte Punkte aber in die Phase Initialisierung verschoben.
   \item Freigabe der Phase \glqq Realisierung\grqq
 \end{itemize*}
 Diese Phase beinhaltet folgende Punkte dieser Dokumentation:
-% TODO
 \begin{itemize*}
-  \item 
+  \item \ref{sec:konzept} \nameref{sec:konzept}
 \end{itemize*}
 Die Konzeptphase widmet sich der konkreten Gestaltung des Systems. Es beinhaltet
 die Struktur, die Architektur, das Design, sowie die Funktionalitäten der zu
@@ -229,16 +237,22 @@ entwickelnden Applikation.
   \item Freigabe der Phase Einführung
 \end{itemize*}
 Diese Phase beinhaltet folgende Punkte dieser Dokumentation:
-% TODO
 \begin{itemize*}
-  \item 
+  \item \ref{sec:realisierung} \nameref{sec:realisierung}
 \end{itemize*}
 \subsection{Einf\"uhrung}
 Hier wird beschrieben, wie die Produkte zum Einsatz bereitgestellt werden.
 Diese Phase beinhaltet folgende Punkte dieser Dokumentation:
-%TODO
+\begin{itemize*}
+  \item \ref{sec:einfuehrung} \nameref{sec:einfuehrung}
+\end{itemize*}
 \subsection{Abschluss}
-%TODO
+Diese Phase beschreibt den Abschluss des Projektes. Nat\"urlich ist der Vortrag
+davon ausgeschlossen. Diese Phase beinhaltet folgende Punkte dieser
+Dokumentation:
+\begin{itemize*}
+  \item \ref{sec:abschluss} \nameref{sec:abschluss}
+\end{itemize*}
 \section{Aufgabenstellung}
 \subsection{Ausgangslage}
 Der Vigenere-Algorithmus ist bereits mehrere Hundert Jahre alt. Er ist
@@ -328,6 +342,7 @@ speziell zu diesem Tema \"andern.
   \caption{Projektrollen}
 \end{table}
 \section{Vorkenntnisse}
+\label{sec:vorkenntnisse}
 Roland Rytz ist erfahrener Javascript Entwickler. Im Verlauf seiner Berufslehre
 als Informatiker EFZ hat er zahlreiche Webseiten und Webapplikatione mit
 Javascript realisiert. Roland hat dann auch in diesem Bereich seine
@@ -342,8 +357,10 @@ Java geschrieben und sich kurz theoretisch mit dem Thema auseinandergesetzt.
 Die beiden Autoren sind theoretisch mit dem Erstellen von Wikipedia-Artikeln
 vertraut, haben aber noch nie zuvor eigene Artikel verfasst.
 \section{Vorarbeiten}
+\label{sec:vorarbeiten}
 Es gibt zu dieser Arbeit keine Vorarbeiten.
 \section{Termine}
+\label{sec:termine}
 \begin{table}[h!]
   \centering
   \begin{tabular}{|l|l|}\hline
@@ -353,6 +370,7 @@ Es gibt zu dieser Arbeit keine Vorarbeiten.
     Kontrolle Arbeitsjouranl & 21. Dezember 2012 \\ \hline
     1. Termin mit Herr L\"uthi & 13. November 2012 \\ \hline
     2. Termin mit Herr L\"uthi & 8. Januar 2013 \\ \hline
+    3. Termin mit Herr L\"uthi & 24. Januar 2013 \\ \hline
   \end{tabular}
   \caption{Termine}
   \label{tab:termine}
@@ -511,16 +529,57 @@ Es gibt zu dieser Arbeit keine Vorarbeiten.
   \end{longtable}
 \end{landscape}
 \section{Schlussbericht}
-%TODO
 \subsection{Vergleich Soll/Ist}
-%TODO
+Leider wurden nicht ganz alle Ziele zu unserer vollen Befriedigung erreicht.
+Das Allermeiste wurde aber rechtzeitig fertiggestellt oder befindet sich
+zumindest kurz vor der Fertigstellung.
+
+Besonders w\"ahrend der Enwicklung der
+Javascript-applikation sind unerwartete Probleme aufgetreten, die Roland aber
+beheben konnte. Die Applikation steht jetzt einsatzbereit zur Verf\"ugung. Sie
+ist ausserdem optisch gut gelungen und einfach in der Bedienung.
+
+Der Wikipedia Artikel ist nahezu fertig. Es ist aber noch unklar wie die
+Community aufnehmen wird und wie die Reaktionen darauf ausfallen werden. Der
+aktuelle Stand des Artikels ist ausserdem im Anhang des Dokumentes vorhanden.
+F\"ur diese Version k\"onnen wir auch versichern, dass sie vollst\"andig von uns
+verfasst worden ist, was bei sp\"ater in der Wikipedia vorhandenen Versionen
+sicherlich nicht mehr der Fall sein wird.
 \subsection{Pers\"onliches Fazit}
 \subsubsection{Niklaus Hofer}
-%TODO
+Nun geht die IdPA zu Ende, nach gut einem halben Jahr. Es war eine aufregende
+Zeit die interessante Erfahrungen mit sich brachte und in der ich einiges lernen
+konnte.
+
+Trotzdem brachte die IdPA nicht viel neues mit sich. Im Verlaufe der Informatik
+Berufslehre hatten wir beinahe in jedem Semester eine benotete Teamarbeit
+abzugeben. Dazu kommen noch die VA und die IPA.
+
+Trotzdem hat die Arbeit einiges neues mich sich gebracht: Zum ersten Mal habe
+ich ernsthaft Javascript programmiert, dies ist die l\"angste Arbeit die ich
+bisher in \LaTeX verfasst habe und es war das erste Mal, dass ich einen
+Wikipedia-Artikel verfasst habe.
+
+Mit dem Verfassen des Artikels haben wir leider erst sehr sp\"at begonnen. Ich
+h\"atte dem Thema gerne etwas mehr Zeit gewidmet, mich genauer damit befasst und
+insbesondere die Abl\"aufe der Wikipedia vorher genauer studiert. Das Verfassen
+des Artikels war sehr interessant und ich bin gespannt darauf, was damit
+geschehen wird.
+
+Abschliessend kann ich sagen, dass die IdPA spannende Seiten hatte, ich nun aber
+froh bin, dass sie zu Ende geht.
 \subsubsection{Roland Rytz}
-%TODO
+Bei der Recherche und Umsetzung dieser Arbeit lernte ich die Grundlagen der
+Kryptographie sowohl von der Theoretischen als auch von der praktischen Seite
+kennen. Die inzwischen über 500 Jahre alte Vigenère-Chiffre bot mir auch
+Einblicke in die moderne Kryptographie und ich konnte Parallelen sowie
+Unterschiede zu modernen Algorithmen untersuchen. Die Arbeit an der
+Javascript-Umsetzung bereitete mir grosse Freude, denn so konnte ich die
+abstrakte Theorie in etwas umwandeln, das man ausprobieren, verändern und
+untersuchen kann.
 \part{Projektdokumentation}
 \section{Voranalyse}
+\label{sec:voranalyse}
 \subsection{Situationsanalyse}
 \subsubsection{Analyse Ist-Zustand}
 Keines der Ziele ist erf\"ullt. Der Wikipedia-Artikel zum Thema \glqq
@@ -750,6 +809,7 @@ Selbst wenn also eine der Maschinen abst\"urzen sollte, ist eine vollst\"andige
 Kopie aller Arbeiten auf all den anderen Rechnern noch vorhanden.
 
 \section{Konzept}
+\label{sec:konzept}
 \subsection{Use-cases}
 \begin{table}[h!]
   \centering
@@ -862,7 +922,6 @@ Kopie aller Arbeiten auf all den anderen Rechnern noch vorhanden.
 Bemerkug: Die Grafiken finden sich im Ahnang unter \glqq \ref{sec:grafiken}
 \nameref{sec:grafiken}\grqq
 \subsubsection{Applikationsstruktur}
-%TODO
 Die Applikation wird strukturiert aufgebaut. Aufgrund der relativ geringen
 Applikationskomplexit\"at ziehen die Autoren dieses Paradigma der
 objektorientierten Programmierung vor. Im Anschluss werden einige der
@@ -897,7 +956,8 @@ dargestellt.
 
 Dazu kommen noch einige weitere Funktionen die vorallem als Wrapper dienen um
 die Verwendung zu vereinfachen oder bei der visuellen Darstellung behilflich
-sind. Genaueres findet sich dann in der %TODO
+sind. Genaueres findet sich im Abschnitt \ref{sec:realisierung}
+\nameref{sec:realisierung}.
 \subsubsection{Oberfl\"achenentwurf}
 \paragraph{Bedienelemente}
 Die Applikation wird drei Eingabefelder darstellen. Das erste davon ist
@@ -990,6 +1050,7 @@ Kryptographie dient:
   \item Kryptoanalyse
 \end{enumerate*}
 \section{Realisierung}
+\label{sec:realisierung}
 \subsection{Funktionen}
 \paragraph{encryptText}
 An der Encrypt-Funktion hat sich im Vergleich zur Konzept-Phase nichts
@@ -1071,17 +1132,33 @@ Entspricht der \glqq startEncryption\grqq Funktion. Wird aber aufgerufen wenn
 der \glqq decrypt\grqq Knopf gedr\"uckt wird und leitet dann die Schritte ein um
 den Text zu entschl\"usseln.
 \section{Einf\"uhrung}
+\label{sec:einfuehrung}
 In beiden F\"allen war die Einf\"uhrung nicht besonders aufw\"andig.
 \subsection{Wikipediaartikel}
-Der Wikipediaartikel wurde w\"ahrend der Arbeiten eingef\"uhrt. Wikipedia
-verfolgt alle \"Anderungen am Text und erlaubt es zwischen der Versionen zu
-wechseln. Das hat es m\"oglich gemacht die Arbeiten gleich auf der Seite
-durchzuf\"uhren.
+Entwickelt haben wir den Artikel in einer privaten Instanz von Apache Wave, was
+es uns erlaubt hat in Echtzeit zusammen zu arbeiten und den Text gmeinsam zu
+entwickeln.
+Niklaus hat in der Deutschen Wikipedia einen Account angelegt in dessen privatem
+Bereich er den Artikel abgelegt hat. Dies hat es uns erm\"oglicht an dem Artikel
+zu arbeiten, ohne dass damit die Nutzer der Wikipedia st\"oren.
+Es war geplant den Artikel vor Projektende \"offentlich verf\"ugbar zu machen.
+Dazu kommt es nun aber leider nicht. Stattdessen wird der Artikel wohl erst im
+Verlaufe des Wochenendes freigegeben.
+
+Das Finden passender Quellen stellte sich als Herausforderung heraus. Viele der
+\glqq Quellen \grqq die man zu dem Thema im Internet findet, verweisen selbst
+auf die Wikipedia was sie zu f\"ur unsere Zwecke ungeeignet macht. Wir haben
+aber auch einiges sehr interessantes Material gefunden.
 \subsection{Website}
 Unser Projekt kommt g\"anzlich ohne serverseitigen Code aus. Die Einf\"uhrung
 beschr\"ankt sich deshalb lediglich auf das Kopieren der Dateien auf eine
 Webserver. Roland Rytz hat die Dateien mit Hilfe von Filezilla auf seinen
 Webserver hochgeladen.
+\section{Abschluss}
+Morgen Fr\"uh werden wir das Dokument zum Drucken und Binden einschicken. Am
+Mittag sollte es bereit sein, so das wir es p\"unktlich abgeben k\"onnen.
+\label{sec:abschluss}
+%TODO
 
 %\section{Abstract}
 %\section{Einleitung}
@@ -1136,6 +1213,16 @@ Webserver hochgeladen.
 %Praxisteil erl\"autert.
 %\newpage
 %foo bar
+\section{Unterzeichnet}
+Bern, \today{}
+
+\vspace{0.5cm}
+\noindent
+Niklaus Hofer\hfill Roland Rytz
+
+\vspace{2cm}
+\noindent
+\hrulefill \hfill \hrulefill
 \newpage
 \listoftables
 \listoffigures
