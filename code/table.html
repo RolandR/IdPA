@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Magic VigeneACCENTGRAPHEre Square</title>
+    <title>Vigenere Encryption Demo</title>
     <script src="jquery-1.8.2.min.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
    
@@ -9,8 +9,8 @@
   	<div id="inputBox">
 <select id="method">
 	  		<option value="mathematical" title="Use ASCII values to en-/decrypt">Solve mathematically</option>
-	  		<option value="graphicalSlow" title="Use an HTML table to en-/decrypt">Solve using table</option>
-	  		<option value="graphicalFast" title="Shows en-/decryption process step by step">Solve graphically</option>
+	  		<option value="graphicalFast" title="Use an HTML table to en-/decrypt">Solve using table</option>
+	  		<option value="graphicalSlow" title="Shows en-/decryption process step by step">Solve graphically</option>
 	  	</select>
 		<input id="keyInput" value="Key" />
 	  	<textArea id="textInput"/>Text</textArea>
@@ -31,6 +31,8 @@
       window.onload=function()
       {
 		
+		var letterSquare = new LetterSquare("vsquare");
+		
 		$("#encryptButton").click(function() {
 		  startEncryption();
 		});
@@ -39,8 +41,19 @@
 		  startDecryption();
 		});
 		
-        var letterSquare = new LetterSquare("vsquare");
+		$('#method').change(function() {
+			if($('#method').val() != 'mathematical'){
+				$("#vsquare").css('display', 'block');
+			} else {
+				$("#vsquare").css('display', 'none');
+				letterSquare.highlight(false, false);
+			}
+	});
 		
+	var globalEncryptedString = '';
+	var globalPlaintextString = '';
+	var globalKeyString = '';
+	var globalCounter = 0;
 		
 	function startEncryption(){
 		var encryptionMethod = $('#method').val();
@@ -89,35 +102,74 @@
 		
 		var outputString = "";
 		
-		if(mode == 'encrypt'){
-			for(var i = 0; i < textLength; i++){
-				var currentLetter = plaintext.charAt(i).toUpperCase();
-				var keyLetter = keyText.charAt(i % keyLength).toUpperCase();
-				var encryptedChar = letterSquare.getCharAtChars(currentLetter, keyLetter);
-				if(encryptedChar){
-					letterSquare.highlightAtChars(currentLetter, keyLetter);
-					outputString = outputString + encryptedChar;
-				} else {
-					outputString = outputString + currentLetter;
-				}
-			}
-			cipherElement.val(outputString);
+		if(graphical == true){
+			//globalEncryptedString = cipherText;
+			globalPlaintextString = plaintext;
+			globalKeyString = keyText;
+			globalCounter = 0;
+			
+			encryptStepFromGlobal();
 		} else {
-			console.log('decrypting');
-			for(var i = 0; i < textLength; i++){
-				var currentLetter = cipherText.charAt(i).toUpperCase();
-				var keyLetter = keyText.charAt(i % keyLength).toUpperCase();
-				var column = letterSquare.getColumnAtChars(currentLetter, keyLetter);
-				if(column){
-					letterSquare.highlightAtChars(column, keyLetter);
-					outputString = outputString + column;
-				} else {
-					outputString = outputString + currentLetter;
+		
+			if(mode == 'encrypt'){
+				for(var i = 0; i < textLength; i++){
+					var currentLetter = plaintext.charAt(i).toUpperCase();
+					var keyLetter = keyText.charAt(i % keyLength).toUpperCase();
+					var encryptedChar = letterSquare.getCharAtChars(currentLetter, keyLetter);
+					if(encryptedChar){
+						letterSquare.highlightAtChars(currentLetter, keyLetter);
+						outputString = outputString + encryptedChar;
+					} else {
+						outputString = outputString + currentLetter;
+					}
 				}
+				cipherElement.val(outputString);
+			} else {
+				console.log('decrypting');
+				for(var i = 0; i < textLength; i++){
+					var currentLetter = cipherText.charAt(i).toUpperCase();
+					var keyLetter = keyText.charAt(i % keyLength).toUpperCase();
+					var column = letterSquare.getColumnAtChars(currentLetter, keyLetter);
+					if(column){
+						letterSquare.highlightAtChars(column, keyLetter);
+						outputString = outputString + column;
+					} else {
+						outputString = outputString + currentLetter;
+					}
+				}
+				plaintextElement.val(outputString);
 			}
-			plaintextElement.val(outputString);
 		}
 	}
+	
+	function encryptStepFromGlobal(){
+		
+		console.log('globalCounter is '+ globalCounter);
+		console.log('globalPlaintextString is '+ globalPlaintextString);
+		
+		if(globalCounter == globalPlaintextString.length){
+			return;
+		} else if(globalCounter == 0){
+			$('#textOutput').val('');
+		}
+		
+		var currentLetter = globalPlaintextString.charAt(globalCounter).toUpperCase();
+		var keyLetter = globalKeyString.charAt(globalCounter % globalKeyString.length).toUpperCase();
+		var encryptedChar = letterSquare.getCharAtChars(currentLetter, keyLetter);
+		if(encryptedChar){
+			setTimeout('letterSquare.highlightAtChars(\''+currentLetter+'\', false);', 200);
+			setTimeout('letterSquare.highlightAtChars(\''+currentLetter+'\', \''+keyLetter+'\');', 700);
+			
+		globalEncryptedString = globalEncryptedString + encryptedChar;
+		} else {
+			globalEncryptedString = globalEncryptedString + currentLetter;
+		}
+		setTimeout("$('#textOutput').val('"+globalEncryptedString+"');", 700);
+		globalCounter++;
+		
+		setTimeout(encryptStepFromGlobal, 1000);
+		
+	}	
 	
 	
       /**
@@ -249,7 +301,7 @@
       }
       
       /*
-      LetterSquare generates and handles the Vigenère table 
+      LetterSquare generates and handles the Vigenere table 
       and offers function to access letters at certain positions
       as well as highlighting them.
       */
@@ -261,7 +313,7 @@
       	initiate(tableId);
       	
       	
-      	//Generates the Vigenère square using the basic alphabet
+      	//Generates the Vigenere square using the basic alphabet
       	function initiate(tableId){
 		var squarestr = "";
 		for( var i=0; i<26; i++)
