@@ -20,6 +20,7 @@
 \usepackage{multirow}
 \usepackage{moreverb}
 \usepackage{cclicenses}
+\usepackage{pdfpages}
 
 \hypersetup{
     colorlinks,
@@ -1283,10 +1284,9 @@ beschr\"ankt sich deshalb lediglich auf das Kopieren der Dateien auf eine
 Webserver. Roland Rytz hat die Dateien mit Hilfe von Filezilla auf seinen
 Webserver hochgeladen.
 \section{Abschluss}
+\label{sec:abschluss}
 Morgen Fr\"uh werden wir das Dokument zum Drucken und Binden einschicken. Am
 Mittag sollte es bereit sein, so das wir es p\"unktlich abgeben k\"onnen.
-\label{sec:abschluss}
-%TODO
 
 %\section{Abstract}
 %\section{Einleitung}
@@ -1359,7 +1359,6 @@ Niklaus Hofer\hfill Roland Rytz
 
 \part{Anhang}
 \label{part:anhang}
-\section{Wikipediaartikel}
 \section{Code}
 \subsection{table.html}
 \lstset{language=JavaScript,frame=single,breaklines=true}
@@ -1367,13 +1366,16 @@ Niklaus Hofer\hfill Roland Rytz
 \subsection{style.css}
 \lstset{language=CSS,frame=single,breaklines=true}
 \lstinputlisting{code/style.css}
+\newpage
 \section{Grafiken}
+\label{sec:grafiken}
 \begin{figure}[h!]
   \centering
   \includegraphics[width=0.8\textwidth]{select.png}
   \caption{Konzeptioneller Entwurf der Abbildung des Vigen\`ere Rechtecks}
   \label{fig:select}
 \end{figure}
+\newpage
 \begin{figure}[h!]
   \centering
   \includegraphics[width=0.8\textwidth]{interface.png}
@@ -1386,25 +1388,32 @@ Niklaus Hofer\hfill Roland Rytz
   \caption{Vigen\`ere Square}
   \label{fig:square}
 \end{figure}
+\newpage
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=\textwidth]{preparePassword.pdf}
+  \includegraphics[width=0.95\textwidth]{preparePassword.pdf}
   \caption{UML Abbildung der preparePassword Funktion}
   \label{fig:preparePassword}
 \end{figure}
-\label{sec:grafiken}
+\newpage
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=\textwidth]{encrypt.pdf}
+  \includegraphics[width=0.95\textwidth]{encrypt.pdf}
   \caption{UML Abbildung der Encrypt-Funktion}
   \label{fig:encrypt}
 \end{figure}
+\newpage
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=\textwidth]{gensquare.pdf}
+  \includegraphics[width=0.95\textwidth]{gensquare.pdf}
   \caption{UML Abbildung der Funktion zum generieren des grafischen Vigen\`ere
   Quadrates}
   \label{fig:gensquare}
 \end{figure}
+
+\newpage
+\section{Wikipedia Artikel}
+Export des Wikipedia Artikels als PDF.
+\includepdf[pages=-]{wikipedia.pdf}
 
 \end{document}
