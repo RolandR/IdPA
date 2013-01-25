@@ -3,104 +3,47 @@
     <title>Magic VigeneACCENTGRAPHEre Square</title>
     <script src="jquery-1.8.2.min.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script>
+   
+  </head>
+  <body onReady="genSquare">
+  	<div id="inputBox">
+<select id="method">
+	  		<option value="mathematical" title="Use ASCII values to en-/decrypt">Solve mathematically</option>
+	  		<option value="graphicalSlow" title="Use an HTML table to en-/decrypt">Solve using table</option>
+	  		<option value="graphicalFast" title="Shows en-/decryption process step by step">Solve graphically</option>
+	  	</select>
+		<input id="keyInput" value="Key" />
+	  	<textArea id="textInput"/>Text</textArea>
+		<div id="buttonsContainer">
+			<div id="buttonsInnerContainer">
+				<input type="Button" id="encryptButton" value="Encrypt&gt;"/>
+				<input type="Button" id="decryptButton" value="&lt;Decrypt"/>
+			</div>
+		</div>
+		<textArea id="textOutput"/>DIVD</textArea>
+	  </div>
+    <table id="vsquare" cellspacing="0" cellpadding="0">
+    </table>
+  </body>
+  
+  
+   <script>
       window.onload=function()
       {
+		
+		$("#encryptButton").click(function() {
+		  startEncryption();
+		});
+		
+		$("#decryptButton").click(function() {
+		  startDecryption();
+		});
+		
         var letterSquare = new LetterSquare("vsquare");
-      }
-      
-      function logThis(message){ //allows you to toggle
-      	var logIsEnabled = false; //if console.log should be enabled
-      	if(logIsEnabled){
-      		console.log(message);
-      	}
-      }
-      
-      /*
-      LetterSquare generates and handles the Vigenère table 
-      and offers function to access letters at certain positions
-      as well as highlighting them.
-      */
-      
-      var LetterSquare = function(
-      	tableId	//Id of the <table> tag which will be used to generate the sqare
-      ){
-      	var tableId = tableId;
-      	initiate(tableId);
-      	
-      	
-      	highlightAtChars('U','O');
-      	console.log(getCharAtChars('U','O'));
-      	
-      	//Generates the Vigenère square using the basic alphabet
-      	function initiate(tableId){
-		var squarestr = "";
-		for( var i=0; i<26; i++)
-		{
-		  squarestr += "<tr y=\""+i+"\">";
-		  for( var u=0; u<26; u++)
-		  {
-		    var character = 65+((u+i)%26);
-		    squarestr += "<td x=\""+u+"\">"+String.fromCharCode(character)+"</td>";
-		  }
-		  squarestr += "</tr>";
-		}
-		$('#'+tableId).html(squarestr);
-      	}
-      	
-      	//Highlights the xPos column and yPos row. Requires capital chars.
-      	//Does not return the value at the position. Set a value to false
-      	//to only highlight the other.
-      	function highlightAtChars(xPos, yPos){
-      		if(yPos != false){
-      			yPos = yPos.toString().charCodeAt(0)-65;
-      		}
-      		if(xPos != false){
-      			xPos = xPos.toString().charCodeAt(0)-65;
-      		}
-      		highlight(xPos, yPos);
-      	}
-      	
-      	//Returns the character at xPos, yPos. Requires integers.
-      	//Does not highlight the position.
-      	function getCharAtPos(xPos, yPos){
-      		return $("#"+tableId+" tr[y=\""+yPos+"\"] td[x=\""+xPos+"\"]").html();
-      	}
-      	
-      	//Returns the character at letters xPos, yPos. Requires capital chars.
-      	//Does not highlight the position.
-      	function getCharAtChars(xPos, yPos){
-      		if(yPos != false){
-      			yPos = yPos.toString().charCodeAt(0)-65;
-      		}
-      		if(xPos != false){
-      			xPos = xPos.toString().charCodeAt(0)-65;
-      		}
-      		return getCharAtPos(xPos, yPos);
-      	}
-      	
-      	//Highlights a position at xPos or yPos or both. Requires integers.
-      	//Set one value to false to omit it and only highlight the other.
-      	//It is also a gebastu, but that's what you get when doing CSS stuff.
-      	function highlight(xPos, yPos){
-      		var tableContents = $("#"+tableId+" *");
-      		tableContents.removeClass("horizontalHighlight");
-      		tableContents.removeClass("verticalHighlight");
-      		tableContents.removeClass("cellHighlight");
-      		if(yPos != -1){
-      			$("#"+tableId+" tr[y=\""+yPos+"\"]").addClass("horizontalHighlight");
-      		}
-      		if(xPos != -1){
-      			$("#"+tableId+" td[x=\""+xPos+"\"]").addClass("verticalHighlight");
-      		}
-      		if(yPos != -1 && yPos != -1){
-      			$("#"+tableId+" tr[y=\""+yPos+"\"] td[x=\""+xPos+"\"]").addClass("cellHighlight");
-      		}
-      	}
-      }
-	
+		
+		
 	function startEncryption(){
-		var encryptionMethod = "mathematical";
+		var encryptionMethod = $('#method').val();
 		var strToEncrypt = $('#textInput').val();
 		var passwordStr = $('#keyInput').val();
 		
@@ -111,11 +54,15 @@
 			var preparedPassword = preparePassword(passwordStr);
 			var encryptedText = encryptText(preparedPassword, strToEncrypt);
 			$('#textOutput').val(encryptedText);
+		} else if(encryptionMethod == "graphicalSlow"){
+			solveGraphically($('#textInput'), $('#textOutput'), $('#keyInput'), 'encrypt', true);
+		} else if(encryptionMethod == "graphicalFast"){
+			solveGraphically($('#textInput'), $('#textOutput'), $('#keyInput'), 'encrypt', false);
 		}
 	}
 
 	function startDecryption(){
-		var encryptionMethod = "mathematical";
+		var encryptionMethod = $('#method').val();
 		var strToDecrypt = $('#textOutput').val();
 		var passwordStr = $('#keyInput').val();
 		
@@ -126,8 +73,52 @@
 			var preparedPassword = preparePassword(passwordStr);
 			var decryptedText = decryptText(preparedPassword, strToDecrypt);
 			$('#textInput').val(decryptedText);
+		} else if(encryptionMethod == "graphicalSlow"){
+			solveGraphically($('#textInput'), $('#textOutput'), $('#keyInput'), 'decrypt', true);
+		} else if(encryptionMethod == "graphicalFast"){
+			solveGraphically($('#textInput'), $('#textOutput'), $('#keyInput'), 'decrypt', false);
 		}
 	}
+	
+	function solveGraphically(plaintextElement, cipherElement, keyElement, mode, graphical){
+		var plaintext = plaintextElement.val();
+		var cipherText = cipherElement.val();
+		var textLength = plaintext.length;
+		var keyText = keyElement.val();
+		var keyLength = keyText.length;
+		
+		var outputString = "";
+		
+		if(mode == 'encrypt'){
+			for(var i = 0; i < textLength; i++){
+				var currentLetter = plaintext.charAt(i).toUpperCase();
+				var keyLetter = keyText.charAt(i % keyLength).toUpperCase();
+				var encryptedChar = letterSquare.getCharAtChars(currentLetter, keyLetter);
+				if(encryptedChar){
+					letterSquare.highlightAtChars(currentLetter, keyLetter);
+					outputString = outputString + encryptedChar;
+				} else {
+					outputString = outputString + currentLetter;
+				}
+			}
+			cipherElement.val(outputString);
+		} else {
+			console.log('decrypting');
+			for(var i = 0; i < textLength; i++){
+				var currentLetter = cipherText.charAt(i).toUpperCase();
+				var keyLetter = keyText.charAt(i % keyLength).toUpperCase();
+				var column = letterSquare.getColumnAtChars(currentLetter, keyLetter);
+				if(column){
+					letterSquare.highlightAtChars(column, keyLetter);
+					outputString = outputString + column;
+				} else {
+					outputString = outputString + currentLetter;
+				}
+			}
+			plaintextElement.val(outputString);
+		}
+	}
+	
 	
       /**
        * Create an array of numbers from the password string
@@ -220,15 +211,15 @@
 	for(n=0; n<text.length; n++)
 	{
 	  var asciiValue = text.charCodeAt(n);
-	  if(asciiValue > 96 && asciiValue < 123)
+	  /*if(asciiValue > 96 && asciiValue < 123)
 	  {
-	    logThis("loewr case. What's that doing in there??");
+	    logThis("lower case. What's that doing in there??");
 	    var calcValue = asciiValue-97;
 	    var foo = ((26+calcValue-pwArray[l%(pwArray.length)])%26)
 	    decText += String.fromCharCode(foo+65);
 	    l++;
 	    continue;
-	  }
+	  }*/
 
 	  if(asciiValue > 64 && asciiValue < 91)
 	  {
@@ -245,59 +236,132 @@
 	}
 	return decText;
       }
-
-    </script>
-  </head>
-  <body onReady="genSquare">
-  	<div id="inputBox">
-<select id="method">
-	  		<option name="mathematical" title="Use ASCII values to en-/decrypt">Solve mathematically</option>
-	  		<option name="graphicalSlow" title="Use an HTML table to en-/decrypt">Solve using table</option>
-	  		<option name="graphicalFast" title="Shows en-/decryption process step by step">Solve graphically</option>
-	  	</select>
-		<input id="keyInput" value="Key" />
-	  	<textArea id="textInput"/>Text</textArea>
-		<div id="buttonsContainer">
-			<div id="buttonsInnerContainer">
-				<input type="Button" id="encryptButton" value="Encrypt&gt;" onclick="startEncryption();"/>
-				<input type="Button" id="decryptButton" value="&lt;Decrypt" onclick="startDecryption();" />
-			</div>
-		</div>
-		<textArea id="textOutput"/>DIVD</textArea>
-	  </div>
-    <table id="vsquare" cellspacing="0" cellpadding="0">
-    </table>
-    <script>
-      // define a password
-      password = "Hello Worold";
-      // Then transform it into an array of numbers
-      // everything will be uppercased. Everything that's not a character
-      // will be ignored!
-      var pwArray = preparePassword(password);
-
-      // Now encrypt the text. Everything will be uppercased.
-      // Everything that is not a character will be put back in the same
-      // place unchanged
-      /*var encText = encryptText(pwArray, "Mein Hut der hat 3 Ecken, 3 Ecken hat mein Hut. Und haett er nicht 3 Ecken, so waer es nicht mein Hut. Ich brauche aber, damit die Analyse moeglich wird, einen deutlich laengeren Text. Deshalb schreib ich hier jetzt eine Menge 'Seich' rein. Ich hoffe das genuegt allmaehlich, denn ich mag mir nicht noch mehr mist ausdenken.");
-
-      document.write("<br />");
-
-      // Write out the encrypted text
-      for(var a=0; a < encText.length; a++)
-      {
-        document.write(encText[a]);
+		
+      }
+	  
+	  var letterSquare;
+      
+      function logThis(message){ //allows you to toggle
+      	var logIsEnabled = false; //if console.log should be enabled
+      	if(logIsEnabled){
+      		console.log(message);
+      	}
+      }
+      
+      /*
+      LetterSquare generates and handles the Vigenère table 
+      and offers function to access letters at certain positions
+      as well as highlighting them.
+      */
+      
+      var LetterSquare = function(
+      	tableId	//Id of the <table> tag which will be used to generate the sqare
+      ){
+      	var tableId = tableId;
+      	initiate(tableId);
+      	
+      	
+      	//Generates the Vigenère square using the basic alphabet
+      	function initiate(tableId){
+		var squarestr = "";
+		for( var i=0; i<26; i++)
+		{
+		  squarestr += "<tr y=\""+i+"\">";
+		  for( var u=0; u<26; u++)
+		  {
+		    var character = 65+((u+i)%26);
+		    squarestr += "<td x=\""+u+"\">"+String.fromCharCode(character)+"</td>";
+		  }
+		  squarestr += "</tr>";
+		}
+		$('#'+tableId).html(squarestr);
+      	}
+      	
+      	//Highlights the xPos column and yPos row. Requires capital chars.
+      	//Does not return the value at the position. Set a value to false
+      	//to only highlight the other.
+      	function highlightAtChars(xPos, yPos){
+      		if(yPos != false){
+      			yPos = yPos.toString().charCodeAt(0)-65;
+      		}
+      		if(xPos != false){
+      			xPos = xPos.toString().charCodeAt(0)-65;
+      		}
+      		highlight(xPos, yPos);
+      	}
+      	
+      	//Returns the character at xPos, yPos. Requires integers.
+      	//Does not highlight the position.
+      	function getCharAtPos(xPos, yPos){
+      		return $("#"+tableId+" tr[y=\""+yPos+"\"] td[x=\""+xPos+"\"]").html();
+      	}
+      	
+      	//Returns the character at letters xPos, yPos. Requires capital chars.
+      	//Does not highlight the position.
+      	function getCharAtChars(xPos, yPos){
+      		if(yPos != false){
+      			yPos = yPos.toString().charCodeAt(0)-65;
+      		} else {
+				return false;
+			}
+      		if(xPos != false){
+      			xPos = xPos.toString().charCodeAt(0)-65;
+      		} else {
+				return false;
+			}
+      		return getCharAtPos(xPos, yPos);
+      	}
+		
+		function getColumnAtChars(character, yPos){
+      		if(yPos != false){
+      			yPos = yPos.toString().charCodeAt(0)-65;
+      		} else {
+				return false;
+			}
+      		if(character != false){
+      			//character = character.toString().charCodeAt(0)-65;
+				var xPos = $("#"+tableId+" tr[y=\""+yPos+"\"] :contains(\""+character+"\")").attr('x');
+				console.log('xPos of '+character+' is '+ xPos);
+      		} else {
+				return false;
+			}
+			
+			var columnChar = getCharAtPos(xPos, 0);
+			
+			console.log('columnChar for xPos '+xPos+' is '+ columnChar)
+			
+      		return columnChar;
+      	}
+      	
+      	//Highlights a position at xPos or yPos or both. Requires integers.
+      	//Set one value to false to omit it and only highlight the other.
+      	//It is also a gebastu, but that's what you get when doing CSS stuff.
+      	function highlight(xPos, yPos){
+      		var tableContents = $("#"+tableId+" *");
+      		tableContents.removeClass("horizontalHighlight");
+      		tableContents.removeClass("verticalHighlight");
+      		tableContents.removeClass("cellHighlight");
+      		if(yPos != -1){
+      			$("#"+tableId+" tr[y=\""+yPos+"\"]").addClass("horizontalHighlight");
+      		}
+      		if(xPos != -1){
+      			$("#"+tableId+" td[x=\""+xPos+"\"]").addClass("verticalHighlight");
+      		}
+      		if(yPos != -1 && yPos != -1){
+      			$("#"+tableId+" tr[y=\""+yPos+"\"] td[x=\""+xPos+"\"]").addClass("cellHighlight");
+      		}
+      	}
+		
+		return{ //Oh, javascript...
+			highlightAtChars: highlightAtChars,
+			getCharAtPos: getCharAtPos,
+			getCharAtChars: getCharAtChars,
+			highlight: highlight,
+			getColumnAtChars: getColumnAtChars
+		}
+		
       }
 
-      var decText = decryptText(pwArray, encText);
-
-      document.write("<br />");
-
-      // Write out the encrypted text
-      for(var a=0; a < decText.length; a++)
-      {
-        document.write(decText[a]);
-      }*/
-
     </script>
-  </body>
+  
 </html>
