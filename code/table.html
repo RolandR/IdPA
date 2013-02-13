@@ -150,7 +150,6 @@
 					var keyLetter = keyText.charAt(i % keyLength).toUpperCase();
 					var encryptedChar = letterSquare.getCharAtChars(currentLetter, keyLetter);
 					if(encryptedChar){
-						letterSquare.highlightAtChars(currentLetter, keyLetter);
 						outputString = outputString + encryptedChar;
 					} else {
 						outputString = outputString + currentLetter;
@@ -165,7 +164,6 @@
 					var column = letterSquare.getColumnAtChars(currentLetter, keyLetter);
 					console.log(letterSquare.getColumnAtChars(currentLetter, keyLetter));
 					if(column){
-						letterSquare.highlightAtChars(column, keyLetter);
 						outputString = outputString + column;
 					} else {
 						outputString = outputString + currentLetter;
