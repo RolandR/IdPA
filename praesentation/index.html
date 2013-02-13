@@ -2,15 +2,15 @@
 
 <html lang="de">
 <head>
+    <title>IdPA-Praesentation</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=1024" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
     
     <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
     <meta name="author" content="Bartek Szopka" />
 
-    <!--link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" /-->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
 
     <link href="css/impress-demo.css" rel="stylesheet" />
     
@@ -33,8 +33,8 @@ Dieser Browser ist veraltet. Get a new one!
 <div id="impress">
 
 	<div class="step noslide">
-		<h1>Die Vigen&egrave;re-Verschlüsselung</h1>
-		<q>Niklaus Hofer, Roland Rytz</q>
+		<h1 style="font-weight: 200">Die Vigen&egrave;re-Verschlüsselung</h1>
+		<q style="font-weight: 200">Niklaus Hofer, Roland Rytz</q>
 	</div>
 	
 	<div class="step slide" data-y="1000" data-z="1000">
@@ -49,7 +49,7 @@ Dieser Browser ist veraltet. Get a new one!
 	</div>
 	
 	<div class="step slide" data-y="3000" data-z="3000">
-		<iframe width=750" height="600" src="../code/table.html">
+		<iframe width=650" height="600" src="../code/table.html">
 		</iframe>
 	</div>
 	
@@ -71,7 +71,7 @@ MOD 26&nbsp; : 25 16 14 00 23 22 22 12 08 09 18 04 25 14 08 20 01 04 19 01<br />
 	</div>
 	
 	<div class="step slide" data-y="5000" data-z="5000">
-	<h2 style="font-size: 2.1em; margin-top: 200px;">Mathematischer Hintergrund</h2>
+	<h2 style="margin-top: 200px;">Mathematischer Hintergrund</h2>
 	</div>
 	
 	<div class="step slide" data-y="6000" data-z="6000">
@@ -81,8 +81,31 @@ MOD 26&nbsp; : 25 16 14 00 23 22 22 12 08 09 18 04 25 14 08 20 01 04 19 01<br />
 	<q>V = Verschlüsselter Text</q>
 	<q>l = Länge des Passwortes</q>
 	<q>i = Aktuelle Stelle</q>
-	
-	<img src="./img/encrypt.png" alt="" title="" height="42" width="510" />
+	<br />
+	<math style="font-size: 2em; color: #000000;">
+        <msub>
+          <mi>V</mi>
+          <mo>i</mo>
+        </msub>
+        <mo>=</mo>
+        <mo>(</mo>
+        <msub>
+          <mi>K</mi>
+          <mn>i</mn>
+        </msub>
+        <mo>+</mo>
+        <msub>
+          <mi>P</mi>
+          <mn>
+            <mi>i</mi>
+            <mo>%</mo>
+            <mi>l</mi>
+          </mn>
+        </msub>
+        <mo>)</mo>
+        <mo>%</mo>
+        <mn>26</mn>
+      </math>
 	
 	</div>
 	
@@ -93,10 +116,108 @@ MOD 26&nbsp; : 25 16 14 00 23 22 22 12 08 09 18 04 25 14 08 20 01 04 19 01<br />
 	<q>V = Verschlüsselter Text</q>
 	<q>l = Länge des Passwortes</q>
 	<q>i = Aktuelle Stelle</q>
-	
-	<img src="./img/encrypt.png" alt="" title="" height="42" width="510" />
+	<br />
+	<math style="font-size: 1.8em; color: #000000;">
+	   <msub>
+          <mi>K</mi>
+          <mo>i</mo>
+        </msub>
+        <mo>=</mo>
+        <mo>(</mo>
+        <mi>26</mi>
+        <mo>+</mo>
+        <msub>
+          <mi>V</mi>
+          <mn>i</mn>
+        </msub>
+        <mo>-</mo>
+        <msub>
+          <mi>P</mi>
+          <mn>
+            <mi>i</mi>
+            <mo>%</mo>
+            <mi>l</mi>
+          </mn>
+        </msub>
+        <mo>)</mo>
+        <mo>%</mo>
+        <mn>26</mn>
+      </math>
 	
 	</div>
+	
+	<div class="step slide" data-y="8000" data-z="8000">
+	<h2 style="margin-top: 200px;">Vorgehen</h2>
+	</div>
+	
+	<div class="step slide" data-y="9000" data-z="9000">
+	<h2>HERMES</h2>
+	<q>Vom Bund standartisierte Projektmethode zur Softwareentwicklung</q>
+	<ul>
+		<li><span>Voranalyse</span></li>
+		<li><span>Konzept</span></li>
+		<li><span>Realisierung</span></li>
+		<li><span>Einführung</span></li>
+		<li><span>Abschluss</span></li>
+	</ul>
+	</div>
+	
+	<div class="step slide" data-y="11000" data-z="11000">
+	<h2>Voranalyse</h2>
+	<ul>
+		<li><span>Situationsanalyse</span></li>
+		<li><span>Variantenanalyse</span></li>
+		<li><span>Analyse Wirtschaftlichkeit</span></li>
+	</ul>
+	</div>
+	
+	<div class="step slide" data-y="12000" data-z="12000">
+	<h2>Konzept</h2>
+	<ul>
+		<li><span>Use Cases</span></li>
+			<ul>
+				<li><span>Was muss die Software können?</span></li>
+				<li><span>Test Cases</span></li>
+			</ul>
+		<li><span>Entwerfen der Applikation</span></li>
+			<ul>
+				<li><span>Funktionsweise</span></li>
+				<li><span>Aufbau</span></li>
+				<li><span>Genauer Ablauf</span></li>
+			</ul>
+	</ul>
+	</div>
+	
+	<div class="step slide" data-y="13000" data-z="13000">
+	<h2>Realisierung</h2>
+	<ul>
+		<li><span>Umsetzung des Konzepts</span></li>
+		<li><span>Dokumentation der &Auml;nderungen</span></li>
+	</ul>
+	</div>
+	
+	<div class="step slide" data-y="14000" data-z="14000">
+	<h2>Einführung</h2>
+	<ul>
+		<li><span>Deployment</span></li>
+		<li><span>Nutzerschulung</span></li>
+	</ul>
+	</div>
+	
+	<div class="step slide" data-y="15000" data-z="15000">
+		<h2 style="margin-top: 200px;">Wikipedia-Eintrag</h2>
+	</div>
+	
+	<div class="step slide" data-y="16000" data-z="16000">
+		<h2>Wikipedia</h2>
+		<ul>
+			<li><span>Mehr Recherche wäre nötig gewesen (Community)</span></li>
+			<li><span>Zu spät begonnen</span></li>
+			<li><span>Gute Quellen gefunden</span></li>
+			<li><span><i>Soon to be available on a Wikipedia near you!</i></span></li>
+		</ul>
+	</div>
+	
 	
 	
 	<!--<div class="step slide" data-y="9000" data-z="9000">
