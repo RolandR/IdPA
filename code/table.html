@@ -104,6 +104,13 @@
 			solveGraphically($('#textInput'), $('#textOutput'), $('#keyInput'), 'decrypt', false);
 		}
 	}
+		
+	function updateDuration(){
+		var date = new Date();
+		var timeFinished = date.getTime();
+		var duration = timeFinished - globalTimeStarted;
+		$('#duration').html('Completed in '+duration+'ms');
+	}
 	
 	function solveGraphically(plaintextElement, cipherElement, keyElement, mode, graphical){
 		var plaintext = plaintextElement.val();
@@ -119,7 +126,6 @@
 			globalEncryptedString = '';
 			globalPlaintextString = plaintext;
 			globalKeyString = keyText;
-			globalCounter = 0;
 			
 			encryptStepFromGlobal();
 		} else {
@@ -161,10 +167,7 @@
 		console.log('globalCounter is '+ globalCounter);
 		console.log('globalPlaintextString is '+ globalPlaintextString);
 		
-		if(globalCounter == globalPlaintextString.length){
-			updateDuration();
-			return;
-		} else if(globalCounter == 0){
+		if(globalCounter == 0){
 			$('#textOutput').val('');
 		}
 		
@@ -172,25 +175,22 @@
 		var keyLetter = globalKeyString.charAt(globalCounter % globalKeyString.length).toUpperCase();
 		var encryptedChar = letterSquare.getCharAtChars(currentLetter, keyLetter);
 		if(encryptedChar){
-			setTimeout('letterSquare.highlightAtChars(\''+currentLetter+'\', false);', 200);
-			setTimeout('letterSquare.highlightAtChars(\''+currentLetter+'\', \''+keyLetter+'\');', 700);
-			
-		globalEncryptedString = globalEncryptedString + encryptedChar;
+			letterSquare.highlightAtChars('+currentLetter+', '+keyLetter+');	
+			globalEncryptedString = globalEncryptedString + encryptedChar;
 		} else {
 			globalEncryptedString = globalEncryptedString + currentLetter;
 		}
-		setTimeout("$('#textOutput').val('"+globalEncryptedString+"');", 700);
+		
+		console.log('encryptedChar is '+ encryptedChar);
+		
+		globalEncryptedString = $('#textOutput').val() + globalEncryptedString;
+		$('#textOutput').val(globalEncryptedString);
 		globalCounter++;
+		console.log('globalCounter is '+ globalCounter);
 		
-		setTimeout(encryptStepFromGlobal, 1000);
-		
-	}	
-	
-	function updateDuration(){
-		var date = new Date();
-		var timeFinished = date.getTime();
-		var duration = timeFinished - globalTimeStarted;
-		$('#duration').html('Completed in '+duration+'ms');
+		if(globalCounter == globalPlaintextString.length){
+			globalCounter = 0;
+		}
 	}
 	
 	
