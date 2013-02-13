@@ -43,7 +43,7 @@
 		});
 		
 		$('#method').change(function() {
-			if($('#method').val() != 'mathematical'){
+			if($('#method').val() == 'graphicalSlow'){
 				$("#vsquare").css('display', 'block');
 			} else {
 				$("#vsquare").css('display', 'none');
@@ -59,8 +59,6 @@
 	var globalTimeStarted = 0;
 		
 	function startEncryption(){
-		var date = new Date();
-		globalTimeStarted = date.getTime();
 		var encryptionMethod = $('#method').val();
 		var strToEncrypt = $('#textInput').val();
 		var passwordStr = $('#keyInput').val();
@@ -69,6 +67,8 @@
 		//var passwordStr = document.getElementById('keyInput').value;
 		
 		if(encryptionMethod == "mathematical"){
+			var date = new Date();
+			globalTimeStarted = date.getTime();
 			var preparedPassword = preparePassword(passwordStr);
 			var encryptedText = encryptText(preparedPassword, strToEncrypt);
 			$('#textOutput').val(encryptedText);
@@ -82,8 +82,6 @@
 	}
 
 	function startDecryption(){
-		var date = new Date();
-		globalTimeStarted = date.getTime();
 		var encryptionMethod = $('#method').val();
 		var strToDecrypt = $('#textOutput').val();
 		var passwordStr = $('#keyInput').val();
@@ -92,6 +90,9 @@
 		//var passwordStr = document.getElementById('keyInput').value;
 		
 		if(encryptionMethod == "mathematical"){
+			var date = new Date();
+			globalTimeStarted = date.getTime();
+			
 			var preparedPassword = preparePassword(passwordStr);
 			var decryptedText = decryptText(preparedPassword, strToDecrypt);
 			$('#textInput').val(decryptedText);
@@ -113,6 +114,10 @@
 	}
 	
 	function solveGraphically(plaintextElement, cipherElement, keyElement, mode, graphical){
+		if(globalCounter == 0){
+			var date = new Date();
+			globalTimeStarted = date.getTime();
+		}
 		var plaintext = plaintextElement.val();
 		var textLength = plaintext.length;
 		var cipherText = cipherElement.val();
@@ -123,11 +128,20 @@
 		var outputString = "";
 		
 		if(graphical == true){
-			globalEncryptedString = '';
-			globalPlaintextString = plaintext;
-			globalKeyString = keyText;
 			
-			encryptStepFromGlobal();
+			if(mode == 'decrypt'){
+				globalEncryptedString = cipherText;
+				globalPlaintextString = '';
+				globalKeyString = keyText;
+				
+				decryptStepFromGlobal();
+			} else {
+				globalEncryptedString = '';
+				globalPlaintextString = plaintext;
+				globalKeyString = keyText;
+			
+				encryptStepFromGlobal();
+			}
 		} else {
 		
 			if(mode == 'encrypt'){
@@ -143,6 +157,7 @@
 					}
 				}
 				cipherElement.val(outputString);
+				updateDuration();
 			} else {
 				for(var i = 0; i < cipherTextLength; i++){
 					var currentLetter = cipherText.charAt(i).toUpperCase();
@@ -163,10 +178,6 @@
 	}
 	
 	function encryptStepFromGlobal(){
-		
-		console.log('globalCounter is '+ globalCounter);
-		console.log('globalPlaintextString is '+ globalPlaintextString);
-		
 		if(globalCounter == 0){
 			$('#textOutput').val('');
 		}
@@ -175,21 +186,45 @@
 		var keyLetter = globalKeyString.charAt(globalCounter % globalKeyString.length).toUpperCase();
 		var encryptedChar = letterSquare.getCharAtChars(currentLetter, keyLetter);
 		if(encryptedChar){
-			letterSquare.highlightAtChars('+currentLetter+', '+keyLetter+');	
+			letterSquare.highlightAtChars(currentLetter, keyLetter);	
 			globalEncryptedString = globalEncryptedString + encryptedChar;
 		} else {
 			globalEncryptedString = globalEncryptedString + currentLetter;
 		}
-		
-		console.log('encryptedChar is '+ encryptedChar);
-		
 		globalEncryptedString = $('#textOutput').val() + globalEncryptedString;
 		$('#textOutput').val(globalEncryptedString);
 		globalCounter++;
-		console.log('globalCounter is '+ globalCounter);
 		
 		if(globalCounter == globalPlaintextString.length){
 			globalCounter = 0;
+			updateDuration();
+		}
+	}
+	
+	function decryptStepFromGlobal(){
+		
+		if(globalCounter == 0){
+			$('#textInput').val('');
+		}
+		
+		var currentLetter = globalEncryptedString.charAt(globalCounter).toUpperCase();
+		var keyLetter = globalKeyString.charAt(globalCounter % globalKeyString.length).toUpperCase();
+		
+		var column = letterSquare.getColumnAtChars(currentLetter, keyLetter);
+		if(column){
+			letterSquare.highlightAtChars(column, keyLetter);
+			globalPlaintextString = globalPlaintextString + column;
+		} else {
+			globalPlaintextString = globalPlaintextString + currentLetter;
+		}
+		
+		globalPlaintextString = $('#textInput').val() + globalPlaintextString;
+		$('#textInput').val(globalPlaintextString);
+		globalCounter++;
+		
+		if(globalCounter == globalEncryptedString.length){
+			globalCounter = 0;
+			updateDuration();
 		}
 	}
 	
