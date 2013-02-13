@@ -1,0 +1,133 @@
+<!doctype html>
+
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
+    
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Bartek Szopka" />
+
+    <!--link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" /-->
+
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    
+</head>
+
+<body class="impress-not-supported">
+
+<!--
+    For example this fallback message is only visible when there is `impress-not-supported` class on body.
+-->
+<div class="fallback-message">
+Dieser Browser ist veraltet. Get a new one!
+</div>
+
+<!-- Table of contents!-->
+<iframe src="./inhalt.html" allowtransparency="true" frameborder="0" scrolling="0" width="300px" height="500px" style="overflow: hidden;"></iframe>
+
+<div id="impress">
+
+	<div class="step noslide">
+		<h1>Die Vigen&egrave;re-Verschlüsselung</h1>
+		<q>Niklaus Hofer, Roland Rytz</q>
+	</div>
+	
+	<div class="step slide" data-y="1000" data-z="1000">
+		<h2>Der Algorithmus</h2>
+		<q>Die Vigenère-Chiffre ist ein simpler, einfach zu verstehender Verschlüsselungsalgorithmus.</q>
+	</div>
+	
+	<div class="step slide" data-y="2000" data-z="2000">
+		<h2>Polyalphabetische Substitution</h2>
+		<q>"Gibb" + 1 &rarr; "Hjcc"</q>
+		<q>"Gibb" + "key" &rarr; "Qmzl"</q>
+	</div>
+	
+	<div class="step slide" data-y="3000" data-z="3000">
+		<iframe width=750" height="600" src="../code/table.html">
+		</iframe>
+	</div>
+	
+	<div class="step slide" data-y="4000" data-z="4000">
+	<h2>Funktionsweise</h2>
+	<q>Klartext: Dies ist ein kurzer Text</q>
+	<q>Passwort: Wikipedia</q>
+	<br />
+	<br />
+<q class="monospace">KLARTEXT: D I E S I S T E I N K U R Z E R T E X T<br />
+PASSWORT: W I K I P E D I A W I K I P E D I A W I<br />
+RESULTAT: Z Q O A X W W M I J S E Z O I U B E T B<br />
+<br />
+KLARTEXT: 03 08 04 18 08 18 19 04 08 13 10 20 17 25 04 17 19 04 23 19<br />
+PASSWORT: 22 08 10 08 15 04 03 08 00 22 08 10 08 15 04 03 08 00 22 08<br />
+RESULTAT: 25 16 14 26 23 22 22 12 08 35 18 30 25 40 08 20 27 04 45 27<br />
+MOD 26&nbsp; : 25 16 14 00 23 22 22 12 08 09 18 04 25 14 08 20 01 04 19 01<br />
+</q>
+	</div>
+	
+	<div class="step slide" data-y="5000" data-z="5000">
+	<h2 style="font-size: 2.1em; margin-top: 200px;">Mathematischer Hintergrund</h2>
+	</div>
+	
+	<div class="step slide" data-y="6000" data-z="6000">
+	<h2>Verschlüsseln</h2>
+	<q>P = Passwort</q>
+	<q>K = Klartext</q>
+	<q>V = Verschlüsselter Text</q>
+	<q>l = Länge des Passwortes</q>
+	<q>i = Aktuelle Stelle</q>
+	
+	<img src="./img/encrypt.png" alt="" title="" height="42" width="510" />
+	
+	</div>
+	
+	<div class="step slide" data-y="7000" data-z="7000">
+	<h2>Entschlüsseln</h2>
+	<q>P = Passwort</q>
+	<q>K = Klartext</q>
+	<q>V = Verschlüsselter Text</q>
+	<q>l = Länge des Passwortes</q>
+	<q>i = Aktuelle Stelle</q>
+	
+	<img src="./img/encrypt.png" alt="" title="" height="42" width="510" />
+	
+	</div>
+	
+	
+	<!--<div class="step slide" data-y="9000" data-z="9000">
+		<input />
+		<input />
+		<div id="bigsendbutton" onclick="$(document).trigger($.Event('keypress', { keyCode: 39 }))">
+			Verschl&uuml;sseln!
+		</div>
+	</div>-->
+	
+	
+	<!--
+	
+	<div class="step slide" data-y="000" data-z="000">
+		<h2>Title!</h2>
+		<q>Foo baaaaaaaar</q>
+		<q>Foo baaaaaaaar</q>
+		<ul>
+			<li>Baz</li>
+			<li>Qux</li>
+		</ul>
+		<q>Fubar</q>
+	</div>
+
+	-->
+
+</div>
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+
+</body>
+</html>
