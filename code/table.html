@@ -18,6 +18,7 @@
 			<div id="buttonsInnerContainer">
 				<input type="Button" id="encryptButton" value="Encrypt&gt;"/>
 				<input type="Button" id="decryptButton" value="&lt;Decrypt"/>
+				<div id="duration"><br /><br /></div>
 			</div>
 		</div>
 		<textArea id="textOutput"/>DIVD</textArea>
@@ -54,8 +55,12 @@
 	var globalPlaintextString = '';
 	var globalKeyString = '';
 	var globalCounter = 0;
+	
+	var globalTimeStarted = 0;
 		
 	function startEncryption(){
+		var date = new Date();
+		globalTimeStarted = date.getTime();
 		var encryptionMethod = $('#method').val();
 		var strToEncrypt = $('#textInput').val();
 		var passwordStr = $('#keyInput').val();
@@ -67,6 +72,8 @@
 			var preparedPassword = preparePassword(passwordStr);
 			var encryptedText = encryptText(preparedPassword, strToEncrypt);
 			$('#textOutput').val(encryptedText);
+			
+			updateDuration();
 		} else if(encryptionMethod == "graphicalSlow"){
 			solveGraphically($('#textInput'), $('#textOutput'), $('#keyInput'), 'encrypt', true);
 		} else if(encryptionMethod == "graphicalFast"){
@@ -75,6 +82,8 @@
 	}
 
 	function startDecryption(){
+		var date = new Date();
+		globalTimeStarted = date.getTime();
 		var encryptionMethod = $('#method').val();
 		var strToDecrypt = $('#textOutput').val();
 		var passwordStr = $('#keyInput').val();
@@ -86,6 +95,9 @@
 			var preparedPassword = preparePassword(passwordStr);
 			var decryptedText = decryptText(preparedPassword, strToDecrypt);
 			$('#textInput').val(decryptedText);
+			
+			updateDuration();
+			
 		} else if(encryptionMethod == "graphicalSlow"){
 			solveGraphically($('#textInput'), $('#textOutput'), $('#keyInput'), 'decrypt', true);
 		} else if(encryptionMethod == "graphicalFast"){
@@ -95,15 +107,16 @@
 	
 	function solveGraphically(plaintextElement, cipherElement, keyElement, mode, graphical){
 		var plaintext = plaintextElement.val();
-		var cipherText = cipherElement.val();
 		var textLength = plaintext.length;
+		var cipherText = cipherElement.val();
+		var cipherTextLength = cipherText.length;
 		var keyText = keyElement.val();
 		var keyLength = keyText.length;
 		
 		var outputString = "";
 		
 		if(graphical == true){
-			//globalEncryptedString = cipherText;
+			globalEncryptedString = '';
 			globalPlaintextString = plaintext;
 			globalKeyString = keyText;
 			globalCounter = 0;
@@ -125,11 +138,11 @@
 				}
 				cipherElement.val(outputString);
 			} else {
-				console.log('decrypting');
-				for(var i = 0; i < textLength; i++){
+				for(var i = 0; i < cipherTextLength; i++){
 					var currentLetter = cipherText.charAt(i).toUpperCase();
 					var keyLetter = keyText.charAt(i % keyLength).toUpperCase();
 					var column = letterSquare.getColumnAtChars(currentLetter, keyLetter);
+					console.log(letterSquare.getColumnAtChars(currentLetter, keyLetter));
 					if(column){
 						letterSquare.highlightAtChars(column, keyLetter);
 						outputString = outputString + column;
@@ -138,6 +151,7 @@
 					}
 				}
 				plaintextElement.val(outputString);
+				updateDuration();
 			}
 		}
 	}
@@ -148,6 +162,7 @@
 		console.log('globalPlaintextString is '+ globalPlaintextString);
 		
 		if(globalCounter == globalPlaintextString.length){
+			updateDuration();
 			return;
 		} else if(globalCounter == 0){
 			$('#textOutput').val('');
@@ -170,6 +185,13 @@
 		setTimeout(encryptStepFromGlobal, 1000);
 		
 	}	
+	
+	function updateDuration(){
+		var date = new Date();
+		var timeFinished = date.getTime();
+		var duration = timeFinished - globalTimeStarted;
+		$('#duration').html('Completed in '+duration+'ms');
+	}
 	
 	
       /**

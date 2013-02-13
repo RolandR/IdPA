@@ -152,7 +152,16 @@
       	border-radius: 5px;
       	width: 110px;
       	position: relative;
-		top: -70px;
+		top: -30px;
+      }
+      
+      #duration{
+      	display: block;
+      	width: 110px;
+      	position: relative;
+		top: -30px;
+		text-align: center;
+		height: 50px;
       }
       
       #encryptButton:hover, #decryptButton:hover{
