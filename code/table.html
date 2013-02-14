@@ -54,6 +54,7 @@
 	var globalEncryptedString = '';
 	var globalPlaintextString = '';
 	var globalKeyString = '';
+	var globalKeyCounter = 0;
 	var globalCounter = 0;
 	
 	var globalTimeStarted = 0;
@@ -122,7 +123,7 @@
 		var textLength = plaintext.length;
 		var cipherText = cipherElement.val();
 		var cipherTextLength = cipherText.length;
-		var keyText = keyElement.val();
+		var keyText = removeNonAlphabetic(keyElement.val());
 		var keyLength = keyText.length;
 		
 		var outputString = "";
@@ -143,14 +144,15 @@
 				encryptStepFromGlobal();
 			}
 		} else {
-		
+			var keyCounter = 0;
 			if(mode == 'encrypt'){
 				for(var i = 0; i < textLength; i++){
 					var currentLetter = plaintext.charAt(i).toUpperCase();
-					var keyLetter = keyText.charAt(i % keyLength).toUpperCase();
+					var keyLetter = keyText.charAt(keyCounter % keyLength).toUpperCase();
 					var encryptedChar = letterSquare.getCharAtChars(currentLetter, keyLetter);
 					if(encryptedChar){
 						outputString = outputString + encryptedChar;
+						keyCounter++;
 					} else {
 						outputString = outputString + currentLetter;
 					}
@@ -160,11 +162,12 @@
 			} else {
 				for(var i = 0; i < cipherTextLength; i++){
 					var currentLetter = cipherText.charAt(i).toUpperCase();
-					var keyLetter = keyText.charAt(i % keyLength).toUpperCase();
+					var keyLetter = keyText.charAt(keyCounter % keyLength).toUpperCase();
 					var column = letterSquare.getColumnAtChars(currentLetter, keyLetter);
 					console.log(letterSquare.getColumnAtChars(currentLetter, keyLetter));
 					if(column){
 						outputString = outputString + column;
+						keyCounter++;
 					} else {
 						outputString = outputString + currentLetter;
 					}
@@ -181,11 +184,12 @@
 		}
 		
 		var currentLetter = globalPlaintextString.charAt(globalCounter).toUpperCase();
-		var keyLetter = globalKeyString.charAt(globalCounter % globalKeyString.length).toUpperCase();
+		var keyLetter = globalKeyString.charAt(globalKeyCounter % globalKeyString.length).toUpperCase();
 		var encryptedChar = letterSquare.getCharAtChars(currentLetter, keyLetter);
 		if(encryptedChar){
 			letterSquare.highlightAtChars(currentLetter, keyLetter);	
 			globalEncryptedString = globalEncryptedString + encryptedChar;
+			globalKeyCounter++;
 		} else {
 			globalEncryptedString = globalEncryptedString + currentLetter;
 		}
@@ -195,6 +199,7 @@
 		
 		if(globalCounter == globalPlaintextString.length){
 			globalCounter = 0;
+			globalKeyCounter = 0;
 			updateDuration();
 		}
 	}
@@ -206,12 +211,15 @@
 		}
 		
 		var currentLetter = globalEncryptedString.charAt(globalCounter).toUpperCase();
-		var keyLetter = globalKeyString.charAt(globalCounter % globalKeyString.length).toUpperCase();
+		
+		var keyLetter = globalKeyString.charAt(globalKeyCounter % globalKeyString.length).toUpperCase();
+			
 		
 		var column = letterSquare.getColumnAtChars(currentLetter, keyLetter);
 		if(column){
 			letterSquare.highlightAtChars(column, keyLetter);
 			globalPlaintextString = globalPlaintextString + column;
+			globalKeyCounter++;
 		} else {
 			globalPlaintextString = globalPlaintextString + currentLetter;
 		}
@@ -222,8 +230,20 @@
 		
 		if(globalCounter == globalEncryptedString.length){
 			globalCounter = 0;
+			globalKeyCounter = 0;
 			updateDuration();
 		}
+	}
+	
+	function removeNonAlphabetic(string){
+		var cleanString = '';
+		for(var c = 0; c < string.length; c++){
+			var newChar = string.charAt(c).toUpperCase();
+			if("ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf(newChar) !== -1){
+				cleanString += newChar;
+			}
+		}
+		return cleanString
 	}
 	
 	
